@@ -1,7 +1,7 @@
-// app.js - Rendering and Interactive Logic for SURD Lab Homepage
+// app.js - Rendering and Interactive Logic for SURD Lab Homepage (Multi-Page Version)
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize dynamic content rendering
+  // Initialize dynamic content rendering with DOM safety checks
   renderHeroAndStats();
   renderAboutSection();
   renderResearchSection();
@@ -98,12 +98,17 @@ function renderAboutSection() {
 
   // PI Card details
   const pi = SURD_DATA.members.pi;
-  if (pi) {
-    document.getElementById("pi-avatar").innerText = pi.initials || "JN";
-    document.getElementById("pi-name").innerText = pi.nameKr;
-    document.getElementById("pi-role").innerText = pi.roleKr;
-    document.getElementById("pi-contact-email").innerHTML = `<a href="mailto:${pi.email}" style="color:var(--primary-color); border-bottom:1px dashed var(--accent-color);">${pi.email}</a>`;
-    document.getElementById("pi-contact-office").innerText = pi.office.split("/")[1].trim(); // Get Korean office part
+  const piAvatarEl = document.getElementById("pi-avatar");
+  if (pi && piAvatarEl) {
+    piAvatarEl.innerText = pi.initials || "NJ";
+    const piNameEl = document.getElementById("pi-name");
+    if (piNameEl) piNameEl.innerText = pi.nameKr;
+    const piRoleEl = document.getElementById("pi-role");
+    if (piRoleEl) piRoleEl.innerText = pi.roleKr;
+    const piEmailEl = document.getElementById("pi-contact-email");
+    if (piEmailEl) piEmailEl.innerHTML = `<a href="mailto:${pi.email}" style="color:var(--primary-color); border-bottom:1px dashed var(--accent-color);">${pi.email}</a>`;
+    const piOfficeEl = document.getElementById("pi-contact-office");
+    if (piOfficeEl) piOfficeEl.innerText = pi.office.split("/")[1].trim(); // Get Korean office part
   }
 
   // Timeline
@@ -166,7 +171,10 @@ function renderResearchSection() {
   }
 
   // Initial projects rendering
-  renderProjects("all");
+  const projectsContainer = document.getElementById("projects-list-container");
+  if (projectsContainer) {
+    renderProjects("all");
+  }
 }
 
 function renderProjects(filter = "all") {
@@ -204,34 +212,51 @@ function renderMembersSection() {
 
   // PI Info Detailed
   const pi = members.pi;
-  if (pi) {
-    document.getElementById("pi-avatar-large").innerText = pi.initials || "JN";
-    document.getElementById("pi-name-large").innerHTML = `${pi.nameKr} <span>${pi.nameEn}</span>`;
-    document.getElementById("pi-role-large").innerText = pi.roleKr;
-    document.getElementById("pi-email-large").innerHTML = `<a href="mailto:${pi.email}" style="color:var(--primary-color); border-bottom:1px dashed var(--accent-color);">${pi.email}</a>`;
-    document.getElementById("pi-office-large").innerText = pi.office;
+  const piAvatarLargeEl = document.getElementById("pi-avatar-large");
+  if (pi && piAvatarLargeEl) {
+    piAvatarLargeEl.innerText = pi.initials || "NJ";
+    const piNameLargeEl = document.getElementById("pi-name-large");
+    if (piNameLargeEl) piNameLargeEl.innerHTML = `${pi.nameKr} <span>${pi.nameEn}</span>`;
+    const piRoleLargeEl = document.getElementById("pi-role-large");
+    if (piRoleLargeEl) piRoleLargeEl.innerText = pi.roleKr;
+    const piEmailLargeEl = document.getElementById("pi-email-large");
+    if (piEmailLargeEl) piEmailLargeEl.innerHTML = `<a href="mailto:${pi.email}" style="color:var(--primary-color); border-bottom:1px dashed var(--accent-color);">${pi.email}</a>`;
+    const piOfficeLargeEl = document.getElementById("pi-office-large");
+    if (piOfficeLargeEl) piOfficeLargeEl.innerText = pi.office;
     
     // Bio
-    document.getElementById("pi-bio-text").innerHTML = `
-      <span style="font-weight: 600; display: block; margin-bottom: 0.75rem; line-height: 1.7; color: var(--primary-color);">${pi.bioKr}</span>
-      <span style="font-family: var(--font-en); font-size: 0.9rem; color: var(--text-secondary); display: block; line-height: 1.7;">${pi.bioEn}</span>
-    `;
+    const piBioTextEl = document.getElementById("pi-bio-text");
+    if (piBioTextEl) {
+      piBioTextEl.innerHTML = `
+        <span style="font-weight: 600; display: block; margin-bottom: 0.75rem; line-height: 1.7; color: var(--primary-color);">${pi.bioKr}</span>
+        <span style="font-family: var(--font-en); font-size: 0.9rem; color: var(--text-secondary); display: block; line-height: 1.7;">${pi.bioEn}</span>
+      `;
+    }
 
     // Education / Experience list
-    const eduItems = [
-      "일본 도쿄대학교 (University of Tokyo) 도시계획학 박사 (Ph.D. in Urban Planning)",
-      "서울대학교 대학원 도시공학 석사 (M.S. in Urban Engineering, SNU)",
-      "서울시립대학교 도시공학과 학사 (B.S. in Urban Engineering, UOS)",
-      "국토교통부 도시재생 특별위원회 위원 (National Urban Regeneration Committee Member, MOLIT)",
-      "서울특별시 도시계획위원회 위원 (Seoul Metropolitan City Planning Committee Member)",
-      "스마트 도시정비 및 주택 정비 재생 분야 주요 국책 과제 총괄 책임자"
-    ];
-    document.getElementById("pi-education-list").innerHTML = eduItems.map(item => `<li>${item}</li>`).join("");
+    const piEducationListEl = document.getElementById("pi-education-list");
+    if (piEducationListEl) {
+      const eduItems = [
+        "일본 도쿄대학교 (University of Tokyo) 도시계획학 박사 (Ph.D. in Urban Planning)",
+        "서울대학교 대학원 도시공학 석사 (M.S. in Urban Engineering, SNU)",
+        "서울시립대학교 도시공학과 학사 (B.S. in Urban Engineering, UOS)",
+        "국토교통부 도시재생 특별위원회 위원 (National Urban Regeneration Committee Member, MOLIT)",
+        "서울특별시 도시계획위원회 위원 (Seoul Metropolitan City Planning Committee Member)",
+        "스마트 도시정비 및 주택 정비 재생 분야 주요 국책 과제 총괄 책임자"
+      ];
+      piEducationListEl.innerHTML = eduItems.map(item => `<li>${item}</li>`).join("");
+    }
   }
 
   // Students Grids
-  renderStudentGrid("phd", "phd-grid");
-  renderStudentGrid("masters", "masters-grid");
+  const phdGridEl = document.getElementById("phd-grid");
+  if (phdGridEl) {
+    renderStudentGrid("phd", "phd-grid");
+  }
+  const mastersGridEl = document.getElementById("masters-grid");
+  if (mastersGridEl) {
+    renderStudentGrid("masters", "masters-grid");
+  }
 }
 
 function renderStudentGrid(category, containerId) {
@@ -384,23 +409,38 @@ function renderContactSection() {
   const contact = SURD_DATA.contact;
   if (!contact) return;
 
-  document.getElementById("contact-email").innerText = contact.email;
-  document.getElementById("contact-email").setAttribute("href", `mailto:${contact.email}`);
+  const contactEmailEl = document.getElementById("contact-email");
+  if (contactEmailEl) {
+    contactEmailEl.innerText = contact.email;
+    contactEmailEl.setAttribute("href", `mailto:${contact.email}`);
+  }
   
-  document.getElementById("contact-address").innerHTML = `
-    ${contact.officeKr}<br>
-    <span style="font-size:0.9rem; color:var(--text-light); font-family:var(--font-en);">${contact.officeEn}</span>
-  `;
+  const contactAddressEl = document.getElementById("contact-address");
+  if (contactAddressEl) {
+    contactAddressEl.innerHTML = `
+      ${contact.officeKr}<br>
+      <span style="font-size:0.9rem; color:var(--text-light); font-family:var(--font-en);">${contact.officeEn}</span>
+    `;
+  }
   
-  document.getElementById("contact-directions-text").innerHTML = `
-    <strong>대중교통 안내 / Transit:</strong><br>
-    ${contact.directionsKr}<br><br>
-    <span style="font-family: var(--font-en); font-size: 0.85rem; color: var(--text-secondary); display: block; line-height: 1.5;">${contact.directionsEn}</span>
-  `;
+  const contactDirectionsTextEl = document.getElementById("contact-directions-text");
+  if (contactDirectionsTextEl) {
+    contactDirectionsTextEl.innerHTML = `
+      <strong>대중교통 안내 / Transit:</strong><br>
+      ${contact.directionsKr}<br><br>
+      <span style="font-family: var(--font-en); font-size: 0.85rem; color: var(--text-secondary); display: block; line-height: 1.5;">${contact.directionsEn}</span>
+    `;
+  }
 
-  // Inject header nav contact info dynamically
-  document.getElementById("dropdown-email").innerText = contact.email;
-  document.getElementById("dropdown-office").innerText = contact.officeEn.split(",")[0]; // Just the room/building name
+  // Inject header nav contact info dynamically (if dropdown elements are present)
+  const dropdownEmailEl = document.getElementById("dropdown-email");
+  if (dropdownEmailEl) {
+    dropdownEmailEl.innerText = contact.email;
+  }
+  const dropdownOfficeEl = document.getElementById("dropdown-office");
+  if (dropdownOfficeEl) {
+    dropdownOfficeEl.innerText = contact.officeEn.split(",")[0]; // Just the room/building name
+  }
 }
 
 /* =========================================================================
@@ -411,6 +451,8 @@ function initNavigation() {
   const navMenu = document.getElementById("nav-menu");
   const navLinks = document.querySelectorAll(".nav-link");
   
+  if (!hamburgerBtn || !navMenu) return;
+
   // Toggle Hamburger menu
   hamburgerBtn.addEventListener("click", () => {
     hamburgerBtn.classList.toggle("open");
@@ -434,10 +476,6 @@ function initNavigation() {
       hamburgerBtn.classList.remove("open");
       navMenu.classList.remove("open");
       document.querySelectorAll(".nav-item").forEach(item => item.classList.remove("dropdown-active"));
-      
-      // Update active state manually on click
-      navLinks.forEach(l => l.classList.remove("active"));
-      link.classList.add("active");
     });
   });
 
@@ -453,6 +491,8 @@ function initNavigation() {
 
 function initProjectsFilter() {
   const tabs = document.querySelectorAll(".projects-tabs .tab-btn");
+  if (tabs.length === 0) return;
+
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
       tabs.forEach(t => t.classList.remove("active"));
@@ -465,6 +505,8 @@ function initProjectsFilter() {
 
 function initPublicationsFilter() {
   const filterBtns = document.querySelectorAll(".publications-filters .filter-btn");
+  if (filterBtns.length === 0) return;
+
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       filterBtns.forEach(b => b.classList.remove("active"));
@@ -478,8 +520,8 @@ function initPublicationsFilter() {
 function initScrollEffects() {
   const header = document.getElementById("header");
   const scrollTopBtn = document.getElementById("scroll-top-btn");
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link");
+
+  if (!header || !scrollTopBtn) return;
 
   window.addEventListener("scroll", () => {
     const scrollPos = window.scrollY;
@@ -497,23 +539,6 @@ function initScrollEffects() {
     } else {
       scrollTopBtn.classList.remove("visible");
     }
-
-    // ScrollSpy active link tracking
-    let currentSectionId = "home";
-    sections.forEach(sec => {
-      const secTop = sec.offsetTop - parseInt(getComputedStyle(document.documentElement).scrollPaddingTop) - 10;
-      const secHeight = sec.offsetHeight;
-      if (scrollPos >= secTop && scrollPos < secTop + secHeight) {
-        currentSectionId = sec.getAttribute("id");
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === `#${currentSectionId}`) {
-        link.classList.add("active");
-      }
-    });
   });
 
   // Scroll to top action

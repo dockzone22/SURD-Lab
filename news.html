@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="스마트도시주택정비및개발연구실 (SURD Lab) 최근 소식. 논문 게재, 공모전 및 학회 수상 실적, 연구실 주요 행사를 알립니다.">
+  <meta name="keywords" content="SURD Lab, 스마트도시주택정비및개발연구실, 서울시립대학교, 남진 교수, 연구실 소식, 공지사항, 행사">
+  
+  <title>News | SURD Lab</title>
+  
+  <!-- Styling Sheet -->
+  <link rel="stylesheet" href="./style.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Fixed Top Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <!-- LOGO: replace this section later -->
+      <div class="logo">
+        <a href="./index.html">SURD</a>
+      </div>
+      
+      <!-- Hamburger Menu for Mobile -->
+      <button class="hamburger" id="hamburger-btn" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <!-- Navigation Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="./research.html" class="nav-link">Research</a></li>
+          <li class="nav-item"><a href="./members.html" class="nav-link">Members</a></li>
+          <li class="nav-item"><a href="./publications.html" class="nav-link">Publications</a></li>
+          <li class="nav-item"><a href="./alumni.html" class="nav-link">Alumni</a></li>
+          <li class="nav-item"><a href="./news.html" class="nav-link active" aria-current="page">News</a></li>
+          <li class="nav-item">
+            <a href="./contact.html" class="nav-link">Contact</a>
+            <!-- Dropdown on Hover -->
+            <div class="nav-dropdown">
+              <div class="nav-dropdown-title">Quick Info</div>
+              <div class="nav-dropdown-info">
+                <div class="nav-dropdown-label">Email</div>
+                <div class="nav-dropdown-value" id="dropdown-email">namjin@uos.ac.kr</div>
+              </div>
+              <div class="nav-dropdown-info">
+                <div class="nav-dropdown-label">Office</div>
+                <div class="nav-dropdown-value" id="dropdown-office">21st Century Hall, Room 405</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- News Section -->
+  <section class="section" id="news" style="padding-top: 10rem;">
+    <div class="container">
+      <div class="section-header">
+        <h2>연구실 소식</h2>
+        <span class="subtitle">News & Events</span>
+      </div>
+      
+      <div class="news-grid" id="news-grid-container">
+        <!-- Rendered dynamically from app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">SURD Lab</div>
+          <div class="footer-lab-desc" id="footer-lab-desc">
+            스마트도시주택정비및개발연구실 (Smart Urban Renewal & Development Lab)<br>
+            도시 데이터 과학과 융합 정비 기술을 통해 미래 주거 환경을 혁신합니다.
+          </div>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-links-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./research.html">Research</a></li>
+              <li><a href="./members.html">Members</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Research & Info</h4>
+            <ul>
+              <li><a href="./publications.html">Publications</a></li>
+              <li><a href="./alumni.html">Alumni</a></li>
+              <li><a href="./news.html">News</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="footer-year">2026</span> SURD Lab, University of Seoul. All Rights Reserved.
+        </div>
+        <div style="font-family: var(--font-en);">
+          Designed for Academic Excellence
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scroll-top-btn" aria-label="맨 위로 이동">
+    <i data-lucide="arrow-up" style="width:20px; height:20px;"></i>
+  </button>
+
+  <!-- Load App Logic -->
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
