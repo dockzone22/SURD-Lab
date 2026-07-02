@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavigation();
   initProjectsFilter();
   initPublicationsFilter();
+  initNewsTabs();
   initScrollEffects();
 
   // Initialize Lucide Icons
@@ -379,6 +380,14 @@ function renderAlumniSection() {
    ========================================================================= */
 function renderNewsSection() {
   const newsContainer = document.getElementById("news-grid-container");
+  if (!newsContainer) return;
+
+  // Default to rendering Lab News
+  renderLabNews();
+}
+
+function renderLabNews() {
+  const newsContainer = document.getElementById("news-grid-container");
   if (!newsContainer || !SURD_DATA.news) return;
 
   newsContainer.innerHTML = SURD_DATA.news.map(n => `
@@ -400,6 +409,78 @@ function renderNewsSection() {
       </div>
     </div>
   `).join("");
+}
+
+function renderInterviews() {
+  const newsContainer = document.getElementById("news-grid-container");
+  if (!newsContainer) return;
+
+  if (!SURD_DATA.interviews || SURD_DATA.interviews.length === 0) {
+    newsContainer.innerHTML = `
+      <div class="news-empty-state" style="grid-column: 1 / -1; text-align: center; padding: 4rem 2rem; background: #ffffff; border-radius: var(--radius-lg); border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center; justify-content: center; box-shadow: var(--shadow-sm);">
+        <i data-lucide="message-square" style="width: 48px; height: 48px; color: var(--text-light); margin-bottom: 1rem;"></i>
+        <p class="empty-title" style="font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem;">등록된 인터뷰 및 기고문이 없습니다.</p>
+        <p class="empty-subtitle" style="font-size: 0.9rem; color: var(--text-light); font-family: var(--font-en);">Interviews and columns will be updated soon.</p>
+      </div>
+    `;
+    if (window.lucide) {
+      window.lucide.createIcons();
+    }
+    return;
+  }
+
+  newsContainer.innerHTML = SURD_DATA.interviews.map(item => `
+    <div class="news-card interview-card">
+      <div class="news-meta">
+        <span class="news-date">${item.date}</span>
+        <span class="news-category-badge ${item.type.toLowerCase()}">${item.type.toUpperCase()}</span>
+      </div>
+      <h4 class="news-title">
+        ${item.titleKr}
+        ${item.titleEn ? `<span style="font-family: var(--font-en); font-size: 0.85rem; font-weight: 500; display: block; margin-top: 0.25rem; color: var(--text-secondary); line-height: 1.4;">${item.titleEn}</span>` : ""}
+      </h4>
+      <div class="news-desc-container" style="display: block; opacity: 1; max-height: none;">
+        <p class="news-desc" style="margin-bottom: 1rem;">
+          ${item.description}
+          <span class="interview-source" style="display: block; margin-top: 0.75rem; font-size: 0.85rem; font-weight: 600; color: var(--primary-color);">매체 / Source: ${item.source}</span>
+        </p>
+        <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="news-link-btn" style="display: inline-flex; align-items: center; color: var(--primary-color); font-weight: 600; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s ease;">
+          원문 보기 &rarr;
+        </a>
+      </div>
+    </div>
+  `).join("");
+  
+  if (window.lucide) {
+    window.lucide.createIcons();
+  }
+}
+
+function initNewsTabs() {
+  const tabs = document.querySelectorAll(".news-content-tab");
+  if (tabs.length === 0) return;
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      // Deactivate all tabs
+      tabs.forEach(t => {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
+      });
+
+      // Activate clicked tab
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
+
+      // Render corresponding content
+      const tabType = tab.getAttribute("data-tab");
+      if (tabType === "news") {
+        renderLabNews();
+      } else if (tabType === "interview") {
+        renderInterviews();
+      }
+    });
+  });
 }
 
 /* =========================================================================
@@ -439,7 +520,8 @@ function renderContactSection() {
   }
   const dropdownOfficeEl = document.getElementById("dropdown-office");
   if (dropdownOfficeEl) {
-    dropdownOfficeEl.innerText = contact.officeEn.split(",")[0]; // Just the room/building name
+    const parts = contact.officeEn.split(",");
+    dropdownOfficeEl.innerText = parts[0].trim() + ", " + parts[1].trim(); // "Baebong Hall, Room 315"
   }
 }
 

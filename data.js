@@ -27,7 +27,7 @@ const SURD_DATA = {
   stats: [
     { labelKr: "연구원 수", labelEn: "Members", value: "14", icon: "users" },
     { labelKr: "발표 논문", labelEn: "Publications", value: "85+", icon: "file-text" },
-    { labelKr: "진행 프로젝트", labelEn: "Projects", value: "24", icon: "briefcase" },
+    { labelKr: "수행 완료 프로젝트", labelEn: "COMPLETED PROJECTS", value: "24", icon: "briefcase" },
     { labelKr: "설립 연도", labelEn: "Year Founded", value: "2018", icon: "calendar" }
   ],
 
@@ -35,8 +35,8 @@ const SURD_DATA = {
   about: {
     philosophyKr: "SURD Lab은 급변하는 도시 환경 속에서 발생하는 주택, 인프라, 지역 쇠퇴 문제를 해결하기 위해 스마트 기술과 데이터 기반 분석을 적용합니다. 우리는 단순히 물리적인 정비를 넘어, 도시 구성원들의 삶의 질을 높이고 환경적 지속가능성을 확보할 수 있는 정책과 기술적 솔루션을 함께 고민합니다.",
     philosophyEn: "SURD Lab applies smart technology and data-driven analysis to resolve housing, infrastructure, and urban decline issues occurring in rapidly changing urban environments. Beyond mere physical renewal, we explore policy and technical solutions that enhance the quality of life for urban residents and secure environmental sustainability.",
-    piWelcomeKr: "안녕하세요. 스마트도시주택정비및개발연구실(SURD Lab)의 지도교수 김상우입니다. 우리 연구실은 복잡하고 다차원적인 도시 문제를 무리수(Surd)처럼 있는 그대로 받아들이고, 실질적이고 과학적인 분석을 통해 해답을 모색하는 학문 공동체입니다. 스마트 기술, 빅데이터, 공간 통계를 활용하여 더 살기 좋고 포용적인 도시의 미래를 함께 그려나갈 인재들을 환영합니다.",
-    piWelcomeEn: "Welcome to the Smart Urban Renewal & Development Laboratory (SURD Lab). I am Professor Sangwoo Kim. Our lab is an academic community that embraces complex, multidimensional urban issues as they are—much like irrational numbers (surds)—and seeks practical, scientific solutions through rigorous analysis. We welcome creative minds to join us in shaping a better, more inclusive urban future using smart technologies, big data, and spatial statistics.",
+    piWelcomeKr: "안녕하세요. 스마트도시주택정비및개발연구실(SURD Lab)의 지도교수 남진입니다. 우리 연구실은 복잡하고 다차원적인 도시 문제를 무리수(Surd)처럼 있는 그대로 받아들이고, 실질적이고 과학적인 분석을 통해 해답을 모색하는 학문 공동체입니다. 스마트 기술, 빅데이터, 공간 통계를 활용하여 더 살기 좋고 포용적인 도시의 미래를 함께 그려나갈 인재들을 환영합니다.",
+    piWelcomeEn: "Welcome to the Smart Urban Renewal & Development Laboratory (SURD Lab). I am Professor Jin Nam. Our lab is an academic community that embraces complex, multidimensional urban issues as they are—much like irrational numbers (surds)—and seeks practical, scientific solutions through rigorous analysis. We welcome creative minds to join us in shaping a better, more inclusive urban future using smart technologies, big data, and spatial statistics.",
     piPhoto: "", // Empty to trigger the placeholder
     
     // Lab History Timeline
@@ -157,7 +157,7 @@ const SURD_DATA = {
       roleEn: "Principal Investigator / Ph.D.",
       photo: "", // Placeholder initials will be "JN"
       email: "namjin@uos.ac.kr",
-      office: "21st Century Hall, Room 405 / 21세기관 405호",
+      office: "Professor Nam Jin’s Office: Baebong Hall, Room 301 / 배봉관 301호",
       bioKr: "남진 교수는 서울시립대학교 도시공학과를 졸업하고 서울대학교 대학원에서 석사, 일본 도쿄대학교(University of Tokyo)에서 도시계획학 박사 학위를 취득하였습니다. 서울시립대학교 도시공학과 교수로 재직 중이며, 스마트 도시재생, 도시정비 정책, 공간 경제 분석 분야에서 다수의 핵심 국책 연구 과제를 수행하고 있습니다.",
       bioEn: "Prof. Jin Nam received his B.S. in Urban Engineering from the University of Seoul, M.S. from Seoul National University, and Ph.D. in Urban Planning from the University of Tokyo. He is a professor at the University of Seoul, actively conducting major national R&D projects focusing on smart urban renewal, housing redevelopment policies, and spatial economics."
     },
@@ -373,13 +373,28 @@ const SURD_DATA = {
     }
   ],
 
+  // Interviews and Columns Section
+  interviews: [
+    /*
+    {
+      date: "YYYY.MM.DD",
+      type: "interview", // "interview" | "column"
+      titleKr: "국문 제목",
+      titleEn: "영문 제목", // or empty string
+      description: "간단한 소개",
+      source: "언론사 또는 게재 매체",
+      url: "원문 링크"
+    }
+    */
+  ],
+
   // Contact Section
   contact: {
     email: "namjin@uos.ac.kr",
     tel: "02-6490-2720", // Realistic UOS office prefix
-    officeKr: "서울특별시 동대문구 서울시립대로 163 서울시립대학교 21세기관 405호",
-    officeEn: "Room 405, 21st Century Hall, University of Seoul, 163 Siripdaero, Dongdaemun-gu, Seoul, Republic of Korea",
-    directionsKr: "지하철 1호선 청량리역 3번 출구 또는 경의중앙선 회기역 2번 출구에서 서울시립대학교 방면으로 오시면 편리합니다. 버스를 이용하시는 경우 서울시립대 정문 정류장(ID: 06-188)에서 하차하신 후 정문 우측에 위치한 21세기관 405호로 오시면 편리합니다.",
-    directionsEn: "A short walk from Cheongnyangni Station (Line 1, Exit 3) or Hoegi Station (Gyeongui-Jungang Line, Exit 2) towards the University of Seoul. If traveling by bus, please get off at the University of Seoul Main Gate stop (ID: 06-188) and proceed to Room 405, 21st Century Hall, located on the right side of the main gate."
+    officeKr: "서울특별시 동대문구 서울시립대로 163, 서울시립대학교 배봉관 315호",
+    officeEn: "Baebong Hall, Room 315, University of Seoul, 163 Seoulsiripdae-ro, Dongdaemun-gu, Seoul, Republic of Korea",
+    directionsKr: "지하철 1호선 청량리역 3번 출구 또는 경의중앙선 회기역 2번 출구에서 서울시립대학교 방면으로 오시면 편리합니다. 버스를 이용하시는 경우 서울시립대 정문 정류장(ID: 06-188)에서 하차하신 후 배봉관 315호로 오시면 편리합니다.",
+    directionsEn: "A short walk from Cheongnyangni Station (Line 1, Exit 3) or Hoegi Station (Gyeongui-Jungang Line, Exit 2) towards the University of Seoul. If traveling by bus, please get off at the University of Seoul Main Gate stop (ID: 06-188) and proceed to Baebong Hall, Room 315."
   }
 };
