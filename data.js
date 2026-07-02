@@ -375,17 +375,15 @@ const SURD_DATA = {
 
   // Interviews and Columns Section
   interviews: [
-    /*
-    {
-      date: "YYYY.MM.DD",
-      type: "interview", // "interview" | "column"
-      titleKr: "국문 제목",
-      titleEn: "영문 제목", // or empty string
-      description: "간단한 소개",
-      source: "언론사 또는 게재 매체",
-      url: "원문 링크"
-    }
-    */
+    // {
+    //   date: "YYYY.MM.DD",
+    //   type: "interview", // or "column"
+    //   titleKr: "",
+    //   titleEn: "",
+    //   description: "",
+    //   source: "",
+    //   url: ""
+    // }
   ],
 
   // Contact Section

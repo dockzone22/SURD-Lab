@@ -69,9 +69,26 @@
       </div>
       
       <!-- News & Interview Tabs -->
-      <div class="news-content-tabs" role="tablist">
-        <button class="news-content-tab active" type="button" role="tab" data-tab="news" aria-selected="true">LAB NEWS</button>
-        <button class="news-content-tab" type="button" role="tab" data-tab="interview" aria-selected="false">INTERVIEW</button>
+      <div class="news-content-tabs" role="tablist" aria-label="News categories">
+        <button
+          type="button"
+          class="news-content-tab active"
+          data-tab="news"
+          role="tab"
+          aria-selected="true"
+          aria-controls="news-grid-container">
+          LAB NEWS
+        </button>
+
+        <button
+          type="button"
+          class="news-content-tab"
+          data-tab="interview"
+          role="tab"
+          aria-selected="false"
+          aria-controls="news-grid-container">
+          INTERVIEW
+        </button>
       </div>
       
       <div class="news-grid" id="news-grid-container">
