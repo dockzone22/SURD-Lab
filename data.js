@@ -195,6 +195,16 @@ const SURD_DATA = {
         image: ""
       },
       {
+        nameKr: "이정현",
+        nameEn: "Junghyun Lee",
+        initials: "JL",
+        roleKr: "박사과정(졸업)",
+        roleEn: "Ph.D.",
+        interestsKr: "공간 복지, 노인 거주 취약성, AI 의사결정 모델",
+        interestsEn: "Spatial Welfare, Elderly Housing Vulnerability, AI Decision Models",
+        image: ""
+      },
+      {
         nameKr: "김은광",
         nameEn: "Eunkwang Kim",
         initials: "EK",
@@ -204,17 +214,7 @@ const SURD_DATA = {
         interestsEn: "Smart City Planning, Climate-resilient Renewal, Carbon Reduction",
         image: ""
       },
-      {
-        nameKr: "이정현",
-        nameEn: "Junghyun Lee",
-        initials: "JL",
-        roleKr: "박사과정(졸업)",
-        roleEn: "Ph.D. Candidate",
-        interestsKr: "공간 복지, 노인 거주 취약성, AI 의사결정 모델",
-        interestsEn: "Spatial Welfare, Elderly Housing Vulnerability, AI Decision Models",
-        image: ""
-      },
-      {
+          {
         nameKr: "이이주",
         nameEn: "Iiju Lee",
         initials: "IL",
