@@ -155,8 +155,7 @@ const SURD_DATA = {
       initials: "JN",
       roleKr: "지도교수 / 공학박사",
       roleEn: "Principal Investigator / Ph.D.",
-      photo: "", // Placeholder initials will be "JN"
-      image: "",
+      image: "./assets/jin_nam.jpg",
       email: "jnam@uos.ac.kr",
       office: "Professor Nam Jin's Office: Baebong Hall, Room 301 / 배봉관 301호",
       bioKr: "남진 교수는 서울시립대학교 도시공학과를 졸업하고 동 대학원에서 석사, 일본 요코하마대학교(University of Yokohama)에서 도시계획학 박사 학위를 취득하였습니다. 서울시립대학교 도시공학과 교수로 재직 중이며, 도시정비 및 개발, 주택시장, 스마트시티 분야에서 다수의 핵심 국책 연구 과제를 수행하고 있습니다.",
@@ -218,7 +217,7 @@ const SURD_DATA = {
         nameKr: "이이주",
         nameEn: "Iiju Lee",
         initials: "IL",
-        roleKr: "박사과정(수료)",
+        roleKr: "박사과정 (수료)",
         roleEn: "Ph.D. candidate",
         interestsKr: "///",
         interestsEn: "///",
@@ -282,8 +281,8 @@ const SURD_DATA = {
         initials: "SP",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "///",
-        interestsEn: "///",
+        interestsKr: "주거정책, 포용적 계획, 균형 발전",
+        interestsEn: "Housing Policy, Inclusive Urban Planning, Balanced Regional Development",
         image: ""
       },
       {
@@ -313,7 +312,7 @@ const SURD_DATA = {
         roleKr: "석사과정",
         roleEn: "M.S. Student",
         interestsKr: "주택 가격, 상권 분석, 상업용 부동산",
-        interestsEn: "Housing Prices, Commercial District Analysis, Commercial Real Estate",
+        interestsEn: "Housing Prices, Commercial District Analysis, Commercial Real Estate + (Website Builder!)",
         image: "./assets/members/jiwoo_kim.jpg"
       }
     ]

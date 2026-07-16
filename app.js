@@ -102,11 +102,13 @@ function renderAboutSection() {
   const piAvatarEl = document.getElementById("pi-avatar");
   if (pi && piAvatarEl) {
     if (pi.image) {
+      piAvatarEl.classList.remove("fallback-active");
       piAvatarEl.innerHTML = `
-        <img src="${pi.image}" alt="${pi.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        <img src="${pi.image}" alt="${pi.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'; this.parentNode.classList.add('fallback-active');">
         <span class="avatar-initials" style="display:none;">${pi.initials || "NJ"}</span>
       `;
     } else {
+      piAvatarEl.classList.add("fallback-active");
       piAvatarEl.innerHTML = `<span class="avatar-initials">${pi.initials || "NJ"}</span>`;
     }
     const piNameEl = document.getElementById("pi-name");

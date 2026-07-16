@@ -585,7 +585,7 @@ button {
 /* About Section */
 .about-grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 5rem;
   margin-bottom: 6rem;
 }
@@ -626,20 +626,25 @@ button {
 .pi-profile-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   border: 1px solid var(--border-color);
   padding: 2.5rem;
   border-radius: 4px;
   background: white;
   box-shadow: var(--shadow-sm);
+  height: auto;
 }
 
 .pi-avatar-placeholder {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+  width: calc(100% + 5rem);
+  height: auto;
+  margin-top: -2.5rem;
+  margin-left: -2.5rem;
+  margin-right: -2.5rem;
+  border-radius: 4px 4px 0 0;
   background-color: #f0f3f3;
-  border: 2px solid var(--primary-color-light);
+  border: none;
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -648,8 +653,18 @@ button {
   font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 1.5rem;
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
   overflow: hidden;
+}
+
+.pi-avatar-placeholder.fallback-active {
+  height: 300px;
+}
+
+.pi-avatar-placeholder img.avatar-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .pi-name {
