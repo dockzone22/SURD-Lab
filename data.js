@@ -162,6 +162,19 @@ const SURD_DATA = {
       bioKr: "남진 교수는 서울시립대학교 도시공학과를 졸업하고 서울대학교 대학원에서 석사, 일본 도쿄대학교(University of Tokyo)에서 도시계획학 박사 학위를 취득하였습니다. 서울시립대학교 도시공학과 교수로 재직 중이며, 스마트 도시재생, 도시정비 정책, 공간 경제 분석 분야에서 다수의 핵심 국책 연구 과제를 수행하고 있습니다.",
       bioEn: "Prof. Jin Nam received his B.S. in Urban Engineering from the University of Seoul, M.S. from Seoul National University, and Ph.D. in Urban Planning from the University of Tokyo. He is a professor at the University of Seoul, actively conducting major national R&D projects focusing on smart urban renewal, housing redevelopment policies, and spatial economics."
     },
+    // TODO: 추후 실제 소개문 및 약력 정보로 교체 필요
+    researchProfessor: {
+      nameKr: "김진하 교수",
+      nameEn: "Prof. Jinha Kim",
+      initials: "JK",
+      roleKr: "연구교수",
+      roleEn: "Research Professor",
+      image: "",
+      email: "k_jinha@uos.ac.kr",
+      office: "Baebong Hall, Room 315 / 배봉관 315호",
+      bioKr: "김진하 교수는 도시와 주택을 둘러싼 다양한 현상을 연구하며, 관련 정책과 실무적 과제에 관심을 두고 있습니다.",
+      bioEn: "Prof. Jinha Kim conducts research on a range of issues related to cities and housing, with an interest in relevant policy and practical challenges."
+    },
     phd: [
       {
         nameKr: "이지민",

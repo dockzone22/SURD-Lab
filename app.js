@@ -263,6 +263,43 @@ function renderMembersSection() {
     }
   }
 
+  // Research Professor Info Detailed
+  const rp = members.researchProfessor;
+  const rpAvatarLargeEl = document.getElementById("rp-avatar-large");
+  if (rp && rpAvatarLargeEl) {
+    if (rp.image) {
+      rpAvatarLargeEl.innerHTML = `
+        <img src="${rp.image}" alt="${rp.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        <span class="avatar-initials" style="display:none;">${rp.initials || "JK"}</span>
+      `;
+    } else {
+      rpAvatarLargeEl.innerHTML = `<span class="avatar-initials">${rp.initials || "JK"}</span>`;
+    }
+    const rpNameLargeEl = document.getElementById("rp-name-large");
+    if (rpNameLargeEl) rpNameLargeEl.innerHTML = `${rp.nameKr} <span>${rp.nameEn}</span>`;
+    const rpRoleLargeEl = document.getElementById("rp-role-large");
+    if (rpRoleLargeEl) rpRoleLargeEl.innerText = rp.roleKr;
+    const rpEmailLargeEl = document.getElementById("rp-email-large");
+    if (rpEmailLargeEl) rpEmailLargeEl.innerHTML = `<a href="mailto:${rp.email}" style="color:var(--primary-color); border-bottom:1px dashed var(--accent-color);">${rp.email}</a>`;
+    const rpOfficeLargeEl = document.getElementById("rp-office-large");
+    if (rpOfficeLargeEl) rpOfficeLargeEl.innerText = rp.office;
+    
+    // Bio
+    const rpBioTextEl = document.getElementById("rp-bio-text");
+    if (rpBioTextEl) {
+      rpBioTextEl.innerHTML = `
+        <span style="font-weight: 600; display: block; margin-bottom: 0.75rem; line-height: 1.7; color: var(--primary-color);">${rp.bioKr}</span>
+        <span style="font-family: var(--font-en); font-size: 0.9rem; color: var(--text-secondary); display: block; line-height: 1.7;">${rp.bioEn}</span>
+      `;
+    }
+
+    // Education / Experience list
+    const rpEducationListEl = document.getElementById("rp-education-list");
+    if (rpEducationListEl) {
+      rpEducationListEl.innerHTML = "";
+    }
+  }
+
   // Students Grids
   const phdGridEl = document.getElementById("phd-grid");
   if (phdGridEl) {
