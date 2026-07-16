@@ -1456,7 +1456,8 @@ button {
   font-weight: 700;
 }
 
-.contact-email-link {
+.contact-email-link,
+.contact-tel-link {
   font-family: var(--font-en);
   font-size: 1.5rem;
   font-weight: 700;
@@ -1464,12 +1465,6 @@ button {
   border-bottom: 2px solid var(--accent-color);
   padding-bottom: 0.25rem;
   display: inline-block;
-  transition: color var(--transition-fast), border-color var(--transition-fast);
-}
-
-.contact-email-link:hover {
-  color: var(--accent-color-hover);
-  border-color: var(--primary-color);
 }
 
 .contact-address-text {

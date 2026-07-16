@@ -158,7 +158,7 @@ const SURD_DATA = {
       photo: "", // Placeholder initials will be "JN"
       image: "",
       email: "jnam@uos.ac.kr",
-      office: "Professor Nam Jin’s Office: Baebong Hall, Room 301 / 배봉관 301호",
+      office: "Professor Nam Jin's Office: Baebong Hall, Room 301 / 배봉관 301호",
       bioKr: "남진 교수는 서울시립대학교 도시공학과를 졸업하고 동 대학원에서 석사, 일본 요코하마대학교(University of Yokohama)에서 도시계획학 박사 학위를 취득하였습니다. 서울시립대학교 도시공학과 교수로 재직 중이며, 도시정비 및 개발, 주택시장, 스마트시티 분야에서 다수의 핵심 국책 연구 과제를 수행하고 있습니다.",
       bioEn: "Prof. Jin Nam received his B.S. in Urban Engineering from the University of Seoul, M.S. from University of Seoul, and Ph.D. in Urban Planning from the University of Yokohama. He is a professor at the University of Seoul, actively conducting major national R&D projects focusing on smart urban renewal, housing redevelopment policies, and spatial economics.",
       education: [

@@ -492,7 +492,17 @@ function renderContactSection() {
   const contactEmailEl = document.getElementById("contact-email");
   if (contactEmailEl) {
     contactEmailEl.innerText = contact.email;
-    contactEmailEl.setAttribute("href", `mailto:${contact.email}`);
+  }
+
+  const contactTelWrapper = document.getElementById("contact-tel-wrapper");
+  const contactTelEl = document.getElementById("contact-tel");
+  if (contact.tel && contactTelEl) {
+    contactTelEl.innerText = contact.tel;
+    if (contactTelWrapper) {
+      contactTelWrapper.style.display = "block";
+    }
+  } else if (contactTelWrapper) {
+    contactTelWrapper.style.display = "none";
   }
   
   const contactAddressEl = document.getElementById("contact-address");
