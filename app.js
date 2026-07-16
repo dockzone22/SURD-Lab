@@ -101,7 +101,14 @@ function renderAboutSection() {
   const pi = SURD_DATA.members.pi;
   const piAvatarEl = document.getElementById("pi-avatar");
   if (pi && piAvatarEl) {
-    piAvatarEl.innerText = pi.initials || "NJ";
+    if (pi.image) {
+      piAvatarEl.innerHTML = `
+        <img src="${pi.image}" alt="${pi.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        <span class="avatar-initials" style="display:none;">${pi.initials || "NJ"}</span>
+      `;
+    } else {
+      piAvatarEl.innerHTML = `<span class="avatar-initials">${pi.initials || "NJ"}</span>`;
+    }
     const piNameEl = document.getElementById("pi-name");
     if (piNameEl) piNameEl.innerText = pi.nameKr;
     const piRoleEl = document.getElementById("pi-role");
@@ -215,7 +222,14 @@ function renderMembersSection() {
   const pi = members.pi;
   const piAvatarLargeEl = document.getElementById("pi-avatar-large");
   if (pi && piAvatarLargeEl) {
-    piAvatarLargeEl.innerText = pi.initials || "NJ";
+    if (pi.image) {
+      piAvatarLargeEl.innerHTML = `
+        <img src="${pi.image}" alt="${pi.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        <span class="avatar-initials" style="display:none;">${pi.initials || "NJ"}</span>
+      `;
+    } else {
+      piAvatarLargeEl.innerHTML = `<span class="avatar-initials">${pi.initials || "NJ"}</span>`;
+    }
     const piNameLargeEl = document.getElementById("pi-name-large");
     if (piNameLargeEl) piNameLargeEl.innerHTML = `${pi.nameKr} <span>${pi.nameEn}</span>`;
     const piRoleLargeEl = document.getElementById("pi-role-large");
@@ -265,9 +279,17 @@ function renderStudentGrid(category, containerId) {
   const students = SURD_DATA.members[category];
   if (!container || !students) return;
 
-  container.innerHTML = students.map(student => `
+  container.innerHTML = students.map(student => {
+    let avatarContent = `<span class="avatar-initials">${student.initials}</span>`;
+    if (student.image) {
+      avatarContent = `
+        <img src="${student.image}" alt="${student.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+        <span class="avatar-initials" style="display:none;">${student.initials}</span>
+      `;
+    }
+    return `
     <div class="member-card">
-      <div class="member-avatar">${student.initials}</div>
+      <div class="member-avatar">${avatarContent}</div>
       <h4 class="member-name">
         ${student.nameKr}
         <span>${student.nameEn}</span>

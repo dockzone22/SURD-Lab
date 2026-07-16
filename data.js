@@ -156,6 +156,7 @@ const SURD_DATA = {
       roleKr: "지도교수 / 공학박사",
       roleEn: "Principal Investigator / Ph.D.",
       photo: "", // Placeholder initials will be "JN"
+      image: "",
       email: "namjin@uos.ac.kr",
       office: "Professor Nam Jin’s Office: Baebong Hall, Room 301 / 배봉관 301호",
       bioKr: "남진 교수는 서울시립대학교 도시공학과를 졸업하고 서울대학교 대학원에서 석사, 일본 도쿄대학교(University of Tokyo)에서 도시계획학 박사 학위를 취득하였습니다. 서울시립대학교 도시공학과 교수로 재직 중이며, 스마트 도시재생, 도시정비 정책, 공간 경제 분석 분야에서 다수의 핵심 국책 연구 과제를 수행하고 있습니다.",
@@ -170,7 +171,8 @@ const SURD_DATA = {
         roleEn: "Ph.D. Candidate",
         interestsKr: "도시 공간 빅데이터, 공간 회귀 모형, 주택 금융",
         interestsEn: "Urban Big Data, Spatial Regression, Housing Finance",
-        email: "jimin.lee@university.ac.kr"
+        email: "jimin.lee@university.ac.kr",
+        image: ""
       },
       {
         nameKr: "박준서",
@@ -180,7 +182,8 @@ const SURD_DATA = {
         roleEn: "Ph.D. Student",
         interestsKr: "스마트시티 기획, 기후탄력성 도시 정비, 탄소저감",
         interestsEn: "Smart City Planning, Climate-resilient Renewal, Carbon Reduction",
-        email: "junseo.p@university.ac.kr"
+        email: "junseo.p@university.ac.kr",
+        image: ""
       },
       {
         nameKr: "최아름",
@@ -190,7 +193,8 @@ const SURD_DATA = {
         roleEn: "Ph.D. Student",
         interestsKr: "공간 복지, 노인 거주 취약성, AI 의사결정 모델",
         interestsEn: "Spatial Welfare, Elderly Housing Vulnerability, AI Decision Models",
-        email: "ar.choi@university.ac.kr"
+        email: "ar.choi@university.ac.kr",
+        image: ""
       }
     ],
     masters: [
@@ -202,7 +206,8 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "GIS 공간 분석, 유동 인구 이동 패턴, 디지털 트윈",
         interestsEn: "GIS Spatial Analysis, Pedestrian Flow Patterns, Digital Twin",
-        email: "dh.kang@university.ac.kr"
+        email: "dh.kang@university.ac.kr",
+        image: ""
       },
       {
         nameKr: "윤서연",
@@ -212,7 +217,8 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "가로환경 정비, 스마트 보행 네트워크, 미세먼지 저감",
         interestsEn: "Streetscape Improvement, Smart Pedestrian Network, Fine Dust Abatement",
-        email: "sy.yoon@university.ac.kr"
+        email: "sy.yoon@university.ac.kr",
+        image: ""
       },
       {
         nameKr: "김민재",
@@ -222,7 +228,8 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "주거 젠트리피케이션, 도시 재생 상생협약, 공간 경제",
         interestsEn: "Residential Gentrification, Win-win Agreements, Spatial Economics",
-        email: "mj.kim@university.ac.kr"
+        email: "mj.kim@university.ac.kr",
+        image: ""
       },
       {
         nameKr: "Sarah Jenkins",
@@ -232,7 +239,19 @@ const SURD_DATA = {
         roleEn: "M.S. Student (International)",
         interestsKr: "글로벌 지속가능 도시 지표 개발, 대중교통 지향 개발 (TOD)",
         interestsEn: "Global Sustainable Urban Indicators, Transit-Oriented Development (TOD)",
-        email: "sarah.j@university.ac.kr"
+        email: "sarah.j@university.ac.kr",
+        image: ""
+      },
+      {
+        nameKr: "김지우",
+        nameEn: "Jiwoo Kim",
+        initials: "JK",
+        roleKr: "석사과정",
+        roleEn: "M.S. Student",
+        interestsKr: "주택 가격, 상권 분석, 상업용 부동산",
+        interestsEn: "Housing Prices, Commercial District Analysis, Commercial Real Estate",
+        email: "jw.kim@university.ac.kr",
+        image: "./assets/members/jiwoo_kim.jpg"
       }
     ]
   },
