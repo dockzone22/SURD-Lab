@@ -471,7 +471,7 @@ const SURD_DATA = {
   // Contact Section
   contact: {
     email: "namjin@uos.ac.kr",
-    tel: "02-6490-2720", // Realistic UOS office prefix
+    tel: "02-6490-5519", 
     officeKr: "서울특별시 동대문구 서울시립대로 163, 서울시립대학교 배봉관 315호",
     officeEn: "Baebong Hall, Room 315, University of Seoul, 163 Seoulsiripdae-ro, Dongdaemun-gu, Seoul, Republic of Korea",
     directionsKr: "지하철 1호선 청량리역 3번 출구 또는 경의중앙선 회기역 2번 출구에서 서울시립대학교 방면으로 오시면 편리합니다. 버스를 이용하시는 경우 서울시립대 정문 정류장(ID: 06-188)에서 하차하신 후 배봉관 315호로 오시면 편리합니다.",
