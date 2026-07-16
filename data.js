@@ -184,7 +184,6 @@ const SURD_DATA = {
         roleEn: "Ph.D. Candidate",
         interestsKr: "도시 공간 빅데이터, 공간 회귀 모형, 주택 금융",
         interestsEn: "Urban Big Data, Spatial Regression, Housing Finance",
-        email: "jimin.lee@university.ac.kr",
         image: ""
       },
       {
@@ -195,7 +194,6 @@ const SURD_DATA = {
         roleEn: "Ph.D. Student",
         interestsKr: "스마트시티 기획, 기후탄력성 도시 정비, 탄소저감",
         interestsEn: "Smart City Planning, Climate-resilient Renewal, Carbon Reduction",
-        email: "junseo.p@university.ac.kr",
         image: ""
       },
       {
@@ -206,7 +204,6 @@ const SURD_DATA = {
         roleEn: "Ph.D. Student",
         interestsKr: "공간 복지, 노인 거주 취약성, AI 의사결정 모델",
         interestsEn: "Spatial Welfare, Elderly Housing Vulnerability, AI Decision Models",
-        email: "ar.choi@university.ac.kr",
         image: ""
       }
     ],
@@ -219,7 +216,6 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "GIS 공간 분석, 유동 인구 이동 패턴, 디지털 트윈",
         interestsEn: "GIS Spatial Analysis, Pedestrian Flow Patterns, Digital Twin",
-        email: "dh.kang@university.ac.kr",
         image: ""
       },
       {
@@ -230,7 +226,6 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "가로환경 정비, 스마트 보행 네트워크, 미세먼지 저감",
         interestsEn: "Streetscape Improvement, Smart Pedestrian Network, Fine Dust Abatement",
-        email: "sy.yoon@university.ac.kr",
         image: ""
       },
       {
@@ -241,7 +236,6 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "주거 젠트리피케이션, 도시 재생 상생협약, 공간 경제",
         interestsEn: "Residential Gentrification, Win-win Agreements, Spatial Economics",
-        email: "mj.kim@university.ac.kr",
         image: ""
       },
       {
@@ -252,7 +246,6 @@ const SURD_DATA = {
         roleEn: "M.S. Student (International)",
         interestsKr: "글로벌 지속가능 도시 지표 개발, 대중교통 지향 개발 (TOD)",
         interestsEn: "Global Sustainable Urban Indicators, Transit-Oriented Development (TOD)",
-        email: "sarah.j@university.ac.kr",
         image: ""
       },
       {
@@ -263,7 +256,6 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "주택 가격, 상권 분석, 상업용 부동산",
         interestsEn: "Housing Prices, Commercial District Analysis, Commercial Real Estate",
-        email: "jw.kim@university.ac.kr",
         image: "./assets/members/jiwoo_kim.jpg"
       }
     ]

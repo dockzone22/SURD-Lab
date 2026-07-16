@@ -1110,25 +1110,8 @@ button {
 .member-interests {
   font-size: 0.85rem;
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   max-width: 90%;
-}
-
-.member-email-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  transition: transform var(--transition-fast), background-color var(--transition-fast);
-}
-
-.member-email-icon:hover {
-  transform: scale(1.1);
-  background-color: #ffffff;
 }
 
 /* Publications Section */

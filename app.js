@@ -333,16 +333,13 @@ function renderStudentGrid(category, containerId) {
       </h4>
       <p class="member-role">${student.roleKr}</p>
       
-      <!-- Hover reveal: research interest + email icon -->
+      <!-- Hover reveal: research interest -->
       <div class="member-hover-overlay">
         <div class="member-hover-title">Research Area</div>
         <div class="member-interests">
           <strong style="display: block; font-size: 0.85rem; margin-bottom: 0.25rem;">${student.interestsKr}</strong>
           <span style="font-family: var(--font-en); font-size: 0.75rem; display: block; opacity: 0.85; line-height: 1.4;">${student.interestsEn}</span>
         </div>
-        <a href="mailto:${student.email}" class="member-email-icon" title="이메일 보내기">
-          <i data-lucide="mail" style="width: 16px; height: 16px;"></i>
-        </a>
       </div>
     </div>
     `;
