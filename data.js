@@ -282,8 +282,8 @@ const SURD_DATA = {
         initials: "SP",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "///",
-        interestsEn: "///",
+        interestsKr: "주거정책, 포용적 계획, 균형 발전",
+        interestsEn: "Housing Policy, Inclusive Urban Planning, Balanced Regional Development",
         image: ""
       },
       {
@@ -313,7 +313,7 @@ const SURD_DATA = {
         roleKr: "석사과정",
         roleEn: "M.S. Student",
         interestsKr: "주택 가격, 상권 분석, 상업용 부동산",
-        interestsEn: "Housing Prices, Commercial District Analysis, Commercial Real Estate",
+        interestsEn: "Housing Prices, Commercial District Analysis, Commercial Real Estate + (Website Builder!)",
         image: "./assets/members/jiwoo_kim.jpg"
       }
     ]
