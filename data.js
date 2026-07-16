@@ -160,7 +160,15 @@ const SURD_DATA = {
       email: "namjin@uos.ac.kr",
       office: "Professor Nam Jin’s Office: Baebong Hall, Room 301 / 배봉관 301호",
       bioKr: "남진 교수는 서울시립대학교 도시공학과를 졸업하고 서울대학교 대학원에서 석사, 일본 도쿄대학교(University of Tokyo)에서 도시계획학 박사 학위를 취득하였습니다. 서울시립대학교 도시공학과 교수로 재직 중이며, 스마트 도시재생, 도시정비 정책, 공간 경제 분석 분야에서 다수의 핵심 국책 연구 과제를 수행하고 있습니다.",
-      bioEn: "Prof. Jin Nam received his B.S. in Urban Engineering from the University of Seoul, M.S. from Seoul National University, and Ph.D. in Urban Planning from the University of Tokyo. He is a professor at the University of Seoul, actively conducting major national R&D projects focusing on smart urban renewal, housing redevelopment policies, and spatial economics."
+      bioEn: "Prof. Jin Nam received his B.S. in Urban Engineering from the University of Seoul, M.S. from Seoul National University, and Ph.D. in Urban Planning from the University of Tokyo. He is a professor at the University of Seoul, actively conducting major national R&D projects focusing on smart urban renewal, housing redevelopment policies, and spatial economics.",
+      education: [
+        "일본 도쿄대학교 (University of Tokyo) 도시계획학 박사 (Ph.D. in Urban Planning)",
+        "서울대학교 대학원 도시공학 석사 (M.S. in Urban Engineering, SNU)",
+        "서울시립대학교 도시공학과 학사 (B.S. in Urban Engineering, UOS)",
+        "국토교통부 도시재생 특별위원회 위원 (National Urban Regeneration Committee Member, MOLIT)",
+        "서울특별시 도시계획위원회 위원 (Seoul Metropolitan City Planning Committee Member)",
+        "스마트 도시정비 및 주택 정비 재생 분야 주요 국책 과제 총괄 책임자"
+      ]
     },
     // TODO: 추후 실제 소개문 및 약력 정보로 교체 필요
     researchProfessor: {

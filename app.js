@@ -119,25 +119,10 @@ function renderAboutSection() {
     if (piOfficeEl) piOfficeEl.innerText = pi.office.split("/")[1].trim(); // Get Korean office part
   }
 
-  // Timeline
-  const timelineContainer = document.getElementById("timeline-container");
-  if (timelineContainer && about.timeline) {
-    timelineContainer.innerHTML = about.timeline.map(item => `
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-year">${item.year}</div>
-          <h4 class="timeline-item-title">
-            ${item.titleKr}
-            <span style="font-family: var(--font-en); font-size: 0.85rem; color: var(--text-light); font-weight: 500; display: block; margin-top: 0.15rem;">${item.titleEn}</span>
-          </h4>
-          <p class="timeline-item-desc">
-            ${item.descKr}
-            <span style="font-family: var(--font-en); font-size: 0.8rem; color: var(--text-light); display: block; margin-top: 0.25rem;">${item.descEn}</span>
-          </p>
-        </div>
-      </div>
-    `).join("");
+  // PI Education / Experience list
+  const piEducationListEl = document.getElementById("pi-education-list");
+  if (piEducationListEl && pi && pi.education) {
+    piEducationListEl.innerHTML = pi.education.map(item => `<li>${item}</li>`).join("");
   }
 }
 
@@ -218,50 +203,7 @@ function renderMembersSection() {
   const members = SURD_DATA.members;
   if (!members) return;
 
-  // PI Info Detailed
-  const pi = members.pi;
-  const piAvatarLargeEl = document.getElementById("pi-avatar-large");
-  if (pi && piAvatarLargeEl) {
-    if (pi.image) {
-      piAvatarLargeEl.innerHTML = `
-        <img src="${pi.image}" alt="${pi.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
-        <span class="avatar-initials" style="display:none;">${pi.initials || "NJ"}</span>
-      `;
-    } else {
-      piAvatarLargeEl.innerHTML = `<span class="avatar-initials">${pi.initials || "NJ"}</span>`;
-    }
-    const piNameLargeEl = document.getElementById("pi-name-large");
-    if (piNameLargeEl) piNameLargeEl.innerHTML = `${pi.nameKr} <span>${pi.nameEn}</span>`;
-    const piRoleLargeEl = document.getElementById("pi-role-large");
-    if (piRoleLargeEl) piRoleLargeEl.innerText = pi.roleKr;
-    const piEmailLargeEl = document.getElementById("pi-email-large");
-    if (piEmailLargeEl) piEmailLargeEl.innerHTML = `<a href="mailto:${pi.email}" style="color:var(--primary-color); border-bottom:1px dashed var(--accent-color);">${pi.email}</a>`;
-    const piOfficeLargeEl = document.getElementById("pi-office-large");
-    if (piOfficeLargeEl) piOfficeLargeEl.innerText = pi.office;
-    
-    // Bio
-    const piBioTextEl = document.getElementById("pi-bio-text");
-    if (piBioTextEl) {
-      piBioTextEl.innerHTML = `
-        <span style="font-weight: 600; display: block; margin-bottom: 0.75rem; line-height: 1.7; color: var(--primary-color);">${pi.bioKr}</span>
-        <span style="font-family: var(--font-en); font-size: 0.9rem; color: var(--text-secondary); display: block; line-height: 1.7;">${pi.bioEn}</span>
-      `;
-    }
 
-    // Education / Experience list
-    const piEducationListEl = document.getElementById("pi-education-list");
-    if (piEducationListEl) {
-      const eduItems = [
-        "일본 도쿄대학교 (University of Tokyo) 도시계획학 박사 (Ph.D. in Urban Planning)",
-        "서울대학교 대학원 도시공학 석사 (M.S. in Urban Engineering, SNU)",
-        "서울시립대학교 도시공학과 학사 (B.S. in Urban Engineering, UOS)",
-        "국토교통부 도시재생 특별위원회 위원 (National Urban Regeneration Committee Member, MOLIT)",
-        "서울특별시 도시계획위원회 위원 (Seoul Metropolitan City Planning Committee Member)",
-        "스마트 도시정비 및 주택 정비 재생 분야 주요 국책 과제 총괄 책임자"
-      ];
-      piEducationListEl.innerHTML = eduItems.map(item => `<li>${item}</li>`).join("");
-    }
-  }
 
   // Research Professor Info Detailed
   const rp = members.researchProfessor;
