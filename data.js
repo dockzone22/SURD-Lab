@@ -470,7 +470,7 @@ const SURD_DATA = {
 
   // Contact Section
   contact: {
-    email: "namjin@uos.ac.kr",
+    email: "jnam@uos.ac.kr",
     tel: "02-6490-5519", 
     officeKr: "서울특별시 동대문구 서울시립대로 163, 서울시립대학교 배봉관 315호",
     officeEn: "Baebong Hall, Room 315, University of Seoul, 163 Seoulsiripdae-ro, Dongdaemun-gu, Seoul, Republic of Korea",
