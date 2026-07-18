@@ -281,7 +281,7 @@ const SURD_DATA = {
         initials: "SP",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "주거정책, 포용적 계획, 균형 발전",
+        interestsKr: "주거정책, 포용적 계획, 균형발전",
         interestsEn: "Housing Policy, Inclusive Urban Planning, Balanced Regional Development",
         image: ""
       },
@@ -297,13 +297,13 @@ const SURD_DATA = {
       },
       {
         nameKr: "윤호철",
-        nameEn: "Hocheol Yoon",
+        nameEn: "Hocheol Yun",
         initials: "HY",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "글로벌 지속가능 도시 지표 개발, 대중교통 지향 개발 (TOD)",
-        interestsEn: "Global Sustainable Urban Indicators, Transit-Oriented Development (TOD)",
-        image: ""
+        interestsKr: "도시성장·쇠퇴, 균형발전, 도시공간구조",
+        interestsEn: "Urban Growth and Decline, Balanced Regional Development, Urban Spatial Structure",
+        image: "./assets/members/hocheol_yun.png"
       },
       {
         nameKr: "김지우",
