@@ -360,20 +360,63 @@ function renderAlumniSection() {
   const alumniContainer = document.getElementById("alumni-grid-container");
   if (!alumniContainer || !SURD_DATA.alumni) return;
 
-  alumniContainer.innerHTML = SURD_DATA.alumni.map(al => `
-    <div class="alumni-card">
-      <span class="alumni-year-badge">${al.gradYear} Graduation</span>
-      <h4 class="alumni-name">
-        ${al.nameKr}
-        <span style="font-family: var(--font-en); font-size: 0.8rem; font-weight: 500; color: var(--text-light); display: block; margin-top: 0.15rem;">${al.nameEn}</span>
-      </h4>
-      <span class="alumni-degree">${al.degreeKr} (${al.degreeEn})</span>
-      <div class="alumni-affiliation">
-        ${al.currentKr}
-        <span style="font-family: var(--font-en); font-size: 0.75rem; color: var(--text-light); display: block; margin-top: 0.25rem; line-height: 1.3;">${al.currentEn}</span>
+  // 1. Calculate & Display Dynamic Total Alumni Count
+  const count = SURD_DATA.alumni.length;
+  const countKrEl = document.getElementById("alumni-count-kr");
+  const countEnEl = document.getElementById("alumni-count-en");
+  if (countKrEl) countKrEl.textContent = `(총 ${count}명)`;
+  if (countEnEl) countEnEl.textContent = `(${count})`;
+
+  // Helper to get top graduation year for sorting & header badge
+  const getTopYear = (al) => {
+    if (!al.degrees || al.degrees.length === 0) return 0;
+    const phdDeg = al.degrees.find(d => d.degreeKr && d.degreeKr.includes("박사"));
+    if (phdDeg && phdDeg.gradYear) return parseInt(phdDeg.gradYear) || 0;
+    return parseInt(al.degrees[0].gradYear) || 0;
+  };
+
+  // Sort alumni list by topYear descending (newest first)
+  const sortedAlumni = [...SURD_DATA.alumni].sort((a, b) => getTopYear(b) - getTopYear(a));
+
+  alumniContainer.innerHTML = sortedAlumni.map(al => {
+    const topYear = getTopYear(al);
+    const isMulti = al.degrees && al.degrees.length > 1;
+
+    // Ensure PhD ("박사") degree is rendered on top, Master ("석사") on bottom
+    const degreesForRender = [...(al.degrees || [])].sort((d1, d2) => {
+      const isD1Phd = d1.degreeKr && d1.degreeKr.includes("박사");
+      const isD2Phd = d2.degreeKr && d2.degreeKr.includes("박사");
+      if (isD1Phd && !isD2Phd) return -1;
+      if (!isD1Phd && isD2Phd) return 1;
+      return 0;
+    });
+
+    const degreesHtml = degreesForRender.map(d => {
+      if (isMulti) {
+        return `<span class="alumni-degree-item">${d.degreeKr} (${d.degreeEn}), ${d.gradYear}</span>`;
+      } else {
+        return `<span class="alumni-degree-item">${d.degreeKr} (${d.degreeEn})</span>`;
+      }
+    }).join("");
+
+    const nameEnClean = (al.nameEn || "").trim();
+    const nameEnHtml = nameEnClean
+      ? `<span class="alumni-name-en">${nameEnClean}</span>`
+      : "";
+
+    return `
+      <div class="alumni-card">
+        <span class="alumni-year-badge">${topYear} Graduation</span>
+        <h4 class="alumni-name">
+          ${al.nameKr}
+          ${nameEnHtml}
+        </h4>
+        <div class="alumni-degrees">
+          ${degreesHtml}
+        </div>
       </div>
-    </div>
-  `).join("");
+    `;
+  }).join("");
 }
 
 /* =========================================================================

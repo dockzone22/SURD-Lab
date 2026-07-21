@@ -281,7 +281,7 @@ const SURD_DATA = {
         initials: "SP",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "주거정책, 포용적 계획, 균형 발전",
+        interestsKr: "주거정책, 포용적 계획, 균형발전",
         interestsEn: "Housing Policy, Inclusive Urban Planning, Balanced Regional Development",
         image: ""
       },
@@ -297,13 +297,13 @@ const SURD_DATA = {
       },
       {
         nameKr: "윤호철",
-        nameEn: "Hocheol Yoon",
+        nameEn: "Hocheol Yun",
         initials: "HY",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "글로벌 지속가능 도시 지표 개발, 대중교통 지향 개발 (TOD)",
-        interestsEn: "Global Sustainable Urban Indicators, Transit-Oriented Development (TOD)",
-        image: ""
+        interestsKr: "도시성장·쇠퇴, 균형발전, 도시공간구조",
+        interestsEn: "Urban Growth and Decline, Balanced Regional Development, Urban Spatial Structure",
+        image: "./assets/members/hocheol_yun.png"
       },
       {
         nameKr: "김지우",
@@ -381,40 +381,1522 @@ const SURD_DATA = {
   // Alumni Section
   alumni: [
     {
-      nameKr: "정성호",
-      nameEn: "Sungho Jung",
-      degreeKr: "공학박사",
-      degreeEn: "Ph.D.",
-      gradYear: "2023",
-      currentKr: "국토연구원 부연구위원",
-      currentEn: "Associate Research Fellow, Korea Research Institute for Human Settlements"
+      nameKr: "한지혜",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2019"
+        },
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2024"
+        }
+      ]
     },
     {
-      nameKr: "김혜원",
-      nameEn: "Hyewon Kim",
-      degreeKr: "공학석사",
-      degreeEn: "M.S.",
-      gradYear: "2022",
-      currentKr: "한국토지주택공사(LH) 스마트도시기획실 연구원",
-      currentEn: "Researcher, Smart City Planning Div., Korea Land & Housing Corporation"
+      nameKr: "정재훈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2019"
+        },
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2026"
+        }
+      ]
     },
     {
-      nameKr: "이동우",
-      nameEn: "Dongwoo Lee",
-      degreeKr: "공학석사",
-      degreeEn: "M.S.",
-      gradYear: "2021",
-      currentKr: "서울시정연구원 연구원",
-      currentEn: "Researcher, Seoul Institute"
+      nameKr: "이정현",
+      nameEn: "",
+      currentMember: true,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2020"
+        },
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2026"
+        }
+      ]
     },
     {
-      nameKr: "최윤지",
-      nameEn: "Yoonji Choi",
-      degreeKr: "공학석사",
-      degreeEn: "M.S.",
-      gradYear: "2020",
-      currentKr: "㈜삼안 도시계획본부 대리",
-      currentEn: "Assistant Manager, Urban Planning Dept., Saman Eng"
+      nameKr: "권영필",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2017"
+        },
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "류용상",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        },
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2021"
+        }
+      ]
+    },
+    {
+      nameKr: "이지현",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        },
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2021"
+        }
+      ]
+    },
+    {
+      nameKr: "이지현",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "송정미",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2026"
+        }
+      ]
+    },
+    {
+      nameKr: "김창규",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2026"
+        }
+      ]
+    },
+    {
+      nameKr: "이광석",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2025"
+        }
+      ]
+    },
+    {
+      nameKr: "노영언",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2025"
+        }
+      ]
+    },
+    {
+      nameKr: "이해인",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2025"
+        }
+      ]
+    },
+    {
+      nameKr: "김경화",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2025"
+        }
+      ]
+    },
+    {
+      nameKr: "노윤아",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2025"
+        }
+      ]
+    },
+    {
+      nameKr: "박초롱",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2025"
+        }
+      ]
+    },
+    {
+      nameKr: "장단위(張團偉)",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "최영운",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "나기범",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "장진하",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "이재일",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "유수민",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "안애랑",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "조성훈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "김은재",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "조민주",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2024"
+        }
+      ]
+    },
+    {
+      nameKr: "정홍",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "한영민",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "김민영",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "김은광",
+      nameEn: "",
+      currentMember: true,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "김상우",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "김성휘",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "정대혁",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "주수빈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "오윤정",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "정지우",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "김도윤",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "박민정",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "홍선기",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "성수연",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "손수민",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "권재연",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "이이주",
+      nameEn: "",
+      currentMember: true,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "이태영",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "안성재",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "조웅전",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "Bo DENG",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "김선정",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "이재국",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "Reach RIM",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "문규리",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "김나래",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "김요한",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2021"
+        }
+      ]
+    },
+    {
+      nameKr: "이수빈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2021"
+        }
+      ]
+    },
+    {
+      nameKr: "김지연",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2021"
+        }
+      ]
+    },
+    {
+      nameKr: "박인숙",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2021"
+        }
+      ]
+    },
+    {
+      nameKr: "장제환",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2021"
+        }
+      ]
+    },
+    {
+      nameKr: "김주영",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2020"
+        }
+      ]
+    },
+    {
+      nameKr: "이다원",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2020"
+        }
+      ]
+    },
+    {
+      nameKr: "허정문",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2020"
+        }
+      ]
+    },
+    {
+      nameKr: "박미현",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2019"
+        }
+      ]
+    },
+    {
+      nameKr: "정필립",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2019"
+        }
+      ]
+    },
+    {
+      nameKr: "남우림",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2019"
+        }
+      ]
+    },
+    {
+      nameKr: "성진욱",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2019"
+        }
+      ]
+    },
+    {
+      nameKr: "장하림",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2019"
+        }
+      ]
+    },
+    {
+      nameKr: "이하연",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2018"
+        }
+      ]
+    },
+    {
+      nameKr: "양만식",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2018"
+        }
+      ]
+    },
+    {
+      nameKr: "장태현",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2018"
+        }
+      ]
+    },
+    {
+      nameKr: "김사인",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2018"
+        }
+      ]
+    },
+    {
+      nameKr: "전근철",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2018"
+        }
+      ]
+    },
+    {
+      nameKr: "이유진",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2017"
+        }
+      ]
+    },
+    {
+      nameKr: "심보영",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2017"
+        }
+      ]
+    },
+    {
+      nameKr: "박지현",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2017"
+        }
+      ]
+    },
+    {
+      nameKr: "정희종",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2017"
+        }
+      ]
+    },
+    {
+      nameKr: "김상훈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2016"
+        }
+      ]
+    },
+    {
+      nameKr: "이선영",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2016"
+        }
+      ]
+    },
+    {
+      nameKr: "박교관",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2015"
+        }
+      ]
+    },
+    {
+      nameKr: "홍영주",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2014"
+        }
+      ]
+    },
+    {
+      nameKr: "윤혜림",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2014"
+        }
+      ]
+    },
+    {
+      nameKr: "김수연",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "류준영",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "노혜진",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "강분선",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "손종효",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "김희진",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "윤보현",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "김정기",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "서용준",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "이병룡",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "김건영",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "임인구",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "배병우",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "도종원",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
+        }
+      ]
+    },
+    {
+      nameKr: "이용훈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2012"
+        }
+      ]
+    },
+    {
+      nameKr: "심진범",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2012"
+        }
+      ]
+    },
+    {
+      nameKr: "김현태",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2012"
+        }
+      ]
+    },
+    {
+      nameKr: "정주석",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2012"
+        }
+      ]
+    },
+    {
+      nameKr: "복선영",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2012"
+        }
+      ]
+    },
+    {
+      nameKr: "김판섭",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2012"
+        }
+      ]
+    },
+    {
+      nameKr: "박정훈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2012"
+        }
+      ]
+    },
+    {
+      nameKr: "김영배",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2012"
+        }
+      ]
+    },
+    {
+      nameKr: "신은진",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2012"
+        }
+      ]
+    },
+    {
+      nameKr: "최은선",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2012"
+        }
+      ]
+    },
+    {
+      nameKr: "신철호",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        }
+      ]
+    },
+    {
+      nameKr: "이진영",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        }
+      ]
+    },
+    {
+      nameKr: "김용배",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        }
+      ]
+    },
+    {
+      nameKr: "김만호",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        }
+      ]
+    },
+    {
+      nameKr: "배명은",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        }
+      ]
+    },
+    {
+      nameKr: "조영국",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        }
+      ]
+    },
+    {
+      nameKr: "윤병훈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        }
+      ]
+    },
+    {
+      nameKr: "서귀동",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "김현정",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "노정대",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "조민중",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "신미경",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "유명소",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "어유라",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "김진호",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "박재언",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "이상용",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
+        }
+      ]
+    },
+    {
+      nameKr: "정순구",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
+        }
+      ]
+    },
+    {
+      nameKr: "고경곤",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
+        }
+      ]
+    },
+    {
+      nameKr: "김재진",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
+        }
+      ]
+    },
+    {
+      nameKr: "강원준",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
+        }
+      ]
+    },
+    {
+      nameKr: "김진하",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
+        }
+      ]
     }
   ],
 

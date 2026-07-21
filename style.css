@@ -1289,6 +1289,20 @@ button {
 }
 
 /* Alumni Section */
+.alumni-count-kr {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-left: 0.4rem;
+}
+
+.alumni-count-en {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-left: 0.3rem;
+}
+
 .alumni-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1298,10 +1312,14 @@ button {
 .alumni-card {
   border: 1px solid var(--border-color);
   border-radius: 4px;
-  padding: 2rem 1.25rem;
+  padding: 1.75rem 1.25rem;
   background-color: var(--bg-color);
   text-align: center;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .alumni-card:hover {
@@ -1323,26 +1341,31 @@ button {
 .alumni-name {
   font-size: 1.1rem;
   font-weight: 700;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
 }
 
-.alumni-degree {
+.alumni-name-en {
+  font-family: var(--font-en);
   font-size: 0.8rem;
+  font-weight: 500;
   color: var(--text-light);
-  margin-bottom: 1rem;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.5rem;
   display: block;
-  width: 70%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 0.2rem;
 }
 
-.alumni-affiliation {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.4;
-  font-weight: 500;
+.alumni-degrees {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.alumni-degree-item {
+  font-size: 0.825rem;
+  color: var(--text-light);
+  line-height: 1.35;
+  display: block;
 }
 
 /* News Section */
