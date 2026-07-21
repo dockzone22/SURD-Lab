@@ -473,7 +473,7 @@ const SURD_DATA = {
         {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
-          gradYear: "2011"
+          gradYear: "2013"
         },
         {
           degreeKr: "공학박사",
@@ -490,7 +490,7 @@ const SURD_DATA = {
         {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
-          gradYear: "2013"
+          gradYear: "2011"
         }
       ]
     },
@@ -1891,6 +1891,11 @@ const SURD_DATA = {
       nameEn: "",
       currentMember: false,
       degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2013"
+        },
         {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
