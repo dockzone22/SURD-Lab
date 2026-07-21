@@ -291,8 +291,8 @@ const SURD_DATA = {
         initials: "HS",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "글로벌 지속가능 도시 지표 개발, 대중교통 지향 개발 (TOD)",
-        interestsEn: "Global Sustainable Urban Indicators, Transit-Oriented Development (TOD)",
+        interestsKr: "기후변화 대응, 도시환경, 도시공간 데이터 분석",
+        interestsEn: "Climate Change Adaptation, Urban Environment, Urban Spatial Data Analytics",
         image: ""
       },
       {
