@@ -1960,7 +1960,7 @@ const SURD_DATA = {
        description: "교수님 인터뷰나 기고문이 들어갑니다",
        source: "00일보",
        url: ""
-     },
+     }
     // {
     //   date: "YYYY.MM.DD",
     //   type: "interview", // or "column"
