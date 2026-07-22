@@ -28,7 +28,7 @@ const SURD_DATA = {
     { labelKr: "연구원 수", labelEn: "Members", value: "14", icon: "users" },
     { labelKr: "발표 논문", labelEn: "Publications", value: "85+", icon: "file-text" },
     { labelKr: "수행 완료 프로젝트", labelEn: "COMPLETED PROJECTS", value: "24", icon: "briefcase" },
-    { labelKr: "설립 연도", labelEn: "Year Founded", value: "2018", icon: "calendar" }
+    { labelKr: "설립 연도", labelEn: "Year Founded", value: "2006", icon: "calendar" }
   ],
 
   // About Section
@@ -66,8 +66,8 @@ const SURD_DATA = {
         year: "2018",
         titleKr: "SURD Lab 설립",
         titleEn: "SURD Lab Founded",
-        descKr: "스마트도시주택정비및개발연구실 출범 (지도교수 김상우)",
-        descEn: "Established the Smart Urban Renewal & Development Laboratory under Prof. Sangwoo Kim"
+        descKr: "스마트도시주택정비및개발연구실 출범 (지도교수 남진)",
+        descEn: "Established the Smart Urban Renewal & Development Laboratory under Prof. Jin Nam"
       }
     ]
   },
@@ -197,7 +197,7 @@ const SURD_DATA = {
         nameKr: "이정현",
         nameEn: "Junghyun Lee",
         initials: "JL",
-        roleKr: "박사과정(졸업)",
+        roleKr: "박사과정 (졸업)",
         roleEn: "Ph.D.",
         interestsKr: "공간 복지, 노인 거주 취약성, AI 의사결정 모델",
         interestsEn: "Spatial Welfare, Elderly Housing Vulnerability, AI Decision Models",
@@ -1943,6 +1943,15 @@ const SURD_DATA = {
 
   // Interviews and Columns Section
   interviews: [
+    {
+       date: "2026.07.22",
+       type: "interview", // or "column"
+       titleKr: "인터뷰예시",
+       titleEn: "interview example",
+       description: "교수님 인터뷰나 기고문이 들어갑니다",
+       source: "00일보",
+       url: ""
+     },
     // {
     //   date: "YYYY.MM.DD",
     //   type: "interview", // or "column"
