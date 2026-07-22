@@ -1953,7 +1953,7 @@ const SURD_DATA = {
        url: ""
      },
      {
-       date: "2026.07.24",
+       date: "2026.07.22",
        type: "column", // or "column"
        titleKr: "기고문예시",
        titleEn: "column example",
