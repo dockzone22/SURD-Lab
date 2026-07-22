@@ -1943,11 +1943,20 @@ const SURD_DATA = {
 
   // Interviews and Columns Section
   interviews: [
-    {
+     {
        date: "2026.07.22",
        type: "interview", // or "column"
        titleKr: "인터뷰예시",
        titleEn: "interview example",
+       description: "교수님 인터뷰나 기고문이 들어갑니다",
+       source: "00일보",
+       url: ""
+     },
+     {
+       date: "2026.07.24",
+       type: "column", // or "column"
+       titleKr: "기고문예시",
+       titleEn: "column example",
        description: "교수님 인터뷰나 기고문이 들어갑니다",
        source: "00일보",
        url: ""
