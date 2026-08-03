@@ -318,65 +318,7 @@ const SURD_DATA = {
     ]
   },
 
-  // Publications Section
-  publications: [
-    {
-      category: "SSCI",
-      title: "Predicting Urban Gentrification Trajectories Using Machine Learning and Multi-source Spatial Big Data",
-      authors: "Lee, J., Kim, S. (Corresponding Author), & Park, J.",
-      journal: "Landscape and Urban Planning",
-      year: 2024,
-      volumeInfo: "Vol. 241, 104928",
-      doi: "https://doi.org/10.1016/j.landurbplan.2023.104928"
-    },
-    {
-      category: "SSCI",
-      title: "How Smart Green Infrastructures Mitigate Urban Heat Island Effects: A Spatial Econometric Approach in Seoul",
-      authors: "Park, J., Choi, A., & Kim, S.",
-      journal: "Sustainable Cities and Society",
-      year: 2023,
-      volumeInfo: "Vol. 95, 104612",
-      doi: "https://doi.org/10.1016/j.scs.2023.104612"
-    },
-    {
-      category: "KCI",
-      title: "기계학습 기반의 서울시 아파트 노후도 평가와 스마트 유지보수 의사결정 모델",
-      englishTitle: "Machine Learning-Based Building Degradation Assessment and Smart Maintenance Decision Model for Apartments in Seoul",
-      authors: "최아름, 이지민, 김상우",
-      journal: "대한국토·도시계획학회지 [국토계획]",
-      year: 2023,
-      volumeInfo: "제58권 제3호, pp. 45-62",
-      doi: "https://doi.org/10.17208/jkpa.2023.06.58.3.45"
-    },
-    {
-      category: "KCI",
-      title: "도시 소외지역 정비를 위한 스마트 공간 복지 시설의 최적 입지 선정 모델",
-      englishTitle: "Optimization Model for Location Selection of Smart Spatial Welfare Facilities for Urban Disadvantaged Areas",
-      authors: "윤서연, 강도현, 김상우",
-      journal: "한국도시설계학회지 [도시설계]",
-      year: 2022,
-      volumeInfo: "제23권 제5호, pp. 89-104",
-      doi: "https://doi.org/10.38195/judik.2022.10.23.5.89"
-    },
-    {
-      category: "Conference",
-      title: "A Digital Twin Framework for Simulating Flood Resilience in Low-Lying Urban Residential Blocks",
-      authors: "Kang, D., Jenkins, S., & Kim, S.",
-      journal: "Proceedings of the 2024 International Conference on Smart Urbanism (ICSU)",
-      year: 2024,
-      volumeInfo: "Singapore, June 14-16",
-      doi: ""
-    },
-    {
-      category: "Conference",
-      title: "Evaluating the Effectiveness of Smart Street Design on Pedestrian Spatial Behavior Using WiFi Sniffer Logs",
-      authors: "Yoon, S., & Kim, S.",
-      journal: "Annual Conference of the Association of Collegiate Schools of Planning (ACSP)",
-      year: 2023,
-      volumeInfo: "Chicago, USA, October 19-21",
-      doi: ""
-    }
-  ],
+
 
   // Alumni Section
   alumni: [

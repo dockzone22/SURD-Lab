@@ -290,49 +290,158 @@ function renderStudentGrid(category, containerId) {
   }).join("");
 }
 
-/* =========================================================================
+/* ===============================================/* =========================================================================
    5. PUBLICATIONS SECTION RENDERING
    ========================================================================= */
+let publicationsDataCache = null;
+
 function renderPublicationsSection(filter = "all") {
   const listContainer = document.getElementById("publications-container-list");
-  if (!listContainer || !SURD_DATA.publications) return;
+  if (!listContainer) return;
 
-  // Filter items
-  const filtered = SURD_DATA.publications.filter(pub => filter === "all" || pub.category === filter);
+  // Show loading message if cache is empty and fetch starts
+  if (!publicationsDataCache) {
+    listContainer.innerHTML = `
+      <div class="pub-loading" style="padding: 3rem; text-align: center; color: var(--text-light); display: flex; flex-direction: column; align-items: center; gap: 0.75rem;">
+        <div class="spinner" style="width: 24px; height: 24px; border: 2px solid var(--border-color); border-top-color: var(--primary-color); border-radius: 50%; animation: spin 0.8s linear infinite;"></div>
+        <span>데이터를 불러오는 중입니다...</span>
+      </div>
+    `;
+
+    // Inject spinner animation dynamically if not present
+    if (!document.getElementById("spinner-keyframe-style")) {
+      const style = document.createElement("style");
+      style.id = "spinner-keyframe-style";
+      style.textContent = "@keyframes spin { to { transform: rotate(360deg); } }";
+      document.head.appendChild(style);
+    }
+
+    fetch('./data/publications.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        publicationsDataCache = data;
+        displayPublications(publicationsDataCache, filter);
+      })
+      .catch(error => {
+        console.error("Publications 데이터 로드 실패:", error);
+        listContainer.innerHTML = `
+          <div style="padding: 3rem; text-align: center; color: var(--accent-color-hover);">
+            데이터를 불러오는 중에 오류가 발생했습니다.<br>
+            <span style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem; display: block;">${error.message}</span>
+          </div>
+        `;
+      });
+  } else {
+    displayPublications(publicationsDataCache, filter);
+  }
+}
+
+function displayPublications(data, filter) {
+  const listContainer = document.getElementById("publications-container-list");
+  if (!listContainer) return;
+
+  // Filter items based on index_type mapping
+  const filtered = data.filter(pub => {
+    if (filter === "all") return true;
+
+    const idxType = (pub.index_type || "").trim().toUpperCase();
+    if (filter === "SSCI/SCIE") {
+      return idxType === "SSCI" || idxType === "SCIE";
+    }
+    if (filter === "KCI") {
+      return idxType === "KCI";
+    }
+    if (filter === "Other") {
+      return idxType === "OTHER" || idxType === "UNVERIFIED" || idxType === "NOT APPLICABLE" || idxType === "";
+    }
+    return false;
+  });
+
+  if (filtered.length === 0) {
+    listContainer.innerHTML = `<div style="padding: 3rem; text-align: center; color: var(--text-light);">조건에 해당하는 논문이 없습니다.</div>`;
+    return;
+  }
 
   // Group by year descending
   const years = [...new Set(filtered.map(pub => pub.year))].sort((a, b) => b - a);
 
-  if (filtered.length === 0) {
-    listContainer.innerHTML = `<div style="padding: 3rem; text-align: center; color: var(--text-light);">발표된 논문이 없습니다.</div>`;
-    return;
-  }
-
   listContainer.innerHTML = years.map(year => {
     const yearPubs = filtered.filter(pub => pub.year === year);
     const itemsHtml = yearPubs.map(pub => {
-      const badgeClass = pub.category.toLowerCase();
-      const englishSubTitle = pub.englishTitle ? `<div class="pub-title-en-sub">${pub.englishTitle}</div>` : "";
-      
-      // DOI link button if available
-      const doiHtml = pub.doi ? `
+      const idxTypeLower = (pub.index_type || "other").toLowerCase();
+      // Class mapping for badge styles
+      let badgeClass = "other";
+      if (idxTypeLower === "ssci" || idxTypeLower === "scie") badgeClass = "ssci";
+      else if (idxTypeLower === "kci") badgeClass = "kci";
+
+      // Formulate volume and issue
+      let volumeInfo = "";
+      if (pub.volume && pub.issue) {
+        volumeInfo = `${pub.volume}(${pub.issue})`;
+      } else if (pub.volume) {
+        volumeInfo = `${pub.volume}`;
+      } else if (pub.issue) {
+        volumeInfo = `(${pub.issue})`;
+      }
+
+      // Natural bibliography string formatting
+      let bibParts = [];
+      if (pub.journal) bibParts.push(pub.journal);
+      if (pub.year) bibParts.push(`(${pub.year})`);
+
+      let bibText = bibParts.join(" ");
+
+      let detailsParts = [];
+      if (volumeInfo) detailsParts.push(volumeInfo);
+      if (pub.pages) detailsParts.push(`pp. ${pub.pages}`);
+
+      if (detailsParts.length > 0) {
+        if (bibText) {
+          bibText += `, ${detailsParts.join(", ")}`;
+        } else {
+          bibText = detailsParts.join(", ");
+        }
+      }
+
+      if (bibText) bibText += ".";
+
+      // Link resolution (DOI vs URL)
+      let linkUrl = "";
+      let isDoi = false;
+      if (pub.doi) {
+        const doiStr = pub.doi.trim();
+        isDoi = true;
+        if (doiStr.startsWith("http://") || doiStr.startsWith("https://")) {
+          linkUrl = doiStr;
+        } else {
+          linkUrl = `https://doi.org/${doiStr}`;
+        }
+      } else if (pub.url) {
+        linkUrl = pub.url.trim();
+      }
+
+      const linkHtml = linkUrl ? `
         <div class="pub-doi-btn">
-          <a href="${pub.doi}" target="_blank" class="btn btn-primary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem; border-radius: 4px; display: inline-flex; align-items: center; gap: 4px;">
-            DOI <i data-lucide="external-link" style="width: 12px; height: 12px;"></i>
+          <a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem; border-radius: 4px; display: inline-flex; align-items: center; gap: 4px;">
+            ${isDoi ? "DOI" : "Link"} <i data-lucide="external-link" style="width: 12px; height: 12px;"></i>
           </a>
         </div>
       ` : "";
 
       return `
         <div class="pub-item">
-          <span class="pub-badge ${badgeClass}">${pub.category}</span>
+          <span class="pub-badge ${badgeClass}">${pub.index_type || "Other"}</span>
           <div class="pub-details">
-            <h4 class="pub-title ${badgeClass === 'kci' ? 'kr-title' : ''}">${pub.title}</h4>
-            ${englishSubTitle}
-            <div class="pub-authors">${pub.authors}</div>
-            <div class="pub-journal">${pub.journal} (${pub.year}), <strong>${pub.volumeInfo}</strong></div>
+            <h4 class="pub-title ${badgeClass === 'kci' ? 'kr-title' : ''}">${pub.title || ""}</h4>
+            <div class="pub-authors">${pub.authors || ""}</div>
+            <div class="pub-journal">${bibText}</div>
           </div>
-          ${doiHtml}
+          ${linkHtml}
         </div>
       `;
     }).join("");
