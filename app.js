@@ -345,11 +345,11 @@ function displayPublications(data, filter) {
   const listContainer = document.getElementById("publications-container-list");
   if (!listContainer) return;
 
-  // Filter items based on index_type mapping
+  // Filter items based on type_index mapping
   const filtered = data.filter(pub => {
     if (filter === "all") return true;
 
-    const idxType = (pub.index_type || "").trim().toUpperCase();
+    const idxType = (pub.type_index || "").trim().toUpperCase();
     if (filter === "SSCI/SCIE") {
       return idxType === "SSCI" || idxType === "SCIE";
     }
@@ -373,7 +373,7 @@ function displayPublications(data, filter) {
   listContainer.innerHTML = years.map(year => {
     const yearPubs = filtered.filter(pub => pub.year === year);
     const itemsHtml = yearPubs.map(pub => {
-      const idxTypeLower = (pub.index_type || "other").toLowerCase();
+      const idxTypeLower = (pub.type_index || "other").toLowerCase();
       // Class mapping for badge styles
       let badgeClass = "other";
       if (idxTypeLower === "ssci" || idxTypeLower === "scie") badgeClass = "ssci";
@@ -435,7 +435,7 @@ function displayPublications(data, filter) {
 
       return `
         <div class="pub-item">
-          <span class="pub-badge ${badgeClass}">${pub.index_type || "Other"}</span>
+          <span class="pub-badge ${badgeClass}">${pub.type_index || "Other"}</span>
           <div class="pub-details">
             <h4 class="pub-title ${badgeClass === 'kci' ? 'kr-title' : ''}">${pub.title || ""}</h4>
             <div class="pub-authors">${pub.authors || ""}</div>
