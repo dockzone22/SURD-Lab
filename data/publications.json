@@ -2186,7 +2186,7 @@
   },
   {
     "id": "PUB-012",
-    "type": "Journal",
+    "type": "Report",
     "type_index": "Other",
     "year": 2005,
     "authors": "남진",
@@ -2281,8 +2281,8 @@
   },
   {
     "id": "PUB-011",
-    "type": "Report",
-    "type_index": "Other",
+    "type": "Journal",
+    "type_index": "KCI",
     "year": 2004,
     "authors": "최현정, 김창석, 남진",
     "title": "주택재건축사업에서의 주거이동에 따른 주변지역 전세가격의 변화에 대한 연구",
