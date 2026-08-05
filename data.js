@@ -3,7 +3,7 @@
 
 const SURD_DATA = {
   labName: {
-    en: "Smart Urban Renewal & Development Laboratory (SURD Lab)",
+    en: "Smart Urban housing Renewal & Development Laboratory (SURD Lab)",
     kr: "스마트도시주택정비및개발연구실",
     abbr: "SURD Lab"
   },
@@ -26,7 +26,7 @@ const SURD_DATA = {
   // Key Statistics
   stats: [
     { labelKr: "연구원 수", labelEn: "Members", value: "14", icon: "users" },
-    { labelKr: "발표 논문", labelEn: "Publications", value: "99+", icon: "file-text" },
+    { labelKr: "발표 논문", labelEn: "Publications", value: "85+", icon: "file-text" },
     { labelKr: "수행 완료 프로젝트", labelEn: "COMPLETED PROJECTS", value: "24", icon: "briefcase" },
     { labelKr: "설립 연도", labelEn: "Year Founded", value: "2006", icon: "calendar" }
   ],
@@ -63,7 +63,7 @@ const SURD_DATA = {
         descEn: "Published multiple papers analyzing smart renewal policy effects in prestigious SSCI/SCIE journals"
       },
       {
-        year: "2018",
+        year: "2006",
         titleKr: "SURD Lab 설립",
         titleEn: "SURD Lab Founded",
         descKr: "스마트도시주택정비및개발연구실 출범 (지도교수 남진)",
