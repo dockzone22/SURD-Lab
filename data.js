@@ -76,31 +76,31 @@ const SURD_DATA = {
   research: {
     areas: [
       {
-        id: "renewal",
-        titleKr: "스마트 도시정비 & 주택개발",
-        titleEn: "Smart Urban Renewal & Housing",
-        shortDescKr: "기술 융합형 정비사업 모델 설계 및 주거복지 향상을 위한 노후 주거지 재생 연구",
-        shortDescEn: "Designing technology-converged renewal models and researching old residential area restoration.",
-        descKr: "기존의 전면 철거형 정비 방식에서 벗어나, 빅데이터와 스마트 센서를 적용해 필요한 노후 주거지를 맞춤형으로 재생하는 전략을 수립합니다. 주택 노후도 진단 자동화, 공간 복지 시설 배치 최적화, 기후 변화에 대응하는 주택 성능 개선 연구를 수행합니다.",
+        id: "Renewal",
+        titleKr: "도시개발 및 도시정비",
+        titleEn: "Urban Renewal & Reconstruction",
+        shortDescKr: "기성시가지의 지속가능한 개발·정비 전략과 실행방안",
+        shortDescEn: "Sustainable development and renewal strategies for established urban areas.",
+        descKr: "국내외 대도시의 기성시가지를 대상으로 도시개발과 도시정비의 전략, 계획기법, 금융구조 및 사업성을 폭넓게 연구합니다. 재개발·재건축을 비롯한 다양한 정비·개발사업의 제도와 추진 과정을 분석하고, 물리적 환경뿐만 아니라 지역의 사회·경제적 여건을 종합적으로 개선할 수 있는 실행방안을 모색합니다",
         descEn: "Moving away from traditional total-demolition redevelopment, we establish tailored renewal strategies for aged residential areas using big data and smart sensors. We conduct research on automated building degradation diagnosis, optimization of public facility distribution, and housing performance upgrades resilient to climate change."
       },
       {
-        id: "data-gis",
-        titleKr: "도시 데이터 & GIS 공간 분석",
-        titleEn: "Urban Data & GIS Spatial Analysis",
-        shortDescKr: "GIS, 공간통계, 인공지능 기반의 대규모 도시 빅데이터 분석 및 시각화",
-        shortDescEn: "Analyzing and visualizing large-scale urban big data based on GIS, spatial statistics, and AI.",
-        descKr: "도시에서 생성되는 이동 통신, 유동 인구, 카드 매출, 환경 센서 등의 다양한 빅데이터를 수집하고 공간 분석(GIS)을 수행합니다. 공간 회귀 분석, 인공지능 기반의 도시 변화 예측 모델링을 통해 정책 의사결정을 지원하는 디지털 트윈 기반 기술을 연구합니다.",
-        descEn: "We collect and conduct spatial analysis (GIS) on diverse urban big data, including mobile communication, pedestrian counts, credit card transactions, and environmental sensors. We study digital-twin-based technologies supporting policy decisions through spatial regression and AI-driven urban change prediction."
+        id: "Housing Market",
+        titleKr: "주택시장 분석 및 주택정책",
+        titleEn: "Housing Market Analysis & Housing Policy",
+        shortDescKr: "주택시장의 작동 원리와 주거문제를 분석하고 정책적 대안 모색",
+        shortDescEn: "Analyzing the functioning principles of the housing market and addressing housing issues to develop policy alternatives.",
+        descKr: "주택시장의 수요와 공급, 주거선택과 이동, 주택가격과 임대시장의 작동 원리를 이론 및 실증분석을 통해 연구합니다. 주택시장 변화와 다양한 주거문제를 진단하고, 주거 안정성과 정책의 실효성을 높이기 위한 주택정책의 방향을 모색합니다.",
+        descEn: "We conduct theoretical and empirical research on housing supply and demand, residential choice and mobility, housing prices, and rental market dynamics. Our research diagnoses changes and challenges in housing markets and explores policies that promote residential stability and improve policy effectiveness"
       },
       {
-        id: "sustainable",
-        titleKr: "지속가능한 도시개발 & 기후변화",
-        titleEn: "Sustainable Development & Climate Change",
-        shortDescKr: "탄소중립 및 재해 복원력을 고려한 포용적이고 지속가능한 도시 모델 연구",
-        shortDescEn: "Researching inclusive and sustainable urban models considering carbon neutrality and resilience.",
-        descKr: "기후 변화에 따른 재난 재해(홍수, 폭염 등)에 회복탄력성(Resilience)을 갖는 지속가능한 도시 개발 패러다임을 제안합니다. 저탄소 녹색 인프라의 배치 효과 시뮬레이션, 에너지 자립형 마이크로그리드 주거 단지 모형 설계 등을 주된 영역으로 합니다.",
-        descEn: "We propose sustainable urban development paradigms resilient to climate disasters (floods, heat waves). Our focus includes simulating low-carbon green infrastructure impact and designing energy-independent microgrid residential complex models."
+        id: "Urban and Housing Development Analysis",
+        titleKr: "도시·주택 개발사업 분석",
+        titleEn: "Urban and Housing Development Analysis",
+        shortDescKr: "도시·주택 개발사업의 계획, 금융구조 및 사업성 종합적 분석 ",
+        shortDescEn: "Analyzing urban and housing development projects in terms of planning, financial structure, and feasibility.",
+        descKr: "도시 및 주택 개발사업의 계획과 실행 과정에서 요구되는 사업성 분석, 금융기법, 제도 및 정책을 연구합니다. 시장성과 공공성을 함께 고려하여 실제 개발사업과 정책 결정에 활용할 수 있는 분석체계와 실행전략을 제시하고자 합니다.",
+        descEn: "We study project feasibility, financing methods, institutions, and policies involved in the planning and implementation of urban and housing development projects. By considering both market viability and public value, we aim to develop analytical frameworks and implementation strategies applicable to real-world projects and policy decisions."
       }
     ],
     projects: [

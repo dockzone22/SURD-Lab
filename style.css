@@ -1309,6 +1309,15 @@ button {
   margin-left: 0.3rem;
 }
 
+.alumni-intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-top: -2rem;
+  margin-bottom: 3.5rem;
+  max-width: 800px;
+}
+
 .alumni-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
