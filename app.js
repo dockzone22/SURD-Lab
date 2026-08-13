@@ -140,13 +140,10 @@ function renderResearchSection() {
   const icons = {
     "Renewal": `
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-custom" aria-hidden="true">
-        <path d="M3 22h6" />
-        <path d="M6 22V5" />
-        <path d="M2 7h20" />
-        <path d="M6 5l8 2" />
-        <path d="M6 5L2 7" />
-        <path d="M18 7v6" />
-        <path d="M16 13h4" />
+        <path d="M2 21h20" />
+        <path d="M4 21V12h5v9" />
+        <path d="M9 21V5h6v16" />
+        <path d="M15 21V10h5v11" />
       </svg>
     `,
     "Housing Market": `
@@ -157,11 +154,10 @@ function renderResearchSection() {
     `,
     "Urban and Housing Development Analysis": `
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-custom" aria-hidden="true">
-        <path d="m14.5 9.5 8.5 8.5" />
-        <path d="M12.5 11.5 5 19l-3-3 7.5-7.5" />
-        <path d="M5.5 5.5 13 13" />
-        <path d="m11 11 5 5" />
-        <path d="m16 8 4 4" />
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="7.5" />
+        <path d="M8.5 8.5l1.75 7 1.75-4.5 1.75 4.5 1.75-7" />
+        <path d="M7 11.5h10M7 13.5h10" />
       </svg>
     `
   };
