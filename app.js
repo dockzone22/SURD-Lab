@@ -138,16 +138,39 @@ function renderResearchSection() {
   // Research Areas Cards
   const areasContainer = document.getElementById("research-areas-container");
   const icons = {
-    renewal: "home",
-    "data-gis": "map",
-    sustainable: "globe"
+    "Renewal": `
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-custom" aria-hidden="true">
+        <path d="M3 22h6" />
+        <path d="M6 22V5" />
+        <path d="M2 7h20" />
+        <path d="M6 5l8 2" />
+        <path d="M6 5L2 7" />
+        <path d="M18 7v6" />
+        <path d="M16 13h4" />
+      </svg>
+    `,
+    "Housing Market": `
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-custom" aria-hidden="true">
+        <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+        <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+      </svg>
+    `,
+    "Urban and Housing Development Analysis": `
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-custom" aria-hidden="true">
+        <path d="m14.5 9.5 8.5 8.5" />
+        <path d="M12.5 11.5 5 19l-3-3 7.5-7.5" />
+        <path d="M5.5 5.5 13 13" />
+        <path d="m11 11 5 5" />
+        <path d="m16 8 4 4" />
+      </svg>
+    `
   };
 
   if (areasContainer && research.areas) {
     areasContainer.innerHTML = research.areas.map(area => `
       <div class="research-card">
         <div class="research-card-icon">
-          <i data-lucide="${icons[area.id] || "layers"}" style="width: 32px; height: 32px;"></i>
+          ${icons[area.id] || `<i data-lucide="layers" style="width: 32px; height: 32px;"></i>`}
         </div>
         <h3>
           ${area.titleKr}
