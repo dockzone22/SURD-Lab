@@ -28,7 +28,7 @@ const SURD_DATA = {
     { labelKr: "연구원 수", labelEn: "Members", value: "14", icon: "users" },
     { labelKr: "발표 논문", labelEn: "Publications", value: "99+", icon: "file-text" },
     { labelKr: "수행 완료 프로젝트", labelEn: "COMPLETED PROJECTS", value: "24", icon: "briefcase" },
-    { labelKr: "설립 연도", labelEn: "Year Founded", value: "2006", icon: "calendar" }
+    { labelKr: "설립 연도", labelEn: "Year Founded", value: "2003", icon: "calendar" }
   ],
 
   // About Section
@@ -63,7 +63,7 @@ const SURD_DATA = {
         descEn: "Published multiple papers analyzing smart renewal policy effects in prestigious SSCI/SCIE journals"
       },
       {
-        year: "2006",
+        year: "2003",
         titleKr: "SURD Lab 설립",
         titleEn: "SURD Lab Founded",
         descKr: "스마트도시주택정비및개발연구실 출범 (지도교수 남진)",
@@ -158,10 +158,10 @@ const SURD_DATA = {
       image: "./assets/jin_nam.jpg",
       email: "jnam@uos.ac.kr",
       office: "Professor Nam Jin's Office: Baebong Hall, Room 301 / 배봉관 301호",
-      bioKr: "남진 교수는 서울시립대학교 도시공학과를 졸업하고 동 대학원에서 석사, 일본 요코하마대학교(University of Yokohama)에서 도시계획학 박사 학위를 취득하였습니다. 서울시립대학교 도시공학과 교수로 재직 중이며, 도시정비 및 개발, 주택시장, 스마트시티 분야에서 다수의 핵심 국책 연구 과제를 수행하고 있습니다.",
+      bioKr: "남진 교수는 서울시립대학교 도시공학과를 졸업하고 동 대학원에서 석사, 일본 요코하마국립대학(Yokohama National University)에서 도시계획학 박사 학위를 취득하였습니다. 서울시립대학교 도시공학과 교수로 재직 중이며, 도시정비 및 개발, 주택시장, 스마트시티 분야에서 다수의 핵심 국책 연구 과제를 수행하고 있습니다.",
       bioEn: "Prof. Jin Nam received his B.S. in Urban Engineering from the University of Seoul, M.S. from University of Seoul, and Ph.D. in Urban Planning from the University of Yokohama. He is a professor at the University of Seoul, actively conducting major national R&D projects focusing on smart urban renewal, housing redevelopment policies, and spatial economics.",
       education: [
-        "일본 요코하마대학교 (University of Yokohama) 도시계획학 박사 (Ph.D. in Urban Planning)",
+        "일본 요코하마국립대학 (Yokohama National University) 도시계획학 박사 (Ph.D. in Urban Planning)",
         "서울시립대학교 대학원 도시공학 석사 (M.S. in Urban Planning and Design, UOS)",
         "서울시립대학교 도시공학과 학사 (B.S. in Urban Planning and Design, UOS)",
         "국토교통부 도시재생 특별위원회 위원 (National Urban Regeneration Committee Member, MOLIT)",
@@ -317,8 +317,6 @@ const SURD_DATA = {
       }
     ]
   },
-
-
 
   // Alumni Section
   alumni: [
