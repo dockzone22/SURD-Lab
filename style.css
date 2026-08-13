@@ -1309,13 +1309,28 @@ button {
   margin-left: 0.3rem;
 }
 
+.alumni-intro-wrapper {
+  margin-top: -2.5rem;
+  margin-bottom: 3.5rem;
+}
+
 .alumni-intro {
   font-size: 1.05rem;
   line-height: 1.7;
   color: var(--text-color);
-  margin-top: -2rem;
-  margin-bottom: 3.5rem;
   max-width: 800px;
+  word-break: keep-all;
+}
+
+.alumni-intro-en {
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--text-light);
+  max-width: 850px;
+  font-style: italic;
+  margin-top: 0.5rem;
+  word-break: keep-all;
 }
 
 .alumni-grid {
