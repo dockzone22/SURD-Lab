@@ -1228,6 +1228,12 @@ button {
   border: 1px solid rgba(232, 200, 130, 0.3);
 }
 
+.pub-badge.kci {
+  background-color: var(--primary-color-light);
+  color: var(--primary-color);
+  border: 1px solid rgba(58, 89, 91, 0.4);
+}
+
 .pub-details {
   flex: 1;
   padding-right: 7rem; /* Make room for DOI button sliding in */
