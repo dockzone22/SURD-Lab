@@ -154,147 +154,111 @@ const SURD_DATA = {
       {
         nameKr: "송선영",
         nameEn: "Seonyeong Song",
-        initials: "SS",
         roleKr: "박사과정 (수료)",
         roleEn: "Ph.D. Candidate",
-        interestsKr: "도시 공간 빅데이터, 공간 회귀 모형, 주택 금융",
-        interestsEn: "Urban Big Data, Spatial Regression, Housing Finance",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "이정현",
         nameEn: "Junghyun Lee",
-        initials: "JL",
         roleKr: "박사과정 (졸업)",
         roleEn: "Ph.D.",
-        interestsKr: "공간 복지, 노인 거주 취약성, AI 의사결정 모델",
-        interestsEn: "Spatial Welfare, Elderly Housing Vulnerability, AI Decision Models",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "김은광",
         nameEn: "Eunkwang Kim",
-        initials: "EK",
         roleKr: "박사과정 (수료)",
         roleEn: "Ph.D. Candidate",
-        interestsKr: "스마트시티 기획, 기후탄력성 도시 정비, 탄소저감",
-        interestsEn: "Smart City Planning, Climate-resilient Renewal, Carbon Reduction",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "이이주",
         nameEn: "Iiju Lee",
-        initials: "IL",
         roleKr: "박사과정 (수료)",
         roleEn: "Ph.D. candidate",
-        interestsKr: "///",
-        interestsEn: "///",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "권영수",
         nameEn: "Youngsoo Kwon",
-        initials: "YK",
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
-        interestsKr: "///",
-        interestsEn: "///",
-        image: "",
         type: "full-time"
+      },
+      // 임시 예시 데이터: 실제 비전일제 연구원 정보 수령 후 교체
+      {
+        nameKr: "비전일제 연구원 예시 1",
+        nameEn: "Part-time Researcher Example 1",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time"
       }
     ],
     masters: [
       {
         nameKr: "이은지",
         nameEn: "Eunji Lee",
-        initials: "EL",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "GIS 공간 분석, 유동 인구 이동 패턴, 디지털 트윈",
-        interestsEn: "GIS Spatial Analysis, Pedestrian Flow Patterns, Digital Twin",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "이채은",
         nameEn: "Chaeeun Lee",
-        initials: "CL",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "가로환경 정비, 스마트 보행 네트워크, 미세먼지 저감",
-        interestsEn: "Streetscape Improvement, Smart Pedestrian Network, Fine Dust Abatement",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "정윤재",
         nameEn: "Yoonjae Jung",
-        initials: "YJ",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "주거 젠트리피케이션, 도시 재생 상생협약, 공간 경제",
-        interestsEn: "Residential Gentrification, Win-win Agreements, Spatial Economics",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "황해운",
         nameEn: "Haewoon Hwang",
-        initials: "HH",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "글로벌 지속가능 도시 지표 개발, 대중교통 지향 개발 (TOD)",
-        interestsEn: "Global Sustainable Urban Indicators, Transit-Oriented Development (TOD)",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "박서현",
         nameEn: "Seohyun Park",
-        initials: "SP",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "주거정책, 포용적 계획, 균형발전",
-        interestsEn: "Housing Policy, Inclusive Urban Planning, Balanced Regional Development",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "신혜형",
         nameEn: "Hyehyung Shin",
-        initials: "HS",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "기후변화 대응, 도시환경, 도시공간 데이터 분석",
-        interestsEn: "Climate Change Adaptation, Urban Environment, Urban Spatial Data Analytics",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "윤호철",
         nameEn: "Hocheol Yun",
-        initials: "HY",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "도시성장·쇠퇴, 균형발전, 도시공간구조",
-        interestsEn: "Urban Growth and Decline, Balanced Regional Development, Urban Spatial Structure",
-        image: "",
         type: "full-time"
       },
       {
         nameKr: "김지우",
         nameEn: "Jiwoo Kim",
-        initials: "JK",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
-        interestsKr: "주택 가격, 상권 분석, 상업용 부동산",
-        interestsEn: "Housing Prices, Commercial District Analysis, Commercial Real Estate + (Website Builder!)",
-        image: "",
         type: "full-time"
+      },
+      // 임시 예시 데이터: 실제 비전일제 연구원 정보 수령 후 교체
+      {
+        nameKr: "비전일제 연구원 예시 2",
+        nameEn: "Part-time Researcher Example 2",
+        roleKr: "석사과정",
+        roleEn: "M.S. Student",
+        type: "part-time"
       }
     ]
     /*
