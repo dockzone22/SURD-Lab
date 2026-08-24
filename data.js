@@ -37,39 +37,7 @@ const SURD_DATA = {
     philosophyEn: "SURD Lab applies smart technology and data-driven analysis to resolve housing, infrastructure, and urban decline issues occurring in rapidly changing urban environments. Beyond mere physical renewal, we explore policy and technical solutions that enhance the quality of life for urban residents and secure environmental sustainability.",
     piWelcomeKr: "안녕하세요. 스마트도시주택정비및개발연구실(SURD Lab)의 지도교수 남진입니다. 우리 연구실은 복잡하고 다차원적인 도시 문제를 무리수(Surd)처럼 있는 그대로 받아들이고, 실질적이고 과학적인 분석을 통해 해답을 모색하는 학문 공동체입니다. 스마트 기술, 빅데이터, 공간 통계를 활용하여 더 살기 좋고 포용적인 도시의 미래를 함께 그려나갈 인재들을 환영합니다.",
     piWelcomeEn: "Welcome to the Smart Urban Renewal & Development Laboratory (SURD Lab). I am Professor Jin Nam. Our lab is an academic community that embraces complex, multidimensional urban issues as they are—much like irrational numbers (surds)—and seeks practical, scientific solutions through rigorous analysis. We welcome creative minds to join us in shaping a better, more inclusive urban future using smart technologies, big data, and spatial statistics.",
-    piPhoto: "", // Empty to trigger the placeholder
-    
-    // Lab History Timeline
-    timeline: [
-      {
-        year: "2024 - Present",
-        titleKr: "스마트 도시재생 R&D 거점 연구소 지정",
-        titleEn: "Designated as Smart Urban Renewal R&D Center",
-        descKr: "국토교통부 스마트시티 혁신인재 육성사업 참여 및 국가 연구단 연구 개시",
-        descEn: "Participation in MOLIT's smart city human resource development project and national R&D project initiation"
-      },
-      {
-        year: "2022",
-        titleKr: "도시 데이터 시각화 플랫폼 구축",
-        titleEn: "Urban Data Visualization Platform Launch",
-        descKr: "서울/수도권 주택 노후도 및 취약성 평가 GIS 오픈 플랫폼 배포",
-        descEn: "Released GIS open platform evaluating building aging and vulnerability in Seoul metropolitan area"
-      },
-      {
-        year: "2020",
-        titleKr: "해외 우수 학술지 논문 게재 다수",
-        titleEn: "Expansion of High-Impact Publications",
-        descKr: "SSCI/SCIE 등 저명 국제 학술지에 스마트 정비 정책 효과 분석 논문 다수 게재",
-        descEn: "Published multiple papers analyzing smart renewal policy effects in prestigious SSCI/SCIE journals"
-      },
-      {
-        year: "2003",
-        titleKr: "SURD Lab 설립",
-        titleEn: "SURD Lab Founded",
-        descKr: "스마트도시주택정비및개발연구실 출범 (지도교수 남진)",
-        descEn: "Established the Smart Urban Renewal & Development Laboratory under Prof. Jin Nam"
-      }
-    ]
+    piPhoto: "" // Empty to trigger the placeholder
   },
 
   // Research Areas
@@ -81,7 +49,7 @@ const SURD_DATA = {
         titleEn: "Urban Renewal & Reconstruction",
         shortDescKr: "기성시가지의 지속가능한 개발·정비 전략과 실행방안",
         shortDescEn: "Sustainable development and renewal strategies for established urban areas.",
-        descKr: "국내외 대도시의 기성시가지를 대상으로 도시개발과 도시정비의 전략, 계획기법, 금융구조 및 사업성을 폭넓게 연구합니다. 재개발·재건축을 비롯한 다양한 정비·개발사업의 제도와 추진 과정을 분석하고, 물리적 환경뿐만 아니라 지역의 사회·경제적 여건을 종합적으로 개선할 수 있는 실행방안을 모색합니다",
+        descKr: "국내외 대도시의 기성시가지를 대상으로 도시개발과 도시정비의 전략, 계획기법, 금융구조 및 사업성을 폭넓게 연구합니다. 재개발·재건축을 비롯한 다양한 정비·개발사업의 제도와 추진 과정을 분석하고, 물리적 환경뿐만 아니라 지역의 사회·경제적 여건을 종합적으로 개선할 수 있는 실행방안을 모색합니다.",
         descEn: "Moving away from traditional total-demolition redevelopment, we establish tailored renewal strategies for aged residential areas using big data and smart sensors. We conduct research on automated building degradation diagnosis, optimization of public facility distribution, and housing performance upgrades resilient to climate change."
       },
       {
@@ -1845,23 +1813,31 @@ const SURD_DATA = {
     }
   ],
 
-  // News Section
+  // News Section, award/paper/event
   news: [
     {
-      date: "2026.05.15",
-      category: "Award",
-      titleKr: "이지민 박사과정, 한국도시계획학회 우수 논문상 수상",
-      titleEn: "Jimin Lee wins Outstanding Paper Award at KPA Spring Conference",
-      descKr: "디지털 트윈을 활용한 미개발 노후주거지 도로망 격자성 분석 논문으로 우수 포스터 발표 부문을 수상하였습니다.",
-      descEn: "Won the Outstanding Poster Presentation Award for her research on structural analysis of street networks in underdeveloped residential blocks using digital twins."
+      date: "2026.08.21",
+      category: "Event",
+      titleKr: "2026 후기 학위수여식 개최 ",
+      titleEn: "Graduation Ceremony for the Second Half of 2026",
+      descKr: "김성호(박사), 송선영(박사), 석채원(석사), 김지우(학사) 학생이 학위를 수여받았습니다.",
+      descEn: "Students Kim Seong-ho (Ph.D.), Song Sun-young (Ph.D.), Seok Chae-won (M.S.), and Kim Ji-woo (B.S.) received their degrees."
     },
     {
-      date: "2026.04.10",
-      category: "Paper",
-      titleKr: "도시 환경 분야 저명 국제 학술지 'Sustainable Cities and Society' 논문 게재 확정",
-      titleEn: "New paper accepted in 'Sustainable Cities and Society'",
-      descKr: "박준서, 최아름 학생 및 김상우 교수가 공동 연구한 스마트 녹색인프라의 도심 열섬 저감 효과 실증 분석 논문이 등재되었습니다.",
-      descEn: "Our paper on empirical analysis of heat island mitigation using smart green infrastructure co-authored by J. Park, A. Choi, and Prof. S. Kim has been accepted for publication."
+      date: "2026.08.18",
+      category: "Event",
+      titleKr: "이이주 박사수료 외 4명, ICAPPS 참가 및 논문 발표",
+      titleEn: "ICAPPS 2026 Participation and Paper Presentation by Dr. Lee and 4 others",
+      descKr: "인도네시아 자카르타에서 개최된 ICAPPS 2026에서 이이주 박사수료, 이채은, 이은지, 정윤재, 황해운 학생이 논문을 발표했습니다.",
+      descEn: "Dr. Lee and 4 others presented papers at ICAPPS 2026 held in Jakarta, Indonesia."
+    },
+    {
+      date: "2026.05.16",
+      category: "Award",
+      titleKr: "이채은 석사과정, 한국도시부동산학회 춘계학술대회 우수논문상 수상",
+      titleEn: "Master's Student Chaeun Lee Receives Best Paper Award at KUREA Spring Conference",
+      descKr: "성균관대학교 자연과학캠퍼스에서 개최된 한국도시부동산학회 춘계학술대회에서 이채은 석사과정 학생이 우수논문상을 수상했습니다.",
+      descEn: "Master's student Chaeun Lee received the Best Paper Award at the KUREA Spring Conference held at Sungkyunkwan University Natural Science Campus."
     },
     {
       date: "2026.03.02",
@@ -1870,18 +1846,10 @@ const SURD_DATA = {
       titleEn: "Spring 2026 Semester Kickoff & Welcome dinner",
       descKr: "새로 입학한 석사과정 연구원들을 환영하고 이번 학기 진행 프로젝트 마일스톤을 점검하는 랩 세미나 및 친목 모임을 진행하였습니다.",
       descEn: "Held our kickoff seminar and welcome dinner to greet incoming master's students and review milestones for research projects this semester."
-    },
-    {
-      date: "2025.11.20",
-      category: "Award",
-      titleKr: "SURD Lab, 국토교통부 스마트 시티 R&D 성과 평가 최우수 선정",
-      titleEn: "SURD Lab wins Top Evaluation in MOLIT Smart City R&D Program",
-      descKr: "지난 2년간 진행한 도시 데이터 플랫폼 실증 부문 연구가 국토부 과제 연차 평가에서 전국 연구단 중 최우수 등급을 받았습니다.",
-      descEn: "Our research in the spatial data platform verification section was awarded the top rank among national teams during the annual evaluation of MOLIT's smart city human resource program."
     }
   ],
 
-  // Interviews and Columns Section
+  // Interviews and Columns Section, column/interview
   interviews: [
      {
        date: "2026.07.22",
