@@ -11,7 +11,7 @@ const SURD_DATA = {
     kr: "서울시립대학교 도시공학과",
     en: "Department of Urban Planning and Design, University of Seoul"
   },
-  
+
   // Hero Tagline (Exact 6 lines requested)
   tagline: [
     "칼로 잰 듯 나누어 떨어지지 않는 무리수처럼,",
@@ -159,7 +159,8 @@ const SURD_DATA = {
         roleEn: "Ph.D. Candidate",
         interestsKr: "도시 공간 빅데이터, 공간 회귀 모형, 주택 금융",
         interestsEn: "Urban Big Data, Spatial Regression, Housing Finance",
-        image: ""
+        image: "",
+        type: "full-time"
       },
       {
         nameKr: "이정현",
@@ -169,7 +170,8 @@ const SURD_DATA = {
         roleEn: "Ph.D.",
         interestsKr: "공간 복지, 노인 거주 취약성, AI 의사결정 모델",
         interestsEn: "Spatial Welfare, Elderly Housing Vulnerability, AI Decision Models",
-        image: ""
+        image: "",
+        type: "full-time"
       },
       {
         nameKr: "김은광",
@@ -179,9 +181,10 @@ const SURD_DATA = {
         roleEn: "Ph.D. Candidate",
         interestsKr: "스마트시티 기획, 기후탄력성 도시 정비, 탄소저감",
         interestsEn: "Smart City Planning, Climate-resilient Renewal, Carbon Reduction",
-        image: ""
+        image: "",
+        type: "full-time"
       },
-          {
+      {
         nameKr: "이이주",
         nameEn: "Iiju Lee",
         initials: "IL",
@@ -189,7 +192,8 @@ const SURD_DATA = {
         roleEn: "Ph.D. candidate",
         interestsKr: "///",
         interestsEn: "///",
-        image: ""
+        image: "",
+        type: "full-time"
       },
       {
         nameKr: "권영수",
@@ -199,7 +203,8 @@ const SURD_DATA = {
         roleEn: "Ph.D. Student",
         interestsKr: "///",
         interestsEn: "///",
-        image: ""
+        image: "",
+        type: "full-time"
       }
     ],
     masters: [
@@ -211,7 +216,8 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "GIS 공간 분석, 유동 인구 이동 패턴, 디지털 트윈",
         interestsEn: "GIS Spatial Analysis, Pedestrian Flow Patterns, Digital Twin",
-        image: ""
+        image: "",
+        type: "full-time"
       },
       {
         nameKr: "이채은",
@@ -221,7 +227,8 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "가로환경 정비, 스마트 보행 네트워크, 미세먼지 저감",
         interestsEn: "Streetscape Improvement, Smart Pedestrian Network, Fine Dust Abatement",
-        image: ""
+        image: "",
+        type: "full-time"
       },
       {
         nameKr: "정윤재",
@@ -231,7 +238,8 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "주거 젠트리피케이션, 도시 재생 상생협약, 공간 경제",
         interestsEn: "Residential Gentrification, Win-win Agreements, Spatial Economics",
-        image: ""
+        image: "",
+        type: "full-time"
       },
       {
         nameKr: "황해운",
@@ -241,7 +249,8 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "글로벌 지속가능 도시 지표 개발, 대중교통 지향 개발 (TOD)",
         interestsEn: "Global Sustainable Urban Indicators, Transit-Oriented Development (TOD)",
-        image: ""
+        image: "",
+        type: "full-time"
       },
       {
         nameKr: "박서현",
@@ -251,7 +260,8 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "주거정책, 포용적 계획, 균형발전",
         interestsEn: "Housing Policy, Inclusive Urban Planning, Balanced Regional Development",
-        image: ""
+        image: "",
+        type: "full-time"
       },
       {
         nameKr: "신혜형",
@@ -261,7 +271,8 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "기후변화 대응, 도시환경, 도시공간 데이터 분석",
         interestsEn: "Climate Change Adaptation, Urban Environment, Urban Spatial Data Analytics",
-        image: ""
+        image: "",
+        type: "full-time"
       },
       {
         nameKr: "윤호철",
@@ -271,7 +282,8 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "도시성장·쇠퇴, 균형발전, 도시공간구조",
         interestsEn: "Urban Growth and Decline, Balanced Regional Development, Urban Spatial Structure",
-        image: "./assets/members/hocheol_yun.png"
+        image: "",
+        type: "full-time"
       },
       {
         nameKr: "김지우",
@@ -281,9 +293,30 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         interestsKr: "주택 가격, 상권 분석, 상업용 부동산",
         interestsEn: "Housing Prices, Commercial District Analysis, Commercial Real Estate + (Website Builder!)",
-        image: "./assets/members/jiwoo_kim.jpg"
+        image: "",
+        type: "full-time"
       }
     ]
+    /*
+    비전일제 연구원(Part-time Researchers) 추가 방법:
+    masters 또는 phd 배열 내에 아래의 형식으로 연구원 데이터 객체를 추가하시면
+    자동으로 Members 페이지의 "비전일제 연구원" 섹션에 분리 렌더링됩니다.
+    소속(affiliation) 정보가 기재된 경우에만 소속 열이 화면에 표시됩니다.
+
+    예시:
+    {
+      nameKr: "홍길동",
+      nameEn: "Gildong Hong",
+      initials: "GH",
+      roleKr: "석사과정",
+      roleEn: "M.S. Student",
+      interestsKr: "",
+      interestsEn: "",
+      image: "",
+      type: "part-time", // 반드시 소문자 "part-time"으로 기입
+      affiliation: "서울도시공사" // 선택 입력 (소속 기관명)
+    }
+    */
   },
 
   // Alumni Section
@@ -1883,7 +1916,7 @@ const SURD_DATA = {
   // Contact Section
   contact: {
     email: "jnam@uos.ac.kr",
-    tel: "02-6490-5519", 
+    tel: "02-6490-5519",
     officeKr: "서울특별시 동대문구 서울시립대로 163, 서울시립대학교 배봉관 315호",
     officeEn: "Baebong Hall, Room 315, University of Seoul, 163 Seoulsiripdae-ro, Dongdaemun-gu, Seoul, Republic of Korea",
     directionsKr: "지하철 1호선 청량리역 3번 출구 또는 경의중앙선 회기역 2번 출구에서 서울시립대학교 방면으로 오시면 편리합니다. 버스를 이용하시는 경우 서울시립대 정문 정류장(ID: 06-188)에서 하차하신 후 배봉관 315호로 오시면 편리합니다.",

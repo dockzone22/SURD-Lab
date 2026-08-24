@@ -173,7 +173,7 @@ function renderResearchSection() {
           <span style="font-family: var(--font-en); font-size: 0.85rem; color: var(--text-light); font-weight: 500; display: block; margin-top: 0.25rem;">${area.titleEn}</span>
         </h3>
         <p class="research-card-text">${area.shortDescKr}</p>
-        
+
         <!-- Sliding overlay from bottom (0.3s ease) -->
         <div class="research-card-overlay">
           <h4>${area.titleEn}</h4>
@@ -246,7 +246,7 @@ function renderMembersSection() {
     if (rpEmailLargeEl) rpEmailLargeEl.innerHTML = `<a href="mailto:${rp.email}" style="color:var(--primary-color); border-bottom:1px dashed var(--accent-color);">${rp.email}</a>`;
     const rpOfficeLargeEl = document.getElementById("rp-office-large");
     if (rpOfficeLargeEl) rpOfficeLargeEl.innerText = rp.office;
-    
+
     // Bio
     const rpBioTextEl = document.getElementById("rp-bio-text");
     if (rpBioTextEl) {
@@ -263,50 +263,65 @@ function renderMembersSection() {
     }
   }
 
-  // Students Grids
-  const phdGridEl = document.getElementById("phd-grid");
-  if (phdGridEl) {
-    renderStudentGrid("phd", "phd-grid");
+  // Render full-time and part-time list
+  const ftListEl = document.getElementById("fulltime-list");
+  if (ftListEl) {
+    renderResearchersList("full-time", "fulltime-list", "fulltime-section");
   }
-  const mastersGridEl = document.getElementById("masters-grid");
-  if (mastersGridEl) {
-    renderStudentGrid("masters", "masters-grid");
+  const ptListEl = document.getElementById("parttime-list");
+  if (ptListEl) {
+    renderResearchersList("part-time", "parttime-list", "parttime-section");
   }
 }
 
-function renderStudentGrid(category, containerId) {
+function renderResearchersList(type, containerId, sectionId) {
   const container = document.getElementById(containerId);
-  const students = SURD_DATA.members[category];
-  if (!container || !students) return;
+  const section = document.getElementById(sectionId);
+  if (!container) return;
 
-  container.innerHTML = students.map(student => {
-    let avatarContent = `<span class="avatar-initials">${student.initials}</span>`;
-    if (student.image) {
-      avatarContent = `
-        <img src="${student.image}" alt="${student.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
-        <span class="avatar-initials" style="display:none;">${student.initials}</span>
-      `;
-    }
-    return `
-    <div class="member-card">
-      <div class="member-avatar">${avatarContent}</div>
-      <h4 class="member-name">
-        ${student.nameKr}
-        <span>${student.nameEn}</span>
-      </h4>
-      <p class="member-role">${student.roleKr}</p>
-      
-      <!-- Hover reveal: research interest -->
-      <div class="member-hover-overlay">
-        <div class="member-hover-title">Research Area</div>
-        <div class="member-interests">
-          <strong style="display: block; font-size: 0.85rem; margin-bottom: 0.25rem;">${student.interestsKr}</strong>
-          <span style="font-family: var(--font-en); font-size: 0.75rem; display: block; opacity: 0.85; line-height: 1.4;">${student.interestsEn}</span>
-        </div>
-      </div>
+  const phdList = SURD_DATA.members.phd || [];
+  const mastersList = SURD_DATA.members.masters || [];
+  const allStudents = [...phdList, ...mastersList];
+
+  // Filter by type (default to full-time if type property is missing)
+  const filtered = allStudents.filter(s => (s.type || "full-time").toLowerCase() === type);
+
+  if (filtered.length === 0) {
+    if (section) section.style.display = "none";
+    return;
+  }
+
+  if (section) section.style.display = "block";
+
+  // Check if any researcher has an affiliation
+  const hasAffiliation = filtered.some(s => s.affiliation && s.affiliation.trim() !== "");
+
+  // Render Table/List Structure
+  let tableHeader = `
+    <div class="member-list-header">
+      <div class="ml-col-name">Name / 이름</div>
+      <div class="ml-col-program">Program / 과정</div>
+      ${hasAffiliation ? `<div class="ml-col-affil">Affiliation / 소속</div>` : ""}
     </div>
+  `;
+
+  let tableRows = filtered.map(s => {
+    return `
+      <div class="member-list-row">
+        <div class="ml-col-name">
+          <span class="ml-name-kr">${s.nameKr}</span>
+          <span class="ml-name-en">${s.nameEn}</span>
+        </div>
+        <div class="ml-col-program">
+          <span class="ml-prog-kr">${s.roleKr}</span>
+          <span class="ml-prog-en">/ ${s.roleEn}</span>
+        </div>
+        ${hasAffiliation ? `<div class="ml-col-affil">${s.affiliation || ""}</div>` : ""}
+      </div>
     `;
   }).join("");
+
+  container.innerHTML = `<div class="member-list-container">${tableHeader}${tableRows}</div>`;
 }
 
 /* ===============================================/* =========================================================================
@@ -622,7 +637,7 @@ function renderInterviews() {
       </div>
     </div>
   `).join("");
-  
+
   if (window.lucide) {
     window.lucide.createIcons();
   }
@@ -677,7 +692,7 @@ function renderContactSection() {
   } else if (contactTelWrapper) {
     contactTelWrapper.style.display = "none";
   }
-  
+
   const contactAddressEl = document.getElementById("contact-address");
   if (contactAddressEl) {
     contactAddressEl.innerHTML = `
@@ -685,7 +700,7 @@ function renderContactSection() {
       <span style="font-size:0.9rem; color:var(--text-light); font-family:var(--font-en);">${contact.officeEn}</span>
     `;
   }
-  
+
   const contactDirectionsTextEl = document.getElementById("contact-directions-text");
   if (contactDirectionsTextEl) {
     contactDirectionsTextEl.innerHTML = `
@@ -714,7 +729,7 @@ function initNavigation() {
   const hamburgerBtn = document.getElementById("hamburger-btn");
   const navMenu = document.getElementById("nav-menu");
   const navLinks = document.querySelectorAll(".nav-link");
-  
+
   if (!hamburgerBtn || !navMenu) return;
 
   // Toggle Hamburger menu
