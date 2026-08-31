@@ -631,9 +631,11 @@ function renderInterviews() {
           ${item.description}
           <span class="interview-source" style="display: block; margin-top: 0.75rem; font-size: 0.85rem; font-weight: 600; color: var(--primary-color);">매체 / Source: ${item.source}</span>
         </p>
-        <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="news-link-btn" style="display: inline-flex; align-items: center; color: var(--primary-color); font-weight: 600; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s ease;">
+        ${item.url ? `
+        <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="news-link-btn">
           원문 보기 &rarr;
         </a>
+        ` : ""}
       </div>
     </div>
   `).join("");

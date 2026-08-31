@@ -1520,6 +1520,32 @@ button {
   border-color: var(--accent-color);
 }
 
+/* News Link Button */
+.news-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 1px solid rgba(58, 89, 91, 0.3);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  margin-top: 0.75rem;
+  min-height: 44px;
+  width: fit-content;
+}
+
+.news-link-btn:hover {
+  background-color: rgba(58, 89, 91, 0.05);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
 .news-meta {
   display: flex;
   justify-content: space-between;

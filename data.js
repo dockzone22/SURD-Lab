@@ -771,6 +771,18 @@ const SURD_DATA = {
       ]
     },
     {
+      nameKr: "천사라",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        }
+      ]
+    },
+    {
       nameKr: "이광석",
       nameEn: "",
       currentMember: false,
@@ -827,6 +839,30 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2025"
+        }
+      ]
+    },
+    {
+      nameKr: "신수경",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
+        }
+      ]
+    },
+    {
+      nameKr: "신수임",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
         }
       ]
     },
@@ -999,6 +1035,18 @@ const SURD_DATA = {
       ]
     },
     {
+      nameKr: "김민지",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2023"
+        }
+      ]
+    },
+    {
       nameKr: "김은광",
       nameEn: "",
       currentMember: true,
@@ -1007,6 +1055,18 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "안종현",
+      nameEn: "",
+      currentMember: true,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2010"
         }
       ]
     },
@@ -1067,6 +1127,18 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2023"
+        }
+      ]
+    },
+    {
+      nameKr: "오문현",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2013"
         }
       ]
     },
@@ -1163,6 +1235,18 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2022"
+        }
+      ]
+    },
+    {
+      nameKr: "이종원",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
         }
       ]
     },
@@ -1299,6 +1383,18 @@ const SURD_DATA = {
       ]
     },
     {
+      nameKr: "이수호",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2010"
+        }
+      ]
+    },
+    {
       nameKr: "김지연",
       nameEn: "",
       currentMember: false,
@@ -1367,6 +1463,18 @@ const SURD_DATA = {
           degreeKr: "공학박사",
           degreeEn: "Ph.D.",
           gradYear: "2020"
+        }
+      ]
+    },
+    {
+      nameKr: "정황호",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2010"
         }
       ]
     },
@@ -1511,6 +1619,18 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2017"
+        }
+      ]
+    },
+    {
+      nameKr: "이윤상",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2014"
         }
       ]
     },
@@ -2072,6 +2192,18 @@ const SURD_DATA = {
       ]
     },
     {
+      nameKr: "신미림",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        }
+      ]
+    },
+    {
       nameKr: "유명소",
       nameEn: "",
       currentMember: false,
@@ -2227,8 +2359,20 @@ const SURD_DATA = {
       degrees: [
         {
           degreeKr: "공학박사",
-          degreeEn: "M.S.",
+          degreeEn: "Ph.D.",
           gradYear: "2007"
+        }
+      ]
+    },
+    {
+      nameKr: "한종훈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2016"
         }
       ]
     },
@@ -2239,8 +2383,80 @@ const SURD_DATA = {
       degrees: [
         {
           degreeKr: "공학박사",
-          degreeEn: "M.S.",
+          degreeEn: "Ph.D.",
           gradYear: "2007"
+        }
+      ]
+    },
+    {
+      nameKr: "박수빈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2016"
+        }
+      ]
+    },
+    {
+      nameKr: "오형인",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2015"
+        }
+      ]
+    },
+    {
+      nameKr: "전혜진",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2015"
+        }
+      ]
+    },
+    {
+      nameKr: "박관우",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2016"
+        }
+      ]
+    },
+    {
+      nameKr: "최수연",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2021"
+        }
+      ]
+    },
+    {
+      nameKr: "석채원",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2026"
         }
       ]
     },
