@@ -228,15 +228,17 @@ function renderMembersSection() {
 
   // Research Professor Info Detailed
   const rp = members.researchProfessor;
-  const rpAvatarLargeEl = document.getElementById("rp-avatar-large");
-  if (rp && rpAvatarLargeEl) {
-    if (rp.image) {
-      rpAvatarLargeEl.innerHTML = `
-        <img src="${rp.image}" alt="${rp.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
-        <span class="avatar-initials" style="display:none;">${rp.initials || "JK"}</span>
-      `;
-    } else {
-      rpAvatarLargeEl.innerHTML = `<span class="avatar-initials">${rp.initials || "JK"}</span>`;
+  if (rp) {
+    const rpAvatarLargeEl = document.getElementById("rp-avatar-large");
+    if (rpAvatarLargeEl) {
+      if (rp.image) {
+        rpAvatarLargeEl.innerHTML = `
+          <img src="${rp.image}" alt="${rp.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
+          <span class="avatar-initials" style="display:none;">${rp.initials || "JK"}</span>
+        `;
+      } else {
+        rpAvatarLargeEl.innerHTML = `<span class="avatar-initials">${rp.initials || "JK"}</span>`;
+      }
     }
     const rpNameLargeEl = document.getElementById("rp-name-large");
     if (rpNameLargeEl) rpNameLargeEl.innerHTML = `${rp.nameKr} <span>${rp.nameEn}</span>`;
@@ -259,7 +261,11 @@ function renderMembersSection() {
     // Education / Experience list
     const rpEducationListEl = document.getElementById("rp-education-list");
     if (rpEducationListEl) {
-      rpEducationListEl.innerHTML = "";
+      if (rp.education && rp.education.length > 0) {
+        rpEducationListEl.innerHTML = rp.education.map(edu => `<li>${edu}</li>`).join("");
+      } else {
+        rpEducationListEl.innerHTML = "";
+      }
     }
   }
 
