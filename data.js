@@ -225,14 +225,6 @@ const SURD_DATA = {
         affiliation: "가람감정평가법인"
       },
       {
-        nameKr: "이정훈",
-        nameEn: "Jeonghoon Lee",
-        roleKr: "박사과정",
-        roleEn: "Ph.D. Student",
-        type: "part-time",
-        affiliation: ""
-      },
-      {
         nameKr: "이재문",
         nameEn: "Jaemoon Lee",
         roleKr: "박사과정",
@@ -255,14 +247,6 @@ const SURD_DATA = {
         roleEn: "Ph.D. Student",
         type: "part-time",
         affiliation: "서울특별시 도시계획국"
-      },
-      {
-        nameKr: "정재훈",
-        nameEn: "Jaehoon Cheong",
-        roleKr: "박사과정",
-        roleEn: "Ph.D. Student",
-        type: "part-time",
-        affiliation: ""
       },
       {
         nameKr: "김진우",
@@ -299,8 +283,8 @@ const SURD_DATA = {
       {
         nameKr: "강대만",
         nameEn: "Daeman Kang",
-        roleKr: "박사과정",
-        roleEn: "Ph.D. Student",
+        roleKr: "박사과정 (수료)",
+        roleEn: "Ph.D. Candidate",
         type: "part-time",
         affiliation: ""
       },
@@ -598,6 +582,14 @@ const SURD_DATA = {
         roleKr: "석사과정",
         roleEn: "M.S. Student",
         type: "part-time"
+      },
+      {
+        nameKr: "이정훈",
+        nameEn: "Jeonghoon Lee",
+        roleKr: "석사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
       }
     ]
     /*
