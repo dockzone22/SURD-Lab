@@ -25,7 +25,7 @@ const SURD_DATA = {
 
   // Key Statistics
   stats: [
-    { labelKr: "연구원 수", labelEn: "Members", value: "14", icon: "users" },
+    { labelKr: "연구원 수", labelEn: "Members", value: "58", icon: "users" },
     { labelKr: "발표 논문", labelEn: "Publications", value: "99+", icon: "file-text" },
     { labelKr: "수행 완료 프로젝트", labelEn: "COMPLETED PROJECTS", value: "24", icon: "briefcase" },
     { labelKr: "설립 연도", labelEn: "Year Founded", value: "2003", icon: "calendar" }
@@ -406,7 +406,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: ""
+        affiliation: "나우동인건축사사무소"
       },
       {
         nameKr: "원종혁",
@@ -462,7 +462,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: ""
+        affiliation: "(주)도시류"
       },
       {
         nameKr: "박동진",
@@ -486,7 +486,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: "도시계획기술사협회 이사"
+        affiliation: "앤더스 엔지니어링, 도시계획기술사협회 상임이사"
       },
       {
         nameKr: "이민현",
@@ -587,7 +587,7 @@ const SURD_DATA = {
         nameKr: "이정훈",
         nameEn: "Jeonghoon Lee",
         roleKr: "석사과정",
-        roleEn: "Ph.D. Student",
+        roleEn: "M.S. Student",
         type: "part-time",
         affiliation: ""
       }
