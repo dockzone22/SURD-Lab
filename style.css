@@ -1592,37 +1592,19 @@ button {
   margin-bottom: 1rem;
 }
 
-/* Hover-triggered description container expansion */
+/* Description container adapts to content height */
 .news-desc-container {
-  overflow: hidden;
-  max-height: 48px; /* Initially shows ~2 lines of text */
-  position: relative;
-  transition: max-height 0.4s ease;
-}
-
-.news-desc-container::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20px;
-  background: linear-gradient(transparent, #ffffff);
-  transition: opacity 0.3s ease;
-}
-
-.news-card:hover .news-desc-container {
-  max-height: 250px; /* Expands to fit full text */
-}
-
-.news-card:hover .news-desc-container::after {
-  opacity: 0; /* Fade out the text truncation gradient */
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .news-desc {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
 }
 
 /* Contact Section */

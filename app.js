@@ -626,7 +626,7 @@ function renderInterviews() {
         ${item.titleKr}
         ${item.titleEn ? `<span style="font-family: var(--font-en); font-size: 0.85rem; font-weight: 500; display: block; margin-top: 0.25rem; color: var(--text-secondary); line-height: 1.4;">${item.titleEn}</span>` : ""}
       </h4>
-      <div class="news-desc-container" style="display: block; opacity: 1; max-height: none;">
+      <div class="news-desc-container">
         <p class="news-desc" style="margin-bottom: 1rem;">
           ${item.description}
           <span class="interview-source" style="display: block; margin-top: 0.75rem; font-size: 0.85rem; font-weight: 600; color: var(--primary-color);">매체 / Source: ${item.source}</span>
