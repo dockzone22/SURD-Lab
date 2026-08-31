@@ -150,8 +150,8 @@ const SURD_DATA = {
       bioKr: "김진하 교수는 도시와 주택을 둘러싼 다양한 현상을 연구하며, 관련 정책과 실무적 과제에 관심을 두고 있습니다.",
       bioEn: "Prof. Jinha Kim conducts research on a range of issues related to cities and housing, with an interest in relevant policy and practical challenges.",
       education: [
-        "서울시립대학교 건축도시조경학부 졸업 (B.S. in Architecture, Urban Planning and Landscape Architecture, UOS)",
-        "서울시립대학교 도시공학과 석·박사 졸업 (M.S. & Ph.D. in Urban Planning and Design, UOS)"
+        "서울시립대학교 도시공학과 졸업 (B.S. in Urban Planning and Design, UOS)",
+        "동 대학원 석·박사 졸업 (M.S. & Ph.D. in Urban Planning and Design, UOS)"
       ]
     },
     phd: [
