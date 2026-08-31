@@ -154,8 +154,8 @@ const SURD_DATA = {
       {
         nameKr: "송선영",
         nameEn: "Seonyeong Song",
-        roleKr: "박사과정 (수료)",
-        roleEn: "Ph.D. Candidate",
+        roleKr: "박사과정 (졸업)",
+        roleEn: "Ph.D.",
         type: "full-time"
       },
       {
@@ -186,13 +186,339 @@ const SURD_DATA = {
         roleEn: "Ph.D. Student",
         type: "full-time"
       },
-      // 임시 예시 데이터: 실제 비전일제 연구원 정보 수령 후 교체
       {
-        nameKr: "비전일제 연구원 예시 1",
-        nameEn: "Part-time Researcher Example 1",
+        nameKr: "최우진",
+        nameEn: "Woojin Choi",
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time"
+      },
+      {
+        nameKr: "김태선",
+        nameEn: "Taeseon Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time"
+      },
+      {
+        nameKr: "김기홍",
+        nameEn: "Kihong Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "LH 도시재생사업단"
+      },
+      {
+        nameKr: "이일우",
+        nameEn: "Ilwoo Lee",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "국민권익위원회"
+      },
+      {
+        nameKr: "김재진",
+        nameEn: "Jaejin Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "가람감정평가법인"
+      },
+      {
+        nameKr: "이정훈",
+        nameEn: "Jeonghoon Lee",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "이재문",
+        nameEn: "Jaemoon Lee",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "가람감정평가법인"
+      },
+      {
+        nameKr: "박병옥",
+        nameEn: "Byeongok Park",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "(주)하우드엔지니어링"
+      },
+      {
+        nameKr: "김창규",
+        nameEn: "Changkyu Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "서울특별시 도시계획국"
+      },
+      {
+        nameKr: "정재훈",
+        nameEn: "Jaehoon Cheong",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "김진우",
+        nameEn: "Jinwoo Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "송기욱",
+        nameEn: "Kiwook Song",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "(주)젠스타메이트"
+      },
+      {
+        nameKr: "민혜숙",
+        nameEn: "Hyesook Min",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "한국자산관리공사(KAMCO)"
+      },
+      {
+        nameKr: "박민수",
+        nameEn: "Minsoo Park",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "(주)감정평가법인 이산"
+      },
+      {
+        nameKr: "강대만",
+        nameEn: "Daeman Kang",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "송정미",
+        nameEn: "Jungmi Song",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "이은숙",
+        nameEn: "Eunsook Lee",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "김현철",
+        nameEn: "Hyeoncheol Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "안준영",
+        nameEn: "Junyeong Ahn",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "김요한",
+        nameEn: "Yohan Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "류준영",
+        nameEn: "Junyeong Ryu",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "서윤정",
+        nameEn: "Yoonjeong Seo",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "심재욱",
+        nameEn: "Jaewook Shim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "이다원",
+        nameEn: "Dawon Lee",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "김희진",
+        nameEn: "Heejin Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "윤혜림",
+        nameEn: "Hyerim Yoon",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "송경일",
+        nameEn: "Kyeongil Song",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "박미현",
+        nameEn: "Mihyeon Park",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "고종환",
+        nameEn: "Jongwhan Ko",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "류호덕",
+        nameEn: "Hodeok Ryu",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "원종혁",
+        nameEn: "Jonghyeok Won",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "김혜민",
+        nameEn: "Hyemin Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "법무법인 송천"
+      },
+      {
+        nameKr: "김정구",
+        nameEn: "Jeonggu Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "김선정",
+        nameEn: "Seonjeong Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "정현중",
+        nameEn: "Hyeonjung Chung",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "김권일",
+        nameEn: "Kwonil Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "류인정",
+        nameEn: "Injeong Ryu",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "박동진",
+        nameEn: "Dongjin Park",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "이수빈",
+        nameEn: "Subin Lee",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "홍석기",
+        nameEn: "Seokgi Hong",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "도시계획기술사협회 이사"
+      },
+      {
+        nameKr: "이민현",
+        nameEn: "Minhyeon Lee",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: ""
+      },
+      {
+        nameKr: "김영관",
+        nameEn: "Yeongkwan Kim",
+        roleKr: "박사과정",
+        roleEn: "Ph.D. Student",
+        type: "part-time",
+        affiliation: "경호엔지니어링"
       }
     ],
     masters: [
@@ -252,10 +578,23 @@ const SURD_DATA = {
         roleEn: "M.S. Student",
         type: "full-time"
       },
-      // 임시 예시 데이터: 실제 비전일제 연구원 정보 수령 후 교체
       {
-        nameKr: "비전일제 연구원 예시 2",
-        nameEn: "Part-time Researcher Example 2",
+        nameKr: "이진영",
+        nameEn: "Jinyoung Lee",
+        roleKr: "석사과정",
+        roleEn: "M.S. Student",
+        type: "part-time"
+      },
+      {
+        nameKr: "오봉석",
+        nameEn: "Bongseok Oh",
+        roleKr: "석사과정",
+        roleEn: "M.S. Student",
+        type: "part-time"
+      },
+      {
+        nameKr: "진수미",
+        nameEn: "Soomi Jin",
         roleKr: "석사과정",
         roleEn: "M.S. Student",
         type: "part-time"
@@ -271,12 +610,8 @@ const SURD_DATA = {
     {
       nameKr: "홍길동",
       nameEn: "Gildong Hong",
-      initials: "GH",
       roleKr: "석사과정",
       roleEn: "M.S. Student",
-      interestsKr: "",
-      interestsEn: "",
-      image: "",
       type: "part-time", // 반드시 소문자 "part-time"으로 기입
       affiliation: "서울도시공사" // 선택 입력 (소속 기관명)
     }
