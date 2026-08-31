@@ -723,6 +723,18 @@ const SURD_DATA = {
       ]
     },
     {
+      nameKr: "송선영",
+      nameEn: "",
+      currentMember: true,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2026"
+        }
+      ]
+    },
+    {
       nameKr: "이지현",
       nameEn: "",
       currentMember: false,
@@ -1371,6 +1383,18 @@ const SURD_DATA = {
       ]
     },
     {
+      nameKr: "강대만",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2018"
+        }
+      ]
+    },
+    {
       nameKr: "정필립",
       nameEn: "",
       currentMember: false,
@@ -1755,6 +1779,18 @@ const SURD_DATA = {
       ]
     },
     {
+      nameKr: "정성국",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2020"
+        }
+      ]
+    },
+    {
       nameKr: "이용훈",
       nameEn: "",
       currentMember: false,
@@ -1899,6 +1935,18 @@ const SURD_DATA = {
       ]
     },
     {
+      nameKr: "원종석",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2015"
+        }
+      ]
+    },
+    {
       nameKr: "김용배",
       nameEn: "",
       currentMember: false,
@@ -1955,6 +2003,11 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2011"
+        },
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2017"
         }
       ]
     },
@@ -2027,6 +2080,11 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2009"
+        },
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2017"
         }
       ]
     },
@@ -2039,6 +2097,18 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "이정환",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
         }
       ]
     },
@@ -2075,6 +2145,18 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2008"
+        }
+      ]
+    },
+    {
+      nameKr: "이남석",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2018"
         }
       ]
     },
@@ -2127,9 +2209,45 @@ const SURD_DATA = {
       ]
     },
     {
-      nameKr: "김진하",
+      nameKr: "문희정",
       nameEn: "",
       currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2005"
+        }
+      ]
+    },
+    {
+      nameKr: "강세진",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "M.S.",
+          gradYear: "2007"
+        }
+      ]
+    },
+    {
+      nameKr: "송윤선",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "M.S.",
+          gradYear: "2007"
+        }
+      ]
+    },
+    {
+      nameKr: "김진하",
+      nameEn: "",
+      currentMember: true,
       degrees: [
         {
           degreeKr: "공학박사",
@@ -2140,6 +2258,23 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2008"
+        }
+      ]
+    },
+    {
+      nameKr: "김성호",
+      nameEn: "",
+      currentMember: true,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2026"
+        },
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2006"
         }
       ]
     }
@@ -2158,9 +2293,9 @@ const SURD_DATA = {
     {
       date: "2026.08.18",
       category: "Event",
-      titleKr: "이이주 박사수료 외 4명, ICAPPS 참가 및 논문 발표",
+      titleKr: "이이주 박사수료 외 4명, ICAPPS에서 논문 발표 및 우수논문상 수상",
       titleEn: "ICAPPS 2026 Participation and Paper Presentation by Dr. Lee and 4 others",
-      descKr: "인도네시아 자카르타에서 개최된 ICAPPS 2026에서 이이주 박사수료, 이채은, 이은지, 정윤재, 황해운 학생이 논문을 발표했습니다.",
+      descKr: "인도네시아 자카르타에서 개최된 ICAPPS 2026에서 이이주 박사수료(우수논문상), 이채은, 이은지, 정윤재, 황해운 학생이 논문을 발표했습니다.",
       descEn: "Dr. Lee and 4 others presented papers at ICAPPS 2026 held in Jakarta, Indonesia."
     },
     {
@@ -2168,7 +2303,7 @@ const SURD_DATA = {
       category: "Award",
       titleKr: "이채은 석사과정, 한국도시부동산학회 춘계학술대회 우수논문상 수상",
       titleEn: "Master's Student Chaeun Lee Receives Best Paper Award at KUREA Spring Conference",
-      descKr: "성균관대학교 자연과학캠퍼스에서 개최된 한국도시부동산학회 춘계학술대회에서 이채은 석사과정 학생이 우수논문상을 수상했습니다.",
+      descKr: "2026년 한국도시부동산학회 춘계학술대회에서 이채은 석사과정 학생이 우수논문상을 수상했습니다.",
       descEn: "Master's student Chaeun Lee received the Best Paper Award at the KUREA Spring Conference held at Sungkyunkwan University Natural Science Campus."
     },
     {
@@ -2184,22 +2319,31 @@ const SURD_DATA = {
   // Interviews and Columns Section, column/interview
   interviews: [
      {
-       date: "2026.07.22",
-       type: "interview", // or "column"
-       titleKr: "인터뷰예시",
-       titleEn: "interview example",
-       description: "교수님 인터뷰나 기고문이 들어갑니다",
-       source: "00일보",
-       url: ""
+       date: "2024.12.9",
+       type: "column", // or "column"
+       titleKr: "서울역, 새로운 미래를 위한 대전환의 시작",
+       titleEn: "Seoul Station, the Beginning Point of Conversion for New Future",
+       description: "서울역을 해외 교통 허브와 비교하고, 서울역 일대 대개조 사업이 나아가야 할 방향을 제시합니다.",
+       source: "머니투데이",
+       url: "https://www.mt.co.kr/opinion/2024/12/09/2024120811275032026"
      },
      {
-       date: "2026.07.22",
+       date: "2024.7.11",
        type: "column", // or "column"
-       titleKr: "기고문예시",
-       titleEn: "column example",
-       description: "교수님 인터뷰나 기고문이 들어갑니다",
-       source: "00일보",
-       url: ""
+       titleKr: "주민-행정-전문가 협력 신통기획, 정비사업 새 열길",
+       titleEn: "",
+       description: "신통기획(신속통합기획)의 취지에 공감하고, 공공과 민간의 상호 협력적 파트너쉽의 중요성을 강조합니다.",
+       source: "동아일보",
+       url: "https://www.donga.com/news/Opinion/article/all/20240711/125894044/2"
+     },
+     {
+       date: "2016.9.23",
+       type: "interview", // or "column"
+       titleKr: "도시재생으로 보는 도시의 미래",
+       titleEn: "Foreseeing Futere of Cities with Urban Regeneration",
+       description: "성수동 일대 총괄계획을 맡은 남진 교수님의 도시재생 관련 법률과 사례에 관한 인터뷰입니다.",
+       source: "건축신문",
+       url: "https://architecture-newspaper.com/vol19-chpt09/"
      }
     // {
     //   date: "YYYY.MM.DD",
