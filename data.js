@@ -156,8 +156,8 @@ const SURD_DATA = {
     },
     phd: [
       {
-        nameKr: "송선영",
-        nameEn: "Seonyeong Song",
+        nameKr: "김성호",
+        nameEn: "Seongho Kim",
         roleKr: "박사과정 (졸업)",
         roleEn: "Ph.D.",
         type: "full-time"
@@ -721,7 +721,7 @@ const SURD_DATA = {
     {
       nameKr: "송선영",
       nameEn: "",
-      currentMember: true,
+      currentMember: false,
       degrees: [
         {
           degreeKr: "공학박사",
