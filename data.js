@@ -410,7 +410,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: "나우동인건축사사무소"
+        affiliation: "나우동인건축사사무소, 도시계획기술사협회 상임이사"
       },
       {
         nameKr: "원종혁",
@@ -466,7 +466,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: "(주)도시류"
+        affiliation: "(주)도시류, 도시계획기술사협회 상임이사"
       },
       {
         nameKr: "박동진",
@@ -593,7 +593,7 @@ const SURD_DATA = {
         roleKr: "석사과정",
         roleEn: "M.S. Student",
         type: "part-time",
-        affiliation: ""
+        affiliation: "이지스자산운용"
       }
     ]
     /*
