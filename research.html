@@ -15,12 +15,12 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:alt" content="SURD Lab, University of Seoul">
-  
+
   <title>Research | SURD Lab</title>
-  
+
   <!-- Styling Sheet -->
   <link rel="stylesheet" href="./style.css">
-  
+
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -33,14 +33,14 @@
       <div class="logo">
         <a href="./index.html">SURD</a>
       </div>
-      
+
       <!-- Hamburger Menu for Mobile -->
       <button class="hamburger" id="hamburger-btn" aria-label="메뉴 열기">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Navigation Menu -->
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
@@ -77,7 +77,7 @@
         <h2>연구 분야 및 프로젝트</h2>
         <span class="subtitle">Research Areas & Projects</span>
       </div>
-      
+
       <!-- Research Area Cards -->
       <div class="research-areas-grid" id="research-areas-container">
         <!-- Rendered dynamically from app.js / data.js -->
@@ -85,7 +85,19 @@
 
       <!-- Ongoing and Completed Projects -->
       <div class="projects-container">
-        <h3>수행 연구 과제</h3>
+        <div class="projects-header-row">
+          <h3>수행 연구 과제</h3>
+          <div class="projects-source-notice">
+            <div class="source-line-kr">
+              <span>자료 출처: <a href="https://www.ntis.go.kr" target="_blank" rel="noopener noreferrer">국가과학기술지식정보서비스(NTIS)</a></span>
+              <span class="source-scope">(* 연구책임 과제 기준)</span>
+            </div>
+            <div class="source-line-en">
+              <span>Source: <a href="https://www.ntis.go.kr" target="_blank" rel="noopener noreferrer">National Science & Technology Information Service (NTIS)</a></span>
+              <span class="source-scope">(* Principal investigator projects only)</span>
+            </div>
+          </div>
+        </div>
         <div class="projects-tabs">
           <button class="tab-btn active" data-filter="all">전체 All</button>
           <button class="tab-btn" data-filter="ongoing">진행 중 Ongoing</button>

@@ -124,7 +124,18 @@ function renderAboutSection() {
   // PI Education / Experience list
   const piEducationListEl = document.getElementById("pi-education-list");
   if (piEducationListEl && pi && pi.education) {
-    piEducationListEl.innerHTML = pi.education.map(item => `<li>${item}</li>`).join("");
+    piEducationListEl.innerHTML = pi.education.map(item => {
+      if (typeof item === "object" && item !== null) {
+        if (item.en) {
+          return `<li>
+            <span class="edu-kr" style="display: block; line-height: 1.4;">${item.kr}</span>
+            <span class="edu-en" style="display: block; font-size: 0.82rem; color: var(--text-light); font-family: var(--font-en); line-height: 1.35; margin-top: 0.15rem;">${item.en}</span>
+          </li>`;
+        }
+        return `<li><span class="edu-kr" style="display: block; line-height: 1.4;">${item.kr}</span></li>`;
+      }
+      return `<li>${item}</li>`;
+    }).join("");
   }
 }
 
@@ -207,10 +218,10 @@ function renderProjects(filter = "all") {
       <div class="project-main-info">
         <span class="project-status-tag ${p.status}">${p.status === "ongoing" ? "진행 중 Ongoing" : "완료 Completed"}</span>
         <h4 class="project-item-title">${p.titleKr}</h4>
-        <div class="project-item-subtitle">${p.titleEn}</div>
+        ${p.titleEn ? `<div class="project-item-subtitle">${p.titleEn}</div>` : ""}
         <div class="project-details">
-          <div class="project-funding"><strong>Sponsor:</strong> ${p.fundingKr} / ${p.fundingEn}</div>
-          <div class="project-period"><strong>Period:</strong> ${p.duration}</div>
+          <div class="project-period"><strong>연구기간 / Period:</strong> ${p.period}</div>
+          <div class="project-stage"><strong>연구개발단계 / Stage:</strong> ${p.stageKr}${p.stageEn ? ` (${p.stageEn})` : ""}</div>
         </div>
       </div>
     </div>
@@ -262,7 +273,18 @@ function renderMembersSection() {
     const rpEducationListEl = document.getElementById("rp-education-list");
     if (rpEducationListEl) {
       if (rp.education && rp.education.length > 0) {
-        rpEducationListEl.innerHTML = rp.education.map(edu => `<li>${edu}</li>`).join("");
+        rpEducationListEl.innerHTML = rp.education.map(edu => {
+          if (typeof edu === "object" && edu !== null) {
+            if (edu.en) {
+              return `<li>
+                <span class="edu-kr" style="display: block; line-height: 1.4;">${edu.kr}</span>
+                <span class="edu-en" style="display: block; font-size: 0.82rem; color: var(--text-light); font-family: var(--font-en); line-height: 1.35; margin-top: 0.15rem;">${edu.en}</span>
+              </li>`;
+            }
+            return `<li><span class="edu-kr" style="display: block; line-height: 1.4;">${edu.kr}</span></li>`;
+          }
+          return `<li>${edu}</li>`;
+        }).join("");
       } else {
         rpEducationListEl.innerHTML = "";
       }

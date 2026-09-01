@@ -27,7 +27,7 @@ const SURD_DATA = {
   stats: [
     { labelKr: "연구원 수", labelEn: "Members", value: "58", icon: "users" },
     { labelKr: "발표 논문", labelEn: "Publications", value: "126", icon: "file-text" },
-    { labelKr: "수행 완료 프로젝트", labelEn: "COMPLETED PROJECTS", value: "24", icon: "briefcase" },
+    { labelKr: "수행 완료 과제", labelEn: "Completed Projects", value: "11", icon: "briefcase" },
     { labelKr: "설립 연도", labelEn: "Year Founded", value: "2003", icon: "calendar" }
   ],
 
@@ -73,43 +73,59 @@ const SURD_DATA = {
     ],
     projects: [
       {
-        titleKr: "빅데이터 기반 주거지 노후도 평가 및 맞춤형 정비 계획 수립 모델 개발",
-        titleEn: "Development of Big Data-based Residential Aging Evaluation and Tailored Renewal Planning Model",
-        duration: "2024.03 ~ 2027.02",
-        fundingKr: "국토교통부 (MOLIT)",
-        fundingEn: "Ministry of Land, Infrastructure and Transport",
+        titleKr: "서울대도시권 공간 불균형 완화를 위한 생활이동기반의 도시활동 복합화 모델 개발 : 직·주·락 활동 복합을 중심으로",
+        titleEn: "",
+        period: "2025.03–2028.02",
+        stageKr: "기초연구",
+        stageEn: "Basic Research",
         status: "ongoing"
       },
       {
-        titleKr: "디지털 트윈을 활용한 탄소중립 스마트 그린 인프라 입지 최적화 연구",
-        titleEn: "Digital Twin-based Optimization for Smart Green Infrastructure Location for Carbon Neutrality",
-        duration: "2023.06 ~ 2026.05",
-        fundingKr: "한국연구재단 (NRF)",
-        fundingEn: "National Research Foundation of Korea",
+        titleKr: "미래혁신성장 스마트시티 교육연구단",
+        titleEn: "",
+        period: "2020.09–2027.08",
+        stageKr: "응용연구",
+        stageEn: "Applied Research",
         status: "ongoing"
       },
       {
-        titleKr: "수도권 교통 소외지역의 포용적 대중교통 접근성 공간 계량 분석",
-        titleEn: "Spatial Econometric Analysis of Inclusive Transit Accessibility in Seoul Metropolitan Area",
-        duration: "2024.01 ~ 2024.12",
-        fundingKr: "서울연구원 (Seoul Institute)",
-        fundingEn: "The Seoul Institute",
-        status: "ongoing"
-      },
-      {
-        titleKr: "인공지능(AI) 기반 도시 쇠퇴 지수 예측 및 선제적 재생 사업 우선순위 도출",
-        titleEn: "AI-based Urban Decline Index Prediction and Preemptive Regeneration Prioritization",
-        duration: "2021.09 ~ 2024.08",
-        fundingKr: "한국연구재단 (NRF)",
-        fundingEn: "National Research Foundation of Korea",
+        titleKr: "친환경 도시재생을 위한 적정개발밀도 산정모델과 용적이양기법 개발",
+        titleEn: "",
+        period: "2018.11–2021.10",
+        stageKr: "기초연구",
+        stageEn: "Basic Research",
         status: "completed"
       },
       {
-        titleKr: "스마트 가로수 및 그린 네트워크 구축을 통한 도시 열섬 현상 저감 실증 연구",
-        titleEn: "Empirical Study on Mitigation of Urban Heat Island Effect through Smart Street Trees and Green Network",
-        duration: "2022.03 ~ 2023.12",
-        fundingKr: "환경부 (ME)",
-        fundingEn: "Ministry of Environment",
+        titleKr: "친환경 도시재생을 위한 적정개발밀도 산정모델과 용적이양기법 개발",
+        titleEn: "",
+        period: "2015.11–2018.10",
+        stageKr: "기초연구",
+        stageEn: "Basic Research",
+        status: "completed"
+      },
+      {
+        titleKr: "친환경 도시재생을 위한 적정개발밀도 산정모델과 용적이양기법 개발",
+        titleEn: "",
+        period: "2012.05–2015.04",
+        stageKr: "기초연구",
+        stageEn: "Basic Research",
+        status: "completed"
+      },
+      {
+        titleKr: "지역자산을 활용한 지역 맞춤형 도시재생 기법 연구",
+        titleEn: "",
+        period: "2014.05–2017.04",
+        stageKr: "기타",
+        stageEn: "Other",
+        status: "completed"
+      },
+      {
+        titleKr: "미래지향형 창조도시재생 인재 육성팀",
+        titleEn: "",
+        period: "2013.09–2020.08",
+        stageKr: "기타",
+        stageEn: "Other",
         status: "completed"
       }
     ]
@@ -129,12 +145,31 @@ const SURD_DATA = {
       bioKr: "남진 교수는 서울시립대학교 도시공학과를 졸업하고 동 대학원에서 석사, 일본 요코하마국립대학(Yokohama National University)에서 도시계획학 박사 학위를 취득하였습니다. 서울시립대학교 도시공학과 교수로 재직 중이며, 도시정비 및 개발, 주택시장, 스마트시티 분야에서 다수의 핵심 국책 연구 과제를 수행하고 있습니다.",
       bioEn: "Prof. Jin Nam received his B.S. in Urban Engineering from the University of Seoul, M.S. from University of Seoul, and Ph.D. in Urban Planning from the University of Yokohama. He is a professor at the University of Seoul, actively conducting major national R&D projects focusing on smart urban renewal, housing redevelopment policies, and spatial economics.",
       education: [
-        "일본 요코하마국립대학 (Yokohama National University) 도시계획학 박사 (Ph.D. in Urban Planning)",
-        "서울시립대학교 대학원 도시공학 석사 (M.S. in Urban Planning and Design, UOS)",
-        "서울시립대학교 도시공학과 학사 (B.S. in Urban Planning and Design, UOS)",
-        "국토교통부 도시재생 특별위원회 위원 (National Urban Regeneration Committee Member, MOLIT)",
-        "서울특별시 도시계획위원회 위원 (Seoul Metropolitan City Planning Committee Member)",
-        "스마트 도시정비 및 주택 정비 재생 분야 주요 국책 과제 총괄 책임자"
+        {
+          kr: "일본 요코하마국립대학 도시계획학 박사",
+          en: "Yokohama National University, Ph.D. in Urban Planning"
+        },
+        {
+          kr: "서울시립대학교 대학원 도시공학 석사",
+          en: "University of Seoul, M.S. in Urban Planning and Design"
+        },
+        {
+          kr: "서울시립대학교 도시공학과 학사",
+          en: "University of Seoul, B.S. in Urban Planning and Design"
+        },
+        {
+          kr: "서울특별시 도시계획위원회 위원",
+          en: "Seoul Metropolitan City Planning Committee Member"
+        },
+        {
+          kr: "KB부동산신탁 사외이사"
+        },
+        {
+          kr: "前) 한국도시부동산학회 회장"
+        },
+        {
+          kr: "그 외 주요 학회 이사, 공공기관 자문위원 및 정비사업 총괄계획가 등 경력 다수"
+        }
       ]
     },
     // TODO: 추후 실제 소개문 및 약력 정보로 교체 필요

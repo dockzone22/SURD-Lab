@@ -498,6 +498,23 @@ button {
   margin-top: 0.15rem;
 }
 
+.stat-note {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  opacity: 0.85;
+  color: #e2e8f0;
+  line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-note-en {
+  font-family: var(--font-en);
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+
 /* Recent News Preview Grid (Home) */
 .home-section-split {
   display: grid;
@@ -878,11 +895,61 @@ button {
 }
 
 /* Research Projects List */
-.projects-container h3 {
-  font-size: 1.5rem;
+.projects-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.projects-header-row h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
   border-left: 4px solid var(--primary-color);
   padding-left: 1rem;
+}
+
+.projects-source-notice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.45;
+  gap: 0.15rem;
+}
+
+.projects-source-notice a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.projects-source-notice a:hover {
+  color: var(--primary-color-hover);
+}
+
+.projects-source-notice .source-scope {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-left: 0.25rem;
+}
+
+.projects-source-notice .source-line-en {
+  font-family: var(--font-en);
+  font-size: 0.76rem;
+  color: var(--text-light);
+}
+
+.projects-source-notice .source-line-en .source-scope {
+  font-family: var(--font-en);
+  font-size: 0.74rem;
+  color: var(--text-light);
 }
 
 .projects-tabs {
@@ -984,7 +1051,8 @@ button {
 }
 
 .project-funding strong,
-.project-period strong {
+.project-period strong,
+.project-stage strong {
   font-weight: 600;
   color: var(--text-secondary);
 }
@@ -1923,6 +1991,21 @@ button {
   .home-section-split {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .projects-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .projects-source-notice {
+    align-items: flex-start;
+  }
+
+  .project-details {
+    flex-direction: column;
+    gap: 0.4rem;
   }
 
   .student-grid {
