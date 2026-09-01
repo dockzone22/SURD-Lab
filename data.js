@@ -49,7 +49,7 @@ const SURD_DATA = {
         titleEn: "Urban Renewal & Reconstruction",
         shortDescKr: "기성시가지의 지속가능한 개발·정비 전략과 실행방안",
         shortDescEn: "Sustainable development and renewal strategies for established urban areas.",
-        descKr: "국내외 대도시의 기성시가지를 대상으로 도시개발과 도시정비의 전략, 계획기법, 금융구조 및 사업성을 폭넓게 연구합니다. 재개발·재건축을 비롯한 다양한 정비·개발사업의 제도와 추진 과정을 분석하고, 물리적 환경뿐만 아니라 지역의 사회·경제적 여건을 종합적으로 개선할 수 있는 실행방안을 모색합니다.",
+        descKr: "국내외 대도시의 기성시가지의 도시개발과 도시정비 전략, 계획기법, 금융구조 및 사업성을 폭넓게 연구합니다. 재개발·재건축을 비롯한 다양한 정비·개발사업의 제도와 추진 과정을 분석하고, 물리적 환경뿐만 아니라 지역의 사회·경제적 여건을 종합적으로 개선할 수 있는 실행방안을 모색합니다.",
         descEn: "Moving away from traditional total-demolition redevelopment, we establish tailored renewal strategies for aged residential areas using big data and smart sensors. We conduct research on automated building degradation diagnosis, optimization of public facility distribution, and housing performance upgrades resilient to climate change."
       },
       {
