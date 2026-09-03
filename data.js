@@ -910,18 +910,6 @@ const SURD_DATA = {
       ]
     },
     {
-      nameKr: "장단위(張團偉)",
-      nameEn: "",
-      currentMember: false,
-      degrees: [
-        {
-          degreeKr: "공학박사",
-          degreeEn: "Ph.D.",
-          gradYear: "2024"
-        }
-      ]
-    },
-    {
       nameKr: "최영운",
       nameEn: "",
       currentMember: false,
@@ -2522,6 +2510,42 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2006"
+        }
+      ]
+    },
+    {
+      nameKr: "김태석",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2026"
+        }
+      ]
+    },
+    {
+      nameKr: "박혜성",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2026"
+        }
+      ]
+    },
+    {
+      nameKr: "정우진",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2026"
         }
       ]
     }
