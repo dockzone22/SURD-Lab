@@ -822,6 +822,9 @@ const SURD_DATA = {
     {
       nameKr: "이광석",
       nameEn: "",
+      photo: "./assets/alumni/kwangseok_lee.jpg",
+      affiliationKr: "메이드그룹 대표이사",
+      bioKr: "(현) 메이드그룹 대표이사\n(전) 서울특별시 정책특별보좌관",
       currentMember: false,
       degrees: [
         {
