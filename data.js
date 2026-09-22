@@ -172,34 +172,43 @@ const SURD_DATA = {
         }
       ]
     },
-    // TODO: 추후 실제 소개문 및 약력 정보로 교체 필요
-    researchProfessor: {
-      nameKr: "김진하 교수",
-      nameEn: "Prof. Jinha Kim",
-      initials: "JK",
-      roleKr: "연구교수",
-      roleEn: "Research Professor",
-      image: "",
-      email: "k_jinha@uos.ac.kr",
-      office: "Baebong Hall, Room 315 / 배봉관 315호",
-      bioKr: "김진하 교수는 도시와 주택을 둘러싼 다양한 현상을 연구하며, 관련 정책과 실무적 과제에 관심을 두고 있습니다.",
-      bioEn: "Prof. Jinha Kim conducts research on a range of issues related to cities and housing, with an interest in relevant policy and practical challenges.",
-      education: [
-        "서울시립대학교 도시공학과 졸업 (B.S. in Urban Planning and Design, UOS)",
-        "동 대학원 석·박사 졸업 (M.S. & Ph.D. in Urban Planning and Design, UOS)"
-      ]
-    },
+    researchProfessors: [
+      {
+        nameKr: "김진하 교수",
+        nameEn: "Prof. Jinha Kim",
+        initials: "JK",
+        roleKr: "연구교수",
+        roleEn: "Research Professor",
+        image: "./assets/alumni/jinha_kim.jpg",
+        email: "k_jinha@uos.ac.kr",
+        office: "Baebong Hall, Room 315 / 배봉관 315호",
+        bioKr: "김진하 교수는 도시와 주택을 둘러싼 다양한 현상을 연구하며, 관련 정책과 실무적 과제에 관심을 두고 있습니다.",
+        bioEn: "Prof. Jinha Kim conducts research on a range of issues related to cities and housing, with an interest in relevant policy and practical challenges.",
+        education: [
+          "서울시립대학교 도시공학과 졸업 (B.S. in Urban Planning and Design, UOS)",
+          "동 대학원 석·박사 졸업 (M.S. & Ph.D. in Urban Planning and Design, UOS)"
+        ]
+      },
+      {
+        nameKr: "이정현 교수",
+        nameEn: "Prof. Junghyun Lee",
+        initials: "JL",
+        roleKr: "연구교수",
+        roleEn: "Research Professor",
+        image: "",
+        email: "",
+        office: "",
+        bioKr: "이정현 연구교수는 스마트 도시정비 및 주택 정책 분석 분야를 연구하고 있습니다.",
+        bioEn: "Prof. Junghyun Lee conducts research on smart urban renewal and housing policy analysis.",
+        education: [
+          "서울시립대학교 도시공학과 석·박사 졸업 (M.S. & Ph.D. in Urban Planning and Design, UOS)"
+        ]
+      }
+    ],
     phd: [
       {
         nameKr: "김성호",
         nameEn: "Seongho Kim",
-        roleKr: "박사과정 (졸업)",
-        roleEn: "Ph.D.",
-        type: "full-time"
-      },
-      {
-        nameKr: "이정현",
-        nameEn: "Junghyun Lee",
         roleKr: "박사과정 (졸업)",
         roleEn: "Ph.D.",
         type: "full-time"
@@ -228,13 +237,6 @@ const SURD_DATA = {
       {
         nameKr: "최우진",
         nameEn: "Woojin Choi",
-        roleKr: "박사과정",
-        roleEn: "Ph.D. Student",
-        type: "part-time"
-      },
-      {
-        nameKr: "김태선",
-        nameEn: "Taeseon Kim",
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time"
@@ -280,28 +282,12 @@ const SURD_DATA = {
         affiliation: "(주)하우드엔지니어링"
       },
       {
-        nameKr: "김창규",
-        nameEn: "Changkyu Kim",
-        roleKr: "박사과정",
-        roleEn: "Ph.D. Student",
-        type: "part-time",
-        affiliation: "서울특별시 도시계획국"
-      },
-      {
-        nameKr: "김진우",
-        nameEn: "Jinwoo Kim",
-        roleKr: "박사과정",
-        roleEn: "Ph.D. Student",
-        type: "part-time",
-        affiliation: ""
-      },
-      {
         nameKr: "송기욱",
         nameEn: "Kiwook Song",
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: "(주)젠스타메이트"
+        affiliation: "LH 연구원"
       },
       {
         nameKr: "민혜숙",
@@ -324,14 +310,6 @@ const SURD_DATA = {
         nameEn: "Daeman Kang",
         roleKr: "박사과정 (수료)",
         roleEn: "Ph.D. Candidate",
-        type: "part-time",
-        affiliation: ""
-      },
-      {
-        nameKr: "송정미",
-        nameEn: "Jungmi Song",
-        roleKr: "박사과정",
-        roleEn: "Ph.D. Student",
         type: "part-time",
         affiliation: ""
       },
@@ -480,14 +458,6 @@ const SURD_DATA = {
         affiliation: ""
       },
       {
-        nameKr: "정현중",
-        nameEn: "Hyeonjung Chung",
-        roleKr: "박사과정",
-        roleEn: "Ph.D. Student",
-        type: "part-time",
-        affiliation: ""
-      },
-      {
         nameKr: "김권일",
         nameEn: "Kwonil Kim",
         roleKr: "박사과정",
@@ -525,7 +495,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: "앤더스 엔지니어링, 도시계획기술사협회 상임이사"
+        affiliation: "도시계획기술사협회 상임이사"
       },
       {
         nameKr: "이민현",
@@ -534,14 +504,6 @@ const SURD_DATA = {
         roleEn: "Ph.D. Student",
         type: "part-time",
         affiliation: ""
-      },
-      {
-        nameKr: "김영관",
-        nameEn: "Yeongkwan Kim",
-        roleKr: "박사과정",
-        roleEn: "Ph.D. Student",
-        type: "part-time",
-        affiliation: "경호엔지니어링"
       }
     ],
     masters: [
@@ -600,13 +562,6 @@ const SURD_DATA = {
         roleKr: "석사과정",
         roleEn: "M.S. Student",
         type: "full-time"
-      },
-      {
-        nameKr: "이진영",
-        nameEn: "Jinyoung Lee",
-        roleKr: "석사과정",
-        roleEn: "M.S. Student",
-        type: "part-time"
       },
       {
         nameKr: "오봉석",
@@ -688,6 +643,8 @@ const SURD_DATA = {
     {
       nameKr: "이정현",
       nameEn: "",
+      affiliationKr: "서울시립대 도시공학과 연구교수",
+      bioKr: "서울시립대 도시공학과 연구교수",
       currentMember: true,
       degrees: [
         {
@@ -2487,6 +2444,9 @@ const SURD_DATA = {
     {
       nameKr: "김진하",
       nameEn: "",
+      photo: "./assets/alumni/jinha_kim.jpg",
+      affiliationKr: "서울시립대 도시공학과 연구교수",
+      bioKr: "서울시립대 도시공학과 연구교수",
       currentMember: true,
       degrees: [
         {
@@ -2551,6 +2511,30 @@ const SURD_DATA = {
           degreeKr: "공학석사",
           degreeEn: "M.S.",
           gradYear: "2026"
+        }
+      ]
+    },
+    {
+      nameKr: "김태선",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2007"
+        }
+      ]
+    },
+    {
+      nameKr: "김영관",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
         }
       ]
     }

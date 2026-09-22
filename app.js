@@ -175,7 +175,7 @@ function renderResearchSection() {
 
   if (areasContainer && research.areas) {
     areasContainer.innerHTML = research.areas.map(area => `
-      <div class="research-card">
+      <div class="research-card" tabindex="0">
         <div class="research-card-icon">
           ${icons[area.id] || `<i data-lucide="layers" style="width: 32px; height: 32px;"></i>`}
         </div>
@@ -193,6 +193,17 @@ function renderResearchSection() {
         </div>
       </div>
     `).join("");
+
+    // Add mobile tap-to-toggle overlay support
+    areasContainer.querySelectorAll(".research-card").forEach(card => {
+      card.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+          const wasActive = card.classList.contains("active");
+          areasContainer.querySelectorAll(".research-card.active").forEach(c => c.classList.remove("active"));
+          if (!wasActive) card.classList.add("active");
+        }
+      });
+    });
   }
 
   // Initial projects rendering
@@ -237,57 +248,85 @@ function renderMembersSection() {
 
 
 
-  // Research Professor Info Detailed
-  const rp = members.researchProfessor;
-  if (rp) {
-    const rpAvatarLargeEl = document.getElementById("rp-avatar-large");
-    if (rpAvatarLargeEl) {
-      if (rp.image) {
-        rpAvatarLargeEl.innerHTML = `
-          <img src="${rp.image}" alt="${rp.nameKr}" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline';">
-          <span class="avatar-initials" style="display:none;">${rp.initials || "JK"}</span>
+  // Research Professors Info Detailed (Supports multiple research professors: 김진하, 이정현)
+  const rpContainer = document.getElementById("rp-list-container");
+  const rpSection = document.getElementById("rp-section");
+  const rpList = members.researchProfessors || (members.researchProfessor ? [members.researchProfessor] : []);
+
+  if (rpContainer) {
+    if (rpList.length === 0) {
+      if (rpSection) rpSection.style.display = "none";
+    } else {
+      if (rpSection) rpSection.style.display = "block";
+      rpContainer.innerHTML = rpList.map(rp => {
+        const hasImage = rp.image && rp.image.trim() !== "";
+        const imageHtml = hasImage
+          ? `<img src="${rp.image}" alt="${rp.nameKr}" class="rp-photo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+             <div class="rp-photo-placeholder" style="display:none;">${rp.initials || "RP"}</div>`
+          : `<div class="rp-photo-placeholder">${rp.initials || "RP"}</div>`;
+
+        const contactItems = [];
+        if (rp.email) {
+          contactItems.push(`
+            <div class="rp-contact-item">
+              <span class="rp-contact-label">Email</span>
+              <span class="rp-contact-value"><a href="mailto:${rp.email}">${rp.email}</a></span>
+            </div>
+          `);
+        }
+        if (rp.office) {
+          contactItems.push(`
+            <div class="rp-contact-item">
+              <span class="rp-contact-label">Office</span>
+              <span class="rp-contact-value">${rp.office}</span>
+            </div>
+          `);
+        }
+
+        const eduHtml = (rp.education && rp.education.length > 0)
+          ? rp.education.map(edu => {
+              if (typeof edu === "object" && edu !== null) {
+                if (edu.en) {
+                  return `<li>
+                    <span class="edu-kr" style="display: block; line-height: 1.4;">${edu.kr}</span>
+                    <span class="edu-en" style="display: block; font-size: 0.82rem; color: var(--text-light); font-family: var(--font-en); line-height: 1.35; margin-top: 0.15rem;">${edu.en}</span>
+                  </li>`;
+                }
+                return `<li><span class="edu-kr" style="display: block; line-height: 1.4;">${edu.kr}</span></li>`;
+              }
+              return `<li>${edu}</li>`;
+            }).join("")
+          : "";
+
+        return `
+          <div class="rp-card">
+            <div class="rp-photo-col">
+              ${imageHtml}
+            </div>
+            <div class="rp-info-col">
+              <div class="rp-header">
+                <div class="rp-title-wrap">
+                  <h4 class="rp-name">${rp.nameKr} <span class="rp-name-en">${rp.nameEn || ""}</span></h4>
+                  <span class="rp-role-tag">${rp.roleKr || "연구교수"}${rp.roleEn ? ` <span class="rp-role-tag-en">/ ${rp.roleEn}</span>` : ""}</span>
+                </div>
+                ${contactItems.length > 0 ? `<div class="rp-contact-box">${contactItems.join("")}</div>` : ""}
+              </div>
+              <div class="rp-body">
+                ${rp.bioKr ? `<p class="rp-bio-kr">${rp.bioKr}</p>` : ""}
+                ${rp.bioEn ? `<p class="rp-bio-en">${rp.bioEn}</p>` : ""}
+                ${eduHtml ? `
+                  <div class="rp-edu-box">
+                    <h5 class="rp-edu-heading">주요 약력 및 학력</h5>
+                    <ul class="rp-edu-list">
+                      ${eduHtml}
+                    </ul>
+                  </div>
+                ` : ""}
+              </div>
+            </div>
+          </div>
         `;
-      } else {
-        rpAvatarLargeEl.innerHTML = `<span class="avatar-initials">${rp.initials || "JK"}</span>`;
-      }
-    }
-    const rpNameLargeEl = document.getElementById("rp-name-large");
-    if (rpNameLargeEl) rpNameLargeEl.innerHTML = `${rp.nameKr} <span>${rp.nameEn}</span>`;
-    const rpRoleLargeEl = document.getElementById("rp-role-large");
-    if (rpRoleLargeEl) rpRoleLargeEl.innerText = rp.roleKr;
-    const rpEmailLargeEl = document.getElementById("rp-email-large");
-    if (rpEmailLargeEl) rpEmailLargeEl.innerHTML = `<a href="mailto:${rp.email}" style="color:var(--primary-color); border-bottom:1px dashed var(--accent-color);">${rp.email}</a>`;
-    const rpOfficeLargeEl = document.getElementById("rp-office-large");
-    if (rpOfficeLargeEl) rpOfficeLargeEl.innerText = rp.office;
-
-    // Bio
-    const rpBioTextEl = document.getElementById("rp-bio-text");
-    if (rpBioTextEl) {
-      rpBioTextEl.innerHTML = `
-        <span style="font-weight: 600; display: block; margin-bottom: 0.75rem; line-height: 1.7; color: var(--primary-color);">${rp.bioKr}</span>
-        <span style="font-family: var(--font-en); font-size: 0.9rem; color: var(--text-secondary); display: block; line-height: 1.7;">${rp.bioEn}</span>
-      `;
-    }
-
-    // Education / Experience list
-    const rpEducationListEl = document.getElementById("rp-education-list");
-    if (rpEducationListEl) {
-      if (rp.education && rp.education.length > 0) {
-        rpEducationListEl.innerHTML = rp.education.map(edu => {
-          if (typeof edu === "object" && edu !== null) {
-            if (edu.en) {
-              return `<li>
-                <span class="edu-kr" style="display: block; line-height: 1.4;">${edu.kr}</span>
-                <span class="edu-en" style="display: block; font-size: 0.82rem; color: var(--text-light); font-family: var(--font-en); line-height: 1.35; margin-top: 0.15rem;">${edu.en}</span>
-              </li>`;
-            }
-            return `<li><span class="edu-kr" style="display: block; line-height: 1.4;">${edu.kr}</span></li>`;
-          }
-          return `<li>${edu}</li>`;
-        }).join("");
-      } else {
-        rpEducationListEl.innerHTML = "";
-      }
+      }).join("");
     }
   }
 
