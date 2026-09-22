@@ -705,6 +705,9 @@ const SURD_DATA = {
     {
       nameKr: "권영필",
       nameEn: "",
+      photo: "./assets/alumni/yeongpil_kwon.jpg",
+      affiliationKr: "보통과이상 도시건축사사무소 대표",
+      bioKr: "보통과이상 도시건축사사무소 대표",
       currentMember: false,
       degrees: [
         {
@@ -739,6 +742,9 @@ const SURD_DATA = {
     {
       nameKr: "이지현",
       nameEn: "",
+      photo: "./assets/alumni/jihyun_lee.jpg",
+      affiliationKr: "경기도 정책보좌관",
+      bioKr: "(현) 경기도 정책보좌관\n(전) 주택산업연구원 도시정비실장",
       currentMember: false,
       degrees: [
         {
@@ -819,9 +825,14 @@ const SURD_DATA = {
       currentMember: false,
       degrees: [
         {
-          degreeKr: "공학박사",
+          degreeKr: "건축학박사",
           degreeEn: "Ph.D.",
           gradYear: "2025"
+        },
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2003"
         }
       ]
     },
@@ -2225,6 +2236,9 @@ const SURD_DATA = {
     {
       nameKr: "유명소",
       nameEn: "",
+      photo: "./assets/alumni/myeongso_yoo.jpg",
+      affiliationKr: "동림피앤디 부사장",
+      bioKr: "(현) 서울시 소규모주택정비통합심의위원 등\n(전) 서울시 용산구·은평구 도시계획위원, 인천광역시 도시계획위원 등",
       currentMember: false,
       degrees: [
         {
@@ -2372,18 +2386,6 @@ const SURD_DATA = {
       ]
     },
     {
-      nameKr: "강세진",
-      nameEn: "",
-      currentMember: false,
-      degrees: [
-        {
-          degreeKr: "공학박사",
-          degreeEn: "Ph.D.",
-          gradYear: "2007"
-        }
-      ]
-    },
-    {
       nameKr: "한종훈",
       nameEn: "",
       currentMember: false,
@@ -2401,8 +2403,8 @@ const SURD_DATA = {
       currentMember: false,
       degrees: [
         {
-          degreeKr: "공학박사",
-          degreeEn: "Ph.D.",
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
           gradYear: "2007"
         }
       ]

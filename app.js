@@ -527,67 +527,246 @@ function displayPublications(data, filter) {
 /* =========================================================================
    6. ALUMNI SECTION RENDERING
    ========================================================================= */
+let currentAlumniTab = "phd";
+
 function renderAlumniSection() {
   const alumniContainer = document.getElementById("alumni-grid-container");
   if (!alumniContainer || !SURD_DATA.alumni) return;
 
   // 1. Calculate & Display Dynamic Total Alumni Count
-  const count = SURD_DATA.alumni.length;
+  const totalCount = SURD_DATA.alumni.length;
   const countKrEl = document.getElementById("alumni-count-kr");
   const countEnEl = document.getElementById("alumni-count-en");
-  if (countKrEl) countKrEl.textContent = `(총 ${count}명)`;
-  if (countEnEl) countEnEl.textContent = `(${count})`;
+  if (countKrEl) countKrEl.textContent = `(총 ${totalCount}명)`;
+  if (countEnEl) countEnEl.textContent = `(${totalCount})`;
 
-  // Helper to get top graduation year for sorting & header badge
-  const getTopYear = (al) => {
-    if (!al.degrees || al.degrees.length === 0) return 0;
-    const phdDeg = al.degrees.find(d => d.degreeKr && d.degreeKr.includes("박사"));
-    if (phdDeg && phdDeg.gradYear) return parseInt(phdDeg.gradYear) || 0;
-    return parseInt(al.degrees[0].gradYear) || 0;
+  // Helper to check if alumni is PhD
+  const isPhdAlumni = (al) => {
+    if (al.degrees && Array.isArray(al.degrees)) {
+      return al.degrees.some(d =>
+        (d.degreeKr && d.degreeKr.includes("박사")) ||
+        (d.degreeEn && (d.degreeEn.includes("Ph.D") || d.degreeEn.includes("PhD")))
+      );
+    }
+    if (al.degreeKr && al.degreeKr.includes("박사")) return true;
+    if (al.degreeEn && (al.degreeEn.includes("Ph.D") || al.degreeEn.includes("PhD"))) return true;
+    return false;
   };
 
-  // Sort alumni list by topYear descending (newest first)
-  const sortedAlumni = [...SURD_DATA.alumni].sort((a, b) => getTopYear(b) - getTopYear(a));
+  // Helper to get top graduation year
+  const getTopYear = (al) => {
+    if (al.degrees && al.degrees.length > 0) {
+      const phdDeg = al.degrees.find(d => d.degreeKr && d.degreeKr.includes("박사"));
+      if (phdDeg && phdDeg.gradYear) return parseInt(phdDeg.gradYear) || 0;
+      return parseInt(al.degrees[0].gradYear) || 0;
+    }
+    if (al.graduationYear) return parseInt(al.graduationYear) || 0;
+    return 0;
+  };
 
-  alumniContainer.innerHTML = sortedAlumni.map(al => {
-    const topYear = getTopYear(al);
-    const isMulti = al.degrees && al.degrees.length > 1;
+  // Korean syllable decomposition for English initials (Given initial + Family initial)
+  const getKoreanRomanizedInitials = (koreanName) => {
+    if (!koreanName || typeof koreanName !== "string") return "?";
+    const name = koreanName.replace(/[^가-힣]/g, "");
+    if (!name) return "?";
 
-    // Ensure PhD ("박사") degree is rendered on top, Master ("석사") on bottom
-    const degreesForRender = [...(al.degrees || [])].sort((d1, d2) => {
-      const isD1Phd = d1.degreeKr && d1.degreeKr.includes("박사");
-      const isD2Phd = d2.degreeKr && d2.degreeKr.includes("박사");
-      if (isD1Phd && !isD2Phd) return -1;
-      if (!isD1Phd && isD2Phd) return 1;
-      return 0;
-    });
+    const familyNameMap = {
+      "김": "K", "이": "L", "박": "P", "최": "C", "정": "J", "강": "K", "조": "C", "윤": "Y", "장": "J", "임": "L",
+      "한": "H", "오": "O", "서": "S", "신": "S", "권": "K", "황": "H", "안": "A", "송": "S", "류": "R", "유": "Y",
+      "홍": "H", "고": "K", "문": "M", "양": "Y", "손": "S", "배": "B", "백": "B", "허": "H", "노": "N", "심": "S",
+      "하": "H", "곽": "K", "성": "S", "차": "C", "주": "J", "우": "W", "구": "K", "전": "J", "민": "M", "나": "N",
+      "진": "J", "지": "J", "엄": "E", "채": "C", "원": "W", "천": "C", "방": "B", "공": "K", "현": "H", "함": "H",
+      "변": "B", "염": "Y", "여": "Y", "추": "C", "도": "D", "소": "S", "석": "S", "선": "S", "설": "S", "마": "M"
+    };
+    const initialMap = ["G", "G", "N", "D", "D", "R", "M", "B", "B", "S", "S", "", "J", "J", "C", "K", "T", "P", "H"];
+    const vowelMap = ["A", "A", "Y", "Y", "E", "E", "Y", "Y", "O", "W", "W", "W", "Y", "U", "W", "W", "W", "Y", "E", "Y", "I"];
 
-    const degreesHtml = degreesForRender.map(d => {
-      if (isMulti) {
-        return `<span class="alumni-degree-item">${d.degreeKr} (${d.degreeEn}), ${d.gradYear}</span>`;
-      } else {
-        return `<span class="alumni-degree-item">${d.degreeKr} (${d.degreeEn})</span>`;
+    const getCharInit = (char, isFamily = false) => {
+      if (isFamily && familyNameMap[char]) return familyNameMap[char];
+      const code = char.charCodeAt(0) - 0xac00;
+      if (code < 0 || code > 11171) return "";
+      const initIdx = Math.floor(code / (21 * 28));
+      const vowIdx = Math.floor((code % (21 * 28)) / 28);
+      if (initIdx === 11) return vowelMap[vowIdx] || "A";
+      return initialMap[initIdx] || "K";
+    };
+
+    if (name.length >= 3) {
+      const fam = getCharInit(name[0], true);
+      const given = getCharInit(name[1], false);
+      return (given + fam).toUpperCase();
+    } else if (name.length === 2) {
+      const fam = getCharInit(name[0], true);
+      const given = getCharInit(name[1], false);
+      return (given + fam).toUpperCase();
+    } else if (name.length === 1) {
+      return getCharInit(name[0], true).toUpperCase() || "?";
+    }
+    return "?";
+  };
+
+  // Helper for initials (Priority: initials -> nameEn -> Korean Romanized Initials -> '?')
+  const getAlumniInitials = (al) => {
+    if (al.initials && al.initials.trim()) return al.initials.trim().toUpperCase();
+    if (al.nameEn && al.nameEn.trim()) {
+      const parts = al.nameEn.trim().replace(/[^a-zA-Z\s-]/g, "").split(/[\s-]+/).filter(Boolean);
+      if (parts.length >= 2) {
+        return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+      } else if (parts.length === 1 && parts[0].length >= 2) {
+        return parts[0].substring(0, 2).toUpperCase();
       }
-    }).join("");
+    }
+    if (al.nameKr && al.nameKr.trim()) {
+      return getKoreanRomanizedInitials(al.nameKr.trim());
+    }
+    return "?";
+  };
 
-    const nameEnClean = (al.nameEn || "").trim();
-    const nameEnHtml = nameEnClean
-      ? `<span class="alumni-name-en">${nameEnClean}</span>`
-      : "";
+  // Separate PhD and Masters
+  const phdList = SURD_DATA.alumni.filter(isPhdAlumni).sort((a, b) => getTopYear(b) - getTopYear(a));
+  const mastersList = SURD_DATA.alumni.filter(al => !isPhdAlumni(al)).sort((a, b) => getTopYear(b) - getTopYear(a));
 
-    return `
-      <div class="alumni-card">
-        <span class="alumni-year-badge">${topYear} Graduation</span>
-        <h4 class="alumni-name">
-          ${al.nameKr}
-          ${nameEnHtml}
-        </h4>
-        <div class="alumni-degrees">
-          ${degreesHtml}
-        </div>
-      </div>
-    `;
-  }).join("");
+  // Update Badges
+  const phdBadge = document.getElementById("phd-count-badge");
+  const mastersBadge = document.getElementById("masters-count-badge");
+  if (phdBadge) phdBadge.textContent = phdList.length;
+  if (mastersBadge) mastersBadge.textContent = mastersList.length;
+
+  // Render Function by Tab
+  const renderTabContent = (tab) => {
+    if (tab === "phd") {
+      alumniContainer.className = "phd-alumni-grid";
+      alumniContainer.innerHTML = phdList.map(al => {
+        const topYear = getTopYear(al);
+        const initials = getAlumniInitials(al);
+        const nameEnClean = (al.nameEn || "").trim();
+        const affiliation = al.affiliationKr || al.affiliationEn || "";
+        const position = al.positionKr || al.positionEn || "";
+        const bio = al.bioKr || al.bioEn || "";
+
+        // Format degrees for overlay
+        const degreeLines = (al.degrees || []).map(d =>
+          `${d.degreeKr} (${d.degreeEn})${d.gradYear ? ` ${d.gradYear}` : ""}`
+        ).join(" · ");
+
+        const formatMultiline = (text) => text ? text.replace(/\n/g, "<br>") : "";
+        const formattedAffiliation = formatMultiline(affiliation);
+        const formattedPosition = formatMultiline(position);
+        const formattedBio = formatMultiline(bio);
+        const bioContent = formattedBio
+          ? formattedBio
+          : (formattedAffiliation ? `${formattedAffiliation}${formattedPosition ? ' ' + formattedPosition : ''}` : '');
+
+        const avatarHtml = al.photo
+          ? `<img src="${al.photo}" alt="${al.nameKr}" class="phd-avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+             <div class="phd-avatar-placeholder" style="display:none;">${initials}</div>`
+          : `<div class="phd-avatar-placeholder">${initials}</div>`;
+
+        return `
+          <div class="phd-alumni-card" tabindex="0">
+            <div class="phd-avatar-wrapper">
+              ${avatarHtml}
+            </div>
+            <div class="phd-info">
+              <span class="phd-degree-badge">Ph.D. ${topYear || ""}</span>
+              <h4 class="phd-name">
+                ${al.nameKr}
+                ${nameEnClean ? `<span class="phd-name-en">${nameEnClean}</span>` : ""}
+              </h4>
+              ${formattedAffiliation ? `<div class="phd-affiliation">${formattedAffiliation}</div>` : ""}
+              ${formattedPosition ? `<div class="phd-position">${formattedPosition}</div>` : ""}
+              <button type="button" class="phd-card-mobile-btn" aria-label="${al.nameKr} 약력 보기">약력 보기 / View profile</button>
+            </div>
+            <div class="phd-bio-overlay">
+              <div class="phd-bio-title">${al.nameKr}</div>
+              ${bioContent ? `<div class="phd-bio-text">${bioContent}</div>` : ""}
+              ${degreeLines ? `<div class="phd-bio-degrees">${degreeLines}</div>` : ""}
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      // Bind mobile card toggle
+      alumniContainer.querySelectorAll(".phd-alumni-card").forEach(card => {
+        const mobileBtn = card.querySelector(".phd-card-mobile-btn");
+        if (mobileBtn) {
+          mobileBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const wasActive = card.classList.contains("is-active");
+            alumniContainer.querySelectorAll(".phd-alumni-card.is-active").forEach(c => c.classList.remove("is-active"));
+            if (!wasActive) card.classList.add("is-active");
+          });
+        }
+        card.addEventListener("click", () => {
+          if (window.innerWidth <= 768) {
+            card.classList.toggle("is-active");
+          }
+        });
+      });
+    } else {
+      alumniContainer.className = "masters-alumni-grid";
+      alumniContainer.innerHTML = mastersList.map(al => {
+        const topYear = getTopYear(al);
+        const nameEnClean = (al.nameEn || "").trim();
+        const degreesHtml = (al.degrees || []).map(d =>
+          `<span class="alumni-degree-item">${d.degreeKr} (${d.degreeEn})</span>`
+        ).join("");
+
+        return `
+          <div class="alumni-card">
+            <span class="alumni-year-badge">${topYear} Graduation</span>
+            <h4 class="alumni-name">
+              ${al.nameKr}
+              ${nameEnClean ? `<span class="alumni-name-en">${nameEnClean}</span>` : ""}
+            </h4>
+            <div class="alumni-degrees">
+              ${degreesHtml}
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+  };
+
+  // Initialize Tabs and event listeners (one-time binding)
+  const tabButtons = document.querySelectorAll(".alumni-tab-btn");
+  tabButtons.forEach((btn, index) => {
+    btn.onclick = () => {
+      const selectedTab = btn.getAttribute("data-tab");
+      if (selectedTab === currentAlumniTab) return;
+      currentAlumniTab = selectedTab;
+
+      tabButtons.forEach(b => {
+        const isActive = b === btn;
+        b.classList.toggle("active", isActive);
+        b.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+
+      renderTabContent(currentAlumniTab);
+    };
+
+    // Keyboard navigation
+    btn.onkeydown = (e) => {
+      let targetIndex = -1;
+      if (e.key === "ArrowRight" || e.key === "ArrowDown") {
+        targetIndex = (index + 1) % tabButtons.length;
+      } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
+        targetIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+      } else if (e.key === "Home") {
+        targetIndex = 0;
+      } else if (e.key === "End") {
+        targetIndex = tabButtons.length - 1;
+      }
+      if (targetIndex !== -1) {
+        e.preventDefault();
+        tabButtons[targetIndex].focus();
+        tabButtons[targetIndex].click();
+      }
+    };
+  });
+
+  // Initial render with default tab (PhD)
+  renderTabContent(currentAlumniTab);
 }
 
 /* =========================================================================

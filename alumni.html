@@ -15,12 +15,12 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:alt" content="SURD Lab, University of Seoul">
-  
+
   <title>Alumni | SURD Lab</title>
-  
+
   <!-- Styling Sheet -->
   <link rel="stylesheet" href="./style.css">
-  
+
   <!-- Lucide Icons CDN -->
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -33,14 +33,14 @@
       <div class="logo">
         <a href="./index.html">SURD</a>
       </div>
-      
+
       <!-- Hamburger Menu for Mobile -->
       <button class="hamburger" id="hamburger-btn" aria-label="메뉴 열기">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      
+
       <!-- Navigation Menu -->
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
@@ -88,8 +88,24 @@
           including public corporations, research institutes, construction and real estate development companies, and engineering firms.
         </p>
       </div>
-      
-      <div class="alumni-grid" id="alumni-grid-container">
+
+      <!-- Alumni Degree Tabs -->
+      <div class="alumni-tabs-container">
+        <div class="alumni-tabs" role="tablist" aria-label="Alumni Category">
+          <button class="alumni-tab-btn active" data-tab="phd" role="tab" aria-selected="true" id="tab-phd" tabindex="0">
+            <span class="tab-label-kr">박사 졸업생</span>
+            <span class="tab-label-en">Ph.D. Alumni</span>
+            <span class="alumni-tab-badge" id="phd-count-badge">0</span>
+          </button>
+          <button class="alumni-tab-btn" data-tab="masters" role="tab" aria-selected="false" id="tab-masters" tabindex="0">
+            <span class="tab-label-kr">석사 졸업생</span>
+            <span class="tab-label-en">Master’s Alumni</span>
+            <span class="alumni-tab-badge" id="masters-count-badge">0</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="alumni-content-container" id="alumni-grid-container" role="tabpanel">
         <!-- Rendered dynamically from app.js -->
       </div>
     </div>
