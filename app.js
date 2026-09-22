@@ -37,6 +37,18 @@ function renderHeroAndStats() {
   // Stats Grid
   const statsContainer = document.getElementById("stats-container");
   if (statsContainer && SURD_DATA.stats) {
+    // Dynamically calculate current active members count (Research Professors + PhD + Masters)
+    if (SURD_DATA.members) {
+      const rpCount = (SURD_DATA.members.researchProfessors || (SURD_DATA.members.researchProfessor ? [SURD_DATA.members.researchProfessor] : [])).length;
+      const phdCount = (SURD_DATA.members.phd || []).length;
+      const msCount = (SURD_DATA.members.masters || []).length;
+      const totalMembers = rpCount + phdCount + msCount;
+      const memberStat = SURD_DATA.stats.find(s => s.labelEn === "Members" || s.labelKr === "연구원 수");
+      if (memberStat) {
+        memberStat.value = String(totalMembers);
+      }
+    }
+
     statsContainer.innerHTML = SURD_DATA.stats.map(stat => `
       <div class="stat-card">
         <div class="stat-value" data-target="${parseInt(stat.value)}">${stat.value}</div>

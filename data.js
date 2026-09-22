@@ -25,7 +25,7 @@ const SURD_DATA = {
 
   // Key Statistics
   stats: [
-    { labelKr: "연구원 수", labelEn: "Members", value: "58", icon: "users" },
+    { labelKr: "연구원 수", labelEn: "Members", value: "51", icon: "users" },
     { labelKr: "발표 논문", labelEn: "Publications", value: "126", icon: "file-text" },
     { labelKr: "수행 완료 과제", labelEn: "Completed Projects", value: "11", icon: "briefcase" },
     { labelKr: "설립 연도", labelEn: "Year Founded", value: "2003", icon: "calendar" }
@@ -196,8 +196,8 @@ const SURD_DATA = {
         roleKr: "연구교수",
         roleEn: "Research Professor",
         image: "",
-        email: "",
-        office: "",
+        email: "jh9410@uos.ac.kr",
+        office: "Baebong Hall, Room 315 / 배봉관 315호",
         bioKr: "이정현 연구교수는 스마트 도시정비 및 주택 정책 분석 분야를 연구하고 있습니다.",
         bioEn: "Prof. Junghyun Lee conducts research on smart urban renewal and housing policy analysis.",
         education: [
@@ -1462,6 +1462,7 @@ const SURD_DATA = {
     {
       nameKr: "허정문",
       nameEn: "",
+      photo: "./assets/alumni/jeongmoon_heo.png",
       currentMember: false,
       degrees: [
         {
