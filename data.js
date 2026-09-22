@@ -607,6 +607,21 @@ const SURD_DATA = {
   // Alumni Section
   alumni: [
     {
+      nameKr: "권예원",
+      nameEn: "",
+      photo: "./assets/alumni/yewon_kwon.jpg",
+      affiliationKr: "서울특별시 기획조정실 재정담당관",
+      bioKr: "(현) 서울특별시 기획조정실 재정담당관",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학박사",
+          degreeEn: "Ph.D.",
+          gradYear: "2026"
+        }
+      ]
+    },
+    {
       nameKr: "한지혜",
       nameEn: "",
       currentMember: false,
