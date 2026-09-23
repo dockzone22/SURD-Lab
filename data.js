@@ -1916,6 +1916,8 @@ const SURD_DATA = {
     {
       nameKr: "정성국",
       nameEn: "",
+      affiliationKr: "서울특별시 물순환안전국장",
+      bioKr: "(현) 서울특별시 물순환안전국장",
       currentMember: false,
       degrees: [
         {
