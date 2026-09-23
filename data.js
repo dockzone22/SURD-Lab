@@ -367,7 +367,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: ""
+        affiliation: "서울특별시 도시기반시설본부"
       },
       {
         nameKr: "이다원",
@@ -697,6 +697,8 @@ const SURD_DATA = {
     {
       nameKr: "류용상",
       nameEn: "",
+      affiliationKr: "앤더스엔지니어링 대표",
+      bioKr: "(현) 앤더스엔지니어링 대표\n(전) 동해종합기술공사 부사장, 한국종합기술 상무",
       currentMember: false,
       degrees: [
         {
@@ -770,6 +772,8 @@ const SURD_DATA = {
     {
       nameKr: "김창규",
       nameEn: "",
+      affiliationKr: "서울특별시 도시공간본부장",
+      bioKr: "(현) 서울특별시 도시공간본부장\n(전) 서울특별시 균형발전본부장",
       currentMember: false,
       degrees: [
         {
@@ -1463,6 +1467,8 @@ const SURD_DATA = {
       nameKr: "허정문",
       nameEn: "",
       photo: "./assets/alumni/jeongmoon_heo.png",
+      affiliationKr: "우대 E&P 사장",
+      bioKr: "(현) 우대 E&P 사장\n(전) 수원도시공사 사장, LH 부산울산지역본부장 등",
       currentMember: false,
       degrees: [
         {
@@ -1535,6 +1541,9 @@ const SURD_DATA = {
     {
       nameKr: "성진욱",
       nameEn: "",
+      photo: "./assets/alumni/jinwook_sung.jpg",
+      affiliationKr: "SH 도시연구원 수석연구원",
+      bioKr: "(현) SH 도시연구원 수석연구원",
       currentMember: false,
       degrees: [
         {
@@ -2123,6 +2132,9 @@ const SURD_DATA = {
     {
       nameKr: "윤병훈",
       nameEn: "",
+      photo: "./assets/alumni/byeonghoon_yoon.jpg",
+      affiliationKr: "LH토지주택연구원 수석연구원, 국립한밭대학교 강사",
+      bioKr: "(현) LH토지주택연구원 수석연구원, 국립한밭대학교 강사\n(전) 서울시 동북4구 도시재생협력지원센터 사무국장, 서울시립대학교 연구교수",
       currentMember: false,
       degrees: [
         {
