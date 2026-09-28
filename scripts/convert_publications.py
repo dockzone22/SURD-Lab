@@ -65,11 +65,15 @@ def convert_excel_to_json():
 
     records = df.to_dict(orient='records')
 
-    # Force integers for floats with .0 decimal part in records to prevent JSON float values (e.g. 28.0 -> 28)
+    # Force integers for floats with .0 decimal part and convert any NaNs to None (null in JSON)
     for record in records:
         for k, v in record.items():
-            if isinstance(v, float) and v.is_integer():
+            if pd.isna(v):
+                record[k] = None
+            elif isinstance(v, float) and v.is_integer():
                 record[k] = int(v)
+            elif isinstance(v, str):
+                record[k] = v.strip()
 
     # 8. Save JSON ensuring Korean characters are intact (ensure_ascii=False)
     print(f"Filtered & Sorted row count: {len(records)}")

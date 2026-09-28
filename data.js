@@ -26,7 +26,7 @@ const SURD_DATA = {
   // Key Statistics
   stats: [
     { labelKr: "연구원 수", labelEn: "Members", value: "51", icon: "users" },
-    { labelKr: "발표 논문", labelEn: "Publications", value: "126", icon: "file-text" },
+    { labelKr: "발표 논문", labelEn: "Publications", value: "128", icon: "file-text" },
     { labelKr: "수행 완료 과제", labelEn: "Completed Projects", value: "11", icon: "briefcase" },
     { labelKr: "설립 연도", labelEn: "Year Founded", value: "2003", icon: "calendar" }
   ],
