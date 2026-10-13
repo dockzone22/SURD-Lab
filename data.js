@@ -760,6 +760,8 @@ const SURD_DATA = {
     {
       nameKr: "송정미",
       nameEn: "",
+      affiliationKr: "서울특별시 신속통합기획과장",
+      bioKr: "(현) 서울특별시 신속통합기획과장",
       currentMember: false,
       degrees: [
         {
@@ -1202,6 +1204,8 @@ const SURD_DATA = {
     {
       nameKr: "성수연",
       nameEn: "",
+      affiliationKr: "서울연구원 도시공간연구실",
+      bioKr: "(현) 서울연구원 도시공간연구실",
       currentMember: false,
       degrees: [
         {
