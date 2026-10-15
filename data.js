@@ -774,6 +774,7 @@ const SURD_DATA = {
     {
       nameKr: "김창규",
       nameEn: "",
+      photo: "./assets/alumni/changkyu_kim.jpg",
       affiliationKr: "서울특별시 도시공간본부장",
       bioKr: "(현) 서울특별시 도시공간본부장\n(전) 서울특별시 균형발전본부장",
       currentMember: false,
