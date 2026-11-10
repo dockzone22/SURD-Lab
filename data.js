@@ -2578,6 +2578,14 @@ const SURD_DATA = {
   // News Section, award/paper/event
   news: [
     {
+      date: "2026.10.31",
+      category: "Event",
+      titleKr: "김지우, 윤호철 석사과정, 대한국토도시계획학회 추계학술대회에서 논문 발표",
+      titleEn: "Paper Presentation by Jiwoo Kim and Hocheol Yun at KPA Fall Conference in Busan",
+      descKr: "부산대학교에서 개최된 대한국토도시계획학회 추계학술대회에서 김지우, 윤호철 학생이 논문을 발표했습니다.",
+      descEn: "Jiwoo Kim and Hocheol Yun presented papers at the KPA Fall Conference held at Pusan National University in Busan, South Korea."
+    },
+    {
       date: "2026.08.21",
       category: "Event",
       titleKr: "2026 후기 학위수여식 개최 ",

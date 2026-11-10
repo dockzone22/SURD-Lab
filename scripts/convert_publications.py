@@ -44,7 +44,11 @@ def convert_excel_to_json():
     df = df.sort_values(by=['year', 'sort_order'], ascending=[False, True], na_position='last')
 
     # 6. Strip leading/trailing whitespaces from string columns
-    df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+    strip_func = lambda x: x.strip() if isinstance(x, str) else x
+    if hasattr(df, 'map'):
+        df = df.map(strip_func)
+    else:
+        df = df.applymap(strip_func)
 
     # Helper function to clean float decimals (e.g., 28.0 -> 28) for volume, issue, pages, etc.
     def clean_floats(val):
