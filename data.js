@@ -2621,42 +2621,114 @@ const SURD_DATA = {
 
   // Interviews and Columns Section, column/interview
   interviews: [
-     {
-       date: "2024.12.9",
-       type: "column", // or "column"
-       titleKr: "서울역, 새로운 미래를 위한 대전환의 시작",
-       titleEn: "Seoul Station, the Beginning Point of Conversion for New Future",
-       description: "서울역을 해외 교통 허브와 비교하고, 서울역 일대 대개조 사업이 나아가야 할 방향을 제시합니다.",
-       source: "머니투데이",
-       url: "https://www.mt.co.kr/opinion/2024/12/09/2024120811275032026"
-     },
-     {
-       date: "2024.7.11",
-       type: "column", // or "column"
-       titleKr: "주민-행정-전문가 협력 신통기획, 정비사업 새 열길",
-       titleEn: "",
-       description: "신통기획(신속통합기획)의 취지에 공감하고, 공공과 민간의 상호 협력적 파트너쉽의 중요성을 강조합니다.",
-       source: "동아일보",
-       url: "https://www.donga.com/news/Opinion/article/all/20240711/125894044/2"
-     },
-     {
-       date: "2016.9.23",
-       type: "interview", // or "column"
-       titleKr: "도시재생으로 보는 도시의 미래",
-       titleEn: "Foreseeing Futere of Cities with Urban Regeneration",
-       description: "성수동 일대 총괄계획을 맡은 남진 교수님의 도시재생 관련 법률과 사례에 관한 인터뷰입니다.",
-       source: "건축신문",
-       url: "https://architecture-newspaper.com/vol19-chpt09/"
-     }
-    // {
-    //   date: "YYYY.MM.DD",
-    //   type: "interview", // or "column"
-    //   titleKr: "",
-    //   titleEn: "",
-    //   description: "",
-    //   source: "",
-    //   url: ""
-    // }
+    {
+      date: "2025.12.10",
+      type: "column",
+      titleKr: "세운 도심재개발은 '강북 전성시대'의 신호탄",
+      titleEn: "Seun Urban Redevelopment: The Signal of a 'Golden Age for Northern Seoul'",
+      description: "종묘와 세운지구의 역사문화유산 보존과 도심 재개발의 조화를 통해 강북 도심 활성화를 도모하는 기고문입니다.",
+      source: "세계일보",
+      url: "https://www.segye.com/newsView/20251210513782"
+    },
+    {
+      date: "2025.07.21",
+      type: "column",
+      titleKr: "서울의 새로운 엣지 도심, 창동·상계의 가능성",
+      titleEn: "The Potential of Chang-dong and Sang-gye as Seoul's New Edge City",
+      description: "서울아레나 및 창동차량기지 일대를 중심으로 동북권 광역중심지로서의 발전 가능성과 미래 비전을 제시합니다.",
+      source: "머니투데이",
+      url: "https://www.mt.co.kr/amp/estate/2025/07/21/2025072011040045033"
+    },
+    {
+      date: "2025.01.10",
+      type: "column",
+      titleKr: "서울 준공업지역, 융복합 공간으로",
+      titleEn: "Transforming Seoul's Semi-Industrial Areas into Convergence Spaces",
+      description: "준공업지역의 시대적 변화에 맞추어 주거·산업·문화가 공존하는 융복합 혁신 공간으로의 전환 필요성을 다룹니다.",
+      source: "서울신문",
+      url: "https://www.seoul.co.kr/news/editOpinion/opinion/contribution/2025/01/10/20250110033004"
+    },
+    {
+      date: "2024.12.26",
+      type: "column",
+      titleKr: "세운, 글로벌 도시 서울의 새로운 기회",
+      titleEn: "Seun: A New Opportunity for Global City Seoul",
+      description: "역사 도심과 현대 도시 기능이 공존하는 세운지구 재개발을 통해 서울의 글로벌 도시 경쟁력 강화 방안을 모색합니다.",
+      source: "머니투데이",
+      url: "https://www.mt.co.kr/opinion/2024/12/26/2024122414280366253"
+    },
+    {
+      date: "2024.12.09",
+      type: "column",
+      titleKr: "서울역, 새로운 미래를 위한 대전환의 시작",
+      titleEn: "Seoul Station, the Beginning Point of Conversion for New Future",
+      description: "서울역을 해외 교통 허브와 비교하고, 서울역 일대 대개조 사업이 나아가야 할 방향을 제시합니다.",
+      source: "머니투데이",
+      url: "https://www.mt.co.kr/opinion/2024/12/09/2024120811275032026"
+    },
+    {
+      date: "2024.07.11",
+      type: "column",
+      titleKr: "주민-행정-전문가 협력 신통기획, 정비사업 새 길 열길",
+      titleEn: "Resident-Administration-Expert Collaboration: Rapid Integrated Planning Opening New Paths for Urban Renewal",
+      description: "신통기획(신속통합기획)의 취지에 공감하고, 공공과 민간의 상호 협력적 파트너쉽의 중요성을 강조합니다.",
+      source: "동아일보",
+      url: "https://www.donga.com/news/Opinion/article/all/20240711/125894044/2"
+    },
+    {
+      date: "2024.04.09",
+      type: "interview",
+      titleKr: "\"日 아키하바라처럼…크고 작은 기업·상가 연계한 융합 도시로\" [용산의 미래]",
+      titleEn: "\"Like Tokyo's Akihabara... A Convergent City Linking Large and Small Businesses\" [Future of Yongsan]",
+      description: "용산국제업무지구 개발과 관련하여 대기업과 중소상가가 유기적으로 연계되는 복합용도 융합 도시에 대한 인터뷰입니다.",
+      source: "아시아경제",
+      url: "https://view.asiae.co.kr/article/2024040517585903726"
+    },
+    {
+      date: "2019.11.07",
+      type: "column",
+      titleKr: "'도시재생회사' 육성하자",
+      titleEn: "Let's Foster Urban Regeneration Corporations",
+      description: "도시재생 뉴딜사업의 지속가능성을 확보하기 위한 민간 참여 및 도시재생회사 육성 방안을 제안합니다.",
+      source: "세계일보",
+      url: "https://www.segye.com/newsView/20191107513834"
+    },
+    {
+      date: "2019.06.05",
+      type: "interview",
+      titleKr: "모든 시민이 안전하고 편리하게 서비스를 영위하는 SmartCity",
+      titleEn: "A Smart City Where All Citizens Enjoy Safe and Convenient Services",
+      description: "서울시립대학교 도시공학과 및 스마트시티 융복합 인재 양성과 스마트 기술을 활용한 도시 서비스에 관한 인터뷰입니다.",
+      source: "서울시립대학교",
+      url: "https://www.uos.ac.kr/html/prom/newsletter_vol_80/index.html"
+    },
+    {
+      date: "2016.12.10",
+      type: "interview",
+      titleKr: "\"'도시재생'은 마라톤이다\"",
+      titleEn: "\"Urban Regeneration is a Marathon\"",
+      description: "성수동과 가리봉동 등 서울의 도시재생 현장 경험과 젠트리피케이션 대응 및 지속가능한 도시재생의 호흡을 다룬 인터뷰입니다.",
+      source: "프레시안",
+      url: "https://www.pressian.com/pages/articles/145828"
+    },
+    {
+      date: "2016.09.23",
+      type: "interview",
+      titleKr: "도시재생으로 보는 도시의 미래",
+      titleEn: "Foreseeing Future of Cities with Urban Regeneration",
+      description: "성수동 일대 총괄계획을 맡은 남진 교수님의 도시재생 관련 법률과 사례에 관한 인터뷰입니다.",
+      source: "건축신문",
+      url: "https://architecture-newspaper.com/vol19-chpt09/"
+    },
+    {
+      date: "2016.05.27",
+      type: "column",
+      titleKr: "기업형임대주택 공급촉진지구, 국토교통부의 혜안을 기대하며",
+      titleEn: "Enterprise-type Rental Housing Supply Acceleration Districts: Anticipating Wise Policy Decisions",
+      description: "기업형임대주택(뉴스테이) 공급촉진지구 지정 및 주택 공급 정책에 대한 제언과 방향성을 담은 기고문입니다.",
+      source: "아시아경제",
+      url: "https://view.asiae.co.kr/news/view.htm?idxno=2016052710580831777"
+    }
   ],
 
   // Contact Section
