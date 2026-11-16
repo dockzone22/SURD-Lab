@@ -351,7 +351,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: ""
+        affiliation: "한국산업단지공단"
       },
       {
         nameKr: "서윤정",
@@ -415,7 +415,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: ""
+        affiliation: "국립소방연구원"
       },
       {
         nameKr: "류호덕",
@@ -463,7 +463,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: ""
+        affiliation: "(주)인토엔지니어링도시건축사사무소, 도시계획기술사"
       },
       {
         nameKr: "류인정",
@@ -495,7 +495,7 @@ const SURD_DATA = {
         roleKr: "박사과정",
         roleEn: "Ph.D. Student",
         type: "part-time",
-        affiliation: "도시계획기술사협회 상임이사"
+        affiliation: "(주)도시알고리즘 대표이사, 도시계획기술사협회 상임이사"
       },
       {
         nameKr: "이민현",
