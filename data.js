@@ -2622,6 +2622,15 @@ const SURD_DATA = {
   // Interviews and Columns Section, column/interview
   interviews: [
     {
+      date: "2026.11.17",
+      type: "column",
+      titleKr: "서울 청년타운은 '미래 인재 키우는 인큐베이터'",
+      titleEn: "Seoul's Youth Town: An Incubator for Future Talent",
+      description: "청년미래타운을 주거·일자리·배움·교류가 결합된 공간으로 조성해 청년의 성장과 서울의 미래 경쟁력을 키우자는 기고문입니다.",
+      source: "세계일보",
+      url: "https://www.segye.com/newsView/20261116514150"
+    },
+    {
       date: "2025.12.10",
       type: "column",
       titleKr: "세운 도심재개발은 '강북 전성시대'의 신호탄",
