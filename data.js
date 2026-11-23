@@ -2572,7 +2572,127 @@ const SURD_DATA = {
           gradYear: "2008"
         }
       ]
-    }
+    },
+    {
+      nameKr: "이정현",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2020"
+        }
+      ]
+    },
+    {
+      nameKr: "김성호",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2006"
+        }
+      ]
+    },
+    {
+      nameKr: "한지혜",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2019"
+        }
+      ]
+    },
+    {
+      nameKr: "권영필",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2017"
+        }
+      ]
+    },
+    {
+      nameKr: "류용상",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "이지현",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2020"
+        }
+      ]
+    },
+    {
+      nameKr: "정재훈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2019"
+        }
+      ]
+    },
+    {
+      nameKr: "윤병훈",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2011"
+        }
+      ]
+    },
+    {
+      nameKr: "유명소",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2009"
+        }
+      ]
+    },
+    {
+      nameKr: "김진하",
+      nameEn: "",
+      currentMember: false,
+      degrees: [
+        {
+          degreeKr: "공학석사",
+          degreeEn: "M.S.",
+          gradYear: "2008"
+        }
+      ]
+    },
   ],
 
   // News Section, award/paper/event
