@@ -2588,7 +2588,7 @@ const SURD_DATA = {
     {
       nameKr: "김성호",
       nameEn: "",
-      currentMember: false,
+      currentMember: true,
       degrees: [
         {
           degreeKr: "공학석사",
