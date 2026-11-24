@@ -2698,6 +2698,14 @@ const SURD_DATA = {
   // News Section, award/paper/event
   news: [
     {
+      date: "2026.11.14",
+      category: "Award",
+      titleKr: "이채은 석사과정, 한국도시부동산학회 추계학술대회 우수논문상 수상",
+      titleEn: "Master's student Chaeun Lee Receives Best Paper Award at KUREA Fall Conference",
+      descKr: "2026년 한국도시부동산학회 추계학술대회에서 이채은 석사과정 학생이 우수논문상을 수상했습니다.",
+      descEn: "Master's student Chaeun Lee received the Best Paper Award at the KUREA Fall Conference held at Konkuk University."
+    },
+    {
       date: "2026.10.31",
       category: "Event",
       titleKr: "김지우, 윤호철 석사과정, 대한국토도시계획학회 추계학술대회에서 논문 발표",
